@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Your Name - Academic Profile</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #3182ce;
+            --text-color: #2d3748;
+            --light-gray: #f7fafc;
+            --border-color: #e2e8f0;
+            --dark-gray: #4a5568;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+            align-items: center;
+        }
+
+        .profile-section {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 8px;
+            margin: 0 auto 1rem;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            color: var(--dark-gray);
+            margin-bottom: 0.8rem;
+            font-style: italic;
+        }
+
+        .affiliation {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            background: var(--light-gray);
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            font-weight: 400;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .interest-tag {
+            background: var(--light-gray);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .publication {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .publication-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+            line-height: 1.3;
+        }
+
+        .publication-authors {
+            color: var(--dark-gray);
+            margin-bottom: 0.2rem;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .publication-venue {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .publication-links {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .publication-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 0.2rem 0.6rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 3px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .publication-links a:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .year-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .year-header {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .education-item, .experience-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .education-item h3, .experience-item h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .education-item .institution, .experience-item .institution {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .education-item .year, .experience-item .year {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .publication-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <div class="profile-img">📚</div>
+            </div>
+            <div class="header-content">
+                <h1>Dr. Your Name</h1>
+                <p class="title">Assistant Professor of Computer Science</p>
+                <p class="affiliation">University of Excellence, Department of Computer Science</p>
+                <div class="contact-info">
+                    <span>📧 <a href="mailto:your.name@university.edu">your.name@university.edu</a></span>
+                    <span>🏢 Office: Science Building, Room 123</span>
+                    <span>📞 +1 (555) 123-4567</span>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>About</h2>
+            <p class="about-text">
+                I am an Assistant Professor in the Department of Computer Science at University of Excellence. 
+                My research focuses on machine learning, artificial intelligence, and their applications to real-world problems. 
+                I am particularly interested in developing robust and interpretable machine learning models that can be deployed 
+                in critical applications such as healthcare and autonomous systems.
+            </p>
+            <p class="about-text">
+                Prior to joining University of Excellence, I completed my Ph.D. in Computer Science at Top University, 
+                where I worked on novel approaches to deep learning under the supervision of Prof. Advisor Name. 
+                I have published over 20 papers in top-tier conferences and journals, including NeurIPS, ICML, and Nature Machine Intelligence.
+            </p>
+            <div class="research-interests">
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Deep Learning</span>
+                <span class="interest-tag">Computer Vision</span>
+                <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">AI Safety</span>
+                <span class="interest-tag">Interpretable AI</span>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="year-section">
+                <div class="year-header">2025</div>
+                
+                <div class="publication">
+                    <div class="publication-title">Advanced Neural Networks for Complex Problem Solving</div>
+                    <div class="publication-authors"><strong>Your Name</strong>, Co-Author One, Co-Author Two</div>
+                    <div class="publication-venue">Proceedings of the International Conference on Machine Learning (ICML 2025)</div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PDF</a>
+                        <a href="#" target="_blank">Code</a>
+                        <a href="#" target="_blank">BibTeX</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Interpretable AI: A Survey of Current Methods and Future Directions</div>
+                    <div class="publication-authors"><strong>Your Name</strong>, Senior Collaborator</div>
+                    <div class="publication-venue">Nature Machine Intelligence, Vol. 9, pp. 123-145 (2025)</div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PDF</a>
+                        <a href="#" target="_blank">DOI</a>
+                        <a href="#" target="_blank">BibTeX</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <div class="year-header">2024</div>
+                
+                <div class="publication">
+                    <div class="publication-title">Robust Machine Learning Models for Healthcare Applications</div>
+                    <div class="publication-authors">Co-Author One, <strong>Your Name</strong>, Co-Author Three</div>
+                    <div class="publication-venue">Conference on Neural Information Processing Systems (NeurIPS 2024)</div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PDF</a>
+                        <a href="#" target="_blank">Poster</a>
+                        <a href="#" target="_blank">Code</a>
+                        <a href="#" target="_blank">BibTeX</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Deep Learning Approaches to Computer Vision: A Comprehensive Study</div>
+                    <div class="publication-authors"><strong>Your Name</strong>, Research Team</div>
+                    <div class="publication-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence, Vol. 46, No. 8 (2024)</div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PDF</a>
+                        <a href="#" target="_blank">DOI</a>
+                        <a href="#" target="_blank">Dataset</a>
+                        <a href="#" target="_blank">BibTeX</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-section">
+                <div class="year-header">2023</div>
+                
+                <div class="publication">
+                    <div class="publication-title">Foundations of Ethical AI: Principles and Implementation</div>
+                    <div class="publication-authors"><strong>Your Name</strong>, Ethics Collaborator, Policy Expert</div>
+                    <div class="publication-venue">ACM Computing Surveys, Vol. 55, No. 3 (2023)</div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PDF</a>
+                        <a href="#" target="_blank">DOI</a>
+                        <a href="#" target="_blank">BibTeX</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research</h2>
+            <p class="about-text">
+                My research program focuses on developing next-generation machine learning systems that are both powerful and trustworthy. 
+                I lead several research projects funded by NSF, NIH, and industry partners, with a total funding of over $2.5M.
+            </p>
+            
+            <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Current Projects</h3>
+            
+            <div class="publication">
+                <div class="publication-title">NSF CAREER: Interpretable Deep Learning for Critical Applications</div>
+                <div class="publication-venue">National Science Foundation | 2024-2029 | $750,000</div>
+                <p style="margin-top: 0.8rem; color: var(--dark-gray);">
+                    Developing novel techniques for creating interpretable deep learning models that maintain high performance 
+                    while providing meaningful explanations for their decisions.
+                </p>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">AI for Healthcare: Robust Diagnostic Systems</div>
+                <div class="publication-venue">NIH R01 | 2023-2026 | $1,200,000</div>
+                <p style="margin-top: 0.8rem; color: var(--dark-gray);">
+                    Collaborating with medical professionals to develop AI systems that can provide reliable diagnostic 
+                    assistance while maintaining patient safety and privacy.
+                </p>
+            </div>
+        </section>
+
+        <section id="teaching">
+            <h2>Teaching</h2>
+            
+            <div class="education-item">
+                <h3>CS 4501: Advanced Machine Learning</h3>
+                <div class="institution">Fall 2024, Spring 2025</div>
+                <p style="margin-top: 0.5rem; color: var(--dark-gray);">
+                    Graduate-level course covering advanced topics in machine learning, including deep learning, 
+                    reinforcement learning, and probabilistic models.
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3>CS 3501: Introduction to Artificial Intelligence</h3>
+                <div class="institution">Fall 2023, Fall 2024</div>
+                <p style="margin-top: 0.5rem; color: var(--dark-gray);">
+                    Undergraduate course introducing fundamental concepts in AI, including search algorithms, 
+                    knowledge representation, and basic machine learning.
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3>CS 6501: Seminar in AI Ethics</h3>
+                <div class="institution">Spring 2024</div>
+                <p style="margin-top: 0.5rem; color: var(--dark-gray);">
+                    Graduate seminar exploring ethical implications of AI technologies and responsible AI development practices.
+                </p>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2>Education & Experience</h2>
+            
+            <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Education</h3>
+            
+            <div class="education-item">
+                <h3>Ph.D. in Computer Science</h3>
+                <div class="institution">Top University</div>
+                <div class="year">2018-2023</div>
+                <p style="margin-top: 0.5rem; color: var(--dark-gray);">
+                    Dissertation: "Robust and Interpretable Machine Learning for Real-World Applications"<br>
+                    Advisor: Prof. Advisor Name
+                </p>
+            </div>
+
+            <div class="education-item">
+                <h3>M.S. in Computer Science</h3>
+                <div class="institution">Great University</div>
+                <div class="year">2016-2018</div>
+            </div>
+
+            <div class="education-item">
+                <h3>B.S. in Computer Science</h3>
+                <div class="institution">Excellent College</div>
+                <div class="year">2012-2016</div>
+                <p style="margin-top: 0.5rem; color: var(--dark-gray);">Summa Cum Laude, Phi Beta Kappa</p>
+            </div>
+
+            <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Professional Experience</h3>
+            
+            <div class="experience-item">
+                <h3>Assistant Professor</h3>
+                <div class="institution">University of Excellence, Department of Computer Science</div>
+                <div class="year">2023-Present</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Research Intern</h3>
+                <div class="institution">Tech Company AI Research Lab</div>
+                <div class="year">Summer 2022</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Dr. Your Name. Last updated: May 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Highlight active section in navigation
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // Fade-in animation for sections
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('section, .publication').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
