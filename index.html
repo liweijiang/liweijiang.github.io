@@ -30,6 +30,8 @@
     --light-gray: #f7fafc;
     --border-color: #e2e8f0;
     --dark-gray: #4a5568;
+    /* --yellow-color: #ffde21; */
+    --yellow-color: #ffcc00;
 }
 
 * {
@@ -46,7 +48,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -66,8 +68,8 @@ header {
 }
 
 .profile-img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     border-radius: 8px;
     margin: 0 auto 1rem;
     background: var(--light-gray);
@@ -83,20 +85,22 @@ header {
     font-size: 2.8rem;
     font-weight: 400;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 }
 
 .title {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--dark-gray);
     margin-bottom: 0.8rem;
+    font-weight: 500;
     font-style: italic;
+    margin-left: 1rem;
 }
 
 .affiliation {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--secondary-color);
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     font-weight: 500;
 }
 
@@ -158,9 +162,10 @@ h2 {
 }
 
 .about-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
     text-align: justify;
 }
 
@@ -173,9 +178,10 @@ h2 {
 
 .interest-tag {
     background: var(--light-gray);
-    padding: 0.6rem 1.2rem;
+    padding: 0.4rem 0.6rem;
     border-radius: 25px;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--primary-color);
     border: 1px solid var(--border-color);
 }
@@ -252,10 +258,10 @@ h2 {
 
 .year-header {
     font-size: 1.2rem;
-    color: var(--secondary-color);
+    color: var(--yellow-color);
     margin-bottom: 0.6rem;
-    font-weight: 600;
-    border-left: 4px solid var(--secondary-color);
+    font-weight: 700;
+    border-left: 10px solid var(--yellow-color);
     padding-left: 1rem;
 }
 
@@ -331,49 +337,52 @@ footer {
 <div class="container">
 <header>
     <div class="profile-section">
-        <div class="profile-img">📚</div>
+        <img src="static/avatar.png" alt="Liwei Jiang Profile Picture" class="profile-img">
     </div>
     <div class="header-content">
-        <h1>Liwei Jiang | 姜力炜</h1>
-        <p class="title">Ph.D. Candidate</p>
+        <h2><b>Liwei Jiang</b> | 姜力炜 <span class="title">Ph.D. Candidate</span></h2>
         <p class="affiliation">Paul G. Allen School of Computer Science & Engineering, University of Washington</p>
         <div class="contact-info">
-            <span>📧 <a href="mailto:liweij@cs.washington.edu">liweij@cs.washington.edu</a></span>
-            <span>🏢 Currently: Research Intern at NVIDIA</span>
-            <span>🎓 Expected Ph.D. 2026</span>
+            <span><b>Email:</b> <a href="mailto:lwjiang@cs.washington.edu">lwjiang@cs.washington.edu</a></span>
+            <!-- <span>🏢 Currently: Research Intern at NVIDIA</span>
+            <span>🎓 Expected Ph.D. 2026</span> -->
         </div>
     </div>
 </header>
 
 <nav>
     <ul>
-        <li><a href="#about" class="nav-link">About</a></li>
+        <!-- <li><a href="#about" class="nav-link">About</a></li> -->
         <li><a href="#publications" class="nav-link">Publications</a></li>
-
-        <li><a href="#teaching" class="nav-link">Teaching</a></li>
-        <li><a href="#cv" class="nav-link">CV</a></li>
+        <li><a href="#experiences" class="nav-link">Education & Experience</a></li>
+        <li><a href="#honors" class="nav-link">Honors & Awards</a></li>
+        <li><a href="static/CV.pdf" class="nav-link">CV</a></li>
     </ul>
 </nav>
 
 <section id="about">
-    <h2>About</h2>
+    <!-- <h2>About</h2> -->
     <p class="about-text">
-        I am a Ph.D. candidate at Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by Professor Yejin Choi. I am also a graduate research intern at NVIDIA and was previously a student researcher at Allen Institute for Artificial Intelligence (AI2). I earned B.A. in Computer Science and B.A. in Mathematics from Colby College.
+        I am a Ph.D. candidate at Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by Professor Yejin Choi. I am also a graduate research intern at NVIDIA and was previously a student researcher at Allen Institute for Artificial Intelligence (Ai2). I earned B.A. in Computer Science and B.A. in Mathematics from Colby College.
     </p>
     <p class="about-text">
-        My research centers on humanistic AI safety, aiming to foster the synergistic, secure, and sustainable coexistence of AI and society—ultimately shaping the co-evolution of AI and humanity. My work spans from developing human-centered, continually-evolving AI systems to advancing knowledge about individuals and society through robust innovations in data, learning algorithms, and system design.
+        My research centers on humanistic AI safety, aiming to foster the synergistic, secure, and sustainable coexistence of AI and society—ultimately shaping the co-evolution of AI and humanity:
+     
+        From Human to AI: Developing human-centered, continually-evolving, and future-proof AI systems—drawing upon interdisciplinary insights into human intelligence, values, and global needs.
+
+        From AI to Human: Advancing the frontiers of knowledge about individuals and society, augmenting human capabilities, and addressing humanity’s most consequential sociotechnical challenges—through robust, efficient, and scalable innovations in data, learning algorithms, and system design.
     </p>
     <p class="about-text">
         My current research encompasses topics such as pluralistic alignment, self-improving algorithms for steerable and secure language models, anticipatory strategies for long-term risks—including overreliance and the erosion of human creativity—and socially impactful applications, such as clinical AI.
     </p>
     <div class="research-interests">
         <span class="interest-tag">Artificial Intelligence</span>
+        <span class="interest-tag">AI Safety</span>
         <span class="interest-tag">Natural Language Processing</span>
         <span class="interest-tag">Machine Learning</span>
-        <span class="interest-tag">Human-AI Interaction</span>
-        <span class="interest-tag">AI Safety</span>
         <span class="interest-tag">Pluralistic Alignment</span>
-        <span class="interest-tag">Humanistic AI</span>
+        <span class="interest-tag">Human-AI Interaction</span>
+        <!-- <span class="interest-tag">Humanistic AI</span> -->
     </div>
 </section>
 
@@ -391,31 +400,31 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
         <div class="publication">
             <div class="publication-title">Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models</div>
             <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Mickel Liu, Yancheng Liang, Simon S. Du, Yejin Choi, Tim Althoff, Natasha Jaques</div>
+                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Mickel Liu*, Yancheng Liang, Simon S. Du, Yejin Choi, Tim Althoff, Natasha Jaques</div>
                 <div class="publication-venue">In submission</div>
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
         <div class="publication">
             <div class="publication-title">X-Teaming: Multi-Turn Jailbreaks and Defenses with Adaptive Multi-Agents</div>
             <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Salman Rahman, James Shiffer, Genglin Liu, Sheriff Issaka, Md Rizwan Parvez, Hamid Palangi, Kai-Wei Chang, Yejin Choi, Saadia Gabriel</div>
+                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Salman Rahman*, James Shiffer*, Genglin Liu, Sheriff Issaka, Md Rizwan Parvez, Hamid Palangi, Kai-Wei Chang, Yejin Choi, Saadia Gabriel</div>
                 <div class="publication-venue">In submission</div>
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -430,7 +439,7 @@ footer {
                 <a href="#" target="_blank">Code</a>
                 <a href="#" target="_blank">Dataset</a>
                 <a href="#" target="_blank">Demo</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -442,7 +451,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -454,7 +463,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -466,7 +475,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -478,7 +487,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
     </div>
@@ -494,7 +503,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -506,7 +515,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -518,7 +527,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -530,7 +539,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -542,7 +551,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -557,7 +566,7 @@ footer {
                 <a href="#" target="_blank">Code</a>
                 <a href="#" target="_blank">Dataset</a>
                 <a href="#" target="_blank">Demo</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
     </div>
@@ -568,12 +577,12 @@ footer {
         <div class="publication">
             <div class="publication-title">What Makes it Ok to Set a Fire? Iterative Self-distillation of Contexts and Rationales for Disambiguating Defeasible Social and Moral Situations</div>
             <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Kavel Rao, Valentina Pyatkin, Yuling Gu, Niket Tandon, Nouha Dziri, Faeze Brahman, Yejin Choi</div>
+                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Kavel Rao*, Valentina Pyatkin, Yuling Gu, Niket Tandon, Nouha Dziri, Faeze Brahman, Yejin Choi</div>
                 <div class="publication-venue">Findings of EMNLP</div>
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -585,7 +594,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -597,7 +606,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -609,14 +618,19 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
-        </div><div class="publication-authors">Valentina Pyatkin, Jena D. Hwang, Vivek Srikumar, Ximing Lu, <strong>Liwei Jiang</strong>, Yejin Choi, Chandra Bhagavatula</div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-title">Reinforced Clarification Question Generation with Defeasibility Rewards for Disambiguating Social and Moral Situations</div>
+            <div class="publication-meta">
+                <div class="publication-authors">Valentina Pyatkin, Jena D. Hwang, Vivek Srikumar, Ximing Lu, <strong>Liwei Jiang</strong>, Yejin Choi, Chandra Bhagavatula</div>
                 <div class="publication-venue">ACL</div>
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
     </div>
@@ -632,7 +646,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -644,7 +658,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -656,7 +670,7 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
     </div>
@@ -672,10 +686,10 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">Poster</a>
-                <a href="#" target="_blank">Slides</a>
-                <a href="#" target="_blank">Data</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">Poster</a> -->
+                <!-- <a href="#" target="_blank">Slides</a> -->
+                <!-- <a href="#" target="_blank">Data</a> -->
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
 
@@ -687,8 +701,8 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">Video</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">Video</a> -->
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
     </div>
@@ -704,129 +718,117 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="#" target="_blank">PDF</a>
-                <a href="#" target="_blank">Slides</a>
-                <a href="#" target="_blank">Video</a>
-                <a href="#" target="_blank">BibTeX</a>
+                <!-- <a href="#" target="_blank">Slides</a> -->
+                <!-- <a href="#" target="_blank">Video</a> -->
+                <!-- <a href="#" target="_blank">BibTeX</a> -->
             </div>
         </div>
     </div>
 </section>
 
 
-
-<section id="teaching">
-    <h2>Teaching & Mentoring</h2>
-    
-    <div class="education-item">
-        <h3>CSE 447/517: Natural Language Processing</h3>
-        <div class="institution">University of Washington, Winter 2024</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Led TA effort and co-renovated/co-designed the class module of the undergrad and grad NLP class (LLM version!). 
-            Helped modernize the curriculum to include cutting-edge developments in large language models.
-        </p>
-    </div>
-
-    <div class="education-item">
-        <h3>Research Mentoring</h3>
-        <div class="institution">Ongoing</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Actively mentoring undergraduate and junior researchers interested in AI safety, NLP, and human-AI interaction. 
-            Feel free to reach out if you're interested in my work!
-        </p>
-    </div>
-
-    <div class="education-item">
-        <h3>Guest Lectures</h3>
-        <div class="institution">Fall 2024</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Delivered guest lectures at UIUC, University of Pittsburgh, and KAIST on topics related to AI safety and alignment.
-        </p>
-    </div>
-</section>
-
-<section id="cv">
+<section id="experiences">
     <h2>Education & Experience</h2>
     
     <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Education</h3>
     
     <div class="education-item">
-        <h3>Ph.D. in Computer Science</h3>
-        <div class="institution">University of Washington</div>
-        <div class="year">2019-2026 (expected)</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Paul G. Allen School of Computer Science & Engineering<br>
-            Advisor: Prof. Yejin Choi<br>
-            Focus: Humanistic AI Safety, Natural Language Processing
-        </p>
+        <h3>University of Washington</h3>
+        <div class="institution">Ph.D. in Computer Science and Engineering</div>
+        <div class="year">2019 - 2026 (expected), Seattle, Washington</div>
     </div>
 
     <div class="education-item">
-        <h3>B.A. in Computer Science (Summa Cum Laude)</h3>
-        <div class="institution">Colby College</div>
-        <div class="year">2015-2019</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Phi Beta Kappa Society</p>
-    </div>
-
-    <div class="education-item">
-        <h3>B.A. in Mathematics (Summa Cum Laude)</h3>
-        <div class="institution">Colby College</div>
-        <div class="year">2015-2019</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Phi Beta Kappa Society</p>
+        <h3>Colby College</h3>
+        <div class="institution">B.A. in Computer Science and Mathematics (Summa Cum Laude, Top 0.5%)</div>
+        <div class="year">2015 - 2019, Waterville, Maine</div>
     </div>
 
     <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Professional Experience</h3>
     
     <div class="experience-item">
-        <h3>Research Intern</h3>
-        <div class="institution">NVIDIA - NeMo-Guardrails Team</div>
-        <div class="year">March 2025 - Present</div>
+        <h3>NVIDIA</h3>
+        <div class="institution">Research Intern at the Nemo-Guardrail Team</div>
+        <div class="year">March 2025 - Present, Santa Clara, California</div>
     </div>
 
     <div class="experience-item">
-        <h3>Graduate Research Intern</h3>
-        <div class="institution">Allen Institute for Artificial Intelligence (AI2)</div>
-        <div class="year">June 2020 - December 2024</div>
+        <h3>Allen Institute for Artificial Intelligence (Ai2)</h3>
+        <div class="institution">Graduate Research Intern at the Mosaic and AllenNLP Teams</div>
+        <div class="year">June 2020 - December 2024, Seattle, Washington</div>
     </div>
 
     <div class="experience-item">
-        <h3>Visit Student Researcher</h3>
-        <div class="institution">The Future Laboratory, Tsinghua University</div>
-        <div class="year">July 2019 - September 2019</div>
+        <h3>The Future Laboratory, Tsinghua University</h3>
+        <div class="institution">Visit Student Researcher</div>
+        <div class="year">July 2019 - September 2019, Beijing, China</div>
     </div>
 
     <div class="experience-item">
-        <h3>Undergraduate Research Intern</h3>
-        <div class="institution">Stanford University</div>
-        <div class="year">June 2017 - September 2019</div>
+        <h3>Stanford University</h3>
+        <div class="institution">Undergraduate Research Intern at the Computer Science Department</div>
+        <div class="year">June 2017 - September 2019, Stanford, California</div>
     </div>
 
-    <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Honors & Awards</h3>
-    
+</section>
+
+
+<section id="honors">
+    <h2>Honors & Awards</h2>
+
     <div class="education-item">
-        <h3>Outstanding Paper Awards</h3>
-        <div class="institution">CHI 2024, EMNLP 2023</div>
-        <div class="year">2023-2024</div>
+        <h3>Outstanding Paper Award</h3>
+        <div class="institution">CHI 2024 (May 2024)</div>
+    </div>
+
+    <div class="education-item">
+        <h3>Outstanding Paper Award</h3>
+        <div class="institution">EMNLP 2023 (Dec 2023)</div>
     </div>
 
     <div class="education-item">
         <h3>Best Paper Award</h3>
-        <div class="institution">NAACL 2022</div>
-        <div class="year">2022</div>
+        <div class="institution">NAACL 2022 (Jul 2022)</div>
     </div>
 
     <div class="education-item">
         <h3>Anne Dinning - Michael Wolf Endowed Regental Fellowship</h3>
-        <div class="institution">University of Washington</div>
-        <div class="year">2019</div>
+        <div class="institution">University of Washington (Sep 2019)</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Paul G. Allen School First-Year Ph.D. Fellowship</p>
+    </div>
+
+    <div class="education-item">
+        <h3>Member of the Phi Beta Kappa Society</h3>
+        <div class="institution">Colby College (Mar 2018)</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Elected as a member of Phi Beta Kappa with junior standing</p>
+    </div>
+
+    <div class="education-item">
+        <h3>Honorable Mention of Interdisciplinary Contest in Modeling (ICM)</h3>
+        <div class="institution">COMAP (Feb 2018)</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">20th annual Interdisciplinary Contest in Modeling (ICM)</p>
     </div>
 
     <div class="education-item">
         <h3>Julius Seelye Bixler Scholar</h3>
-        <div class="institution">Colby College</div>
-        <div class="year">2017</div>
+        <div class="institution">Colby College (Sep 2017)</div>
         <p style="margin-top: 0.5rem; color: var(--dark-gray);">Top two students in the sophomore and junior classes</p>
     </div>
+
+    <div class="education-item">
+        <h3>Member of the Phi Beta Kappa Society</h3>
+        <div class="institution">Colby College (Sep 2016 – Sep 2018)</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Top-ranking students as determined by the cumulative academic record, three-time recipient</p>
+    </div>
+
+    <div class="education-item">
+        <h3>Phi Beta Kappa Summer Research Scholar</h3>
+        <div class="institution">Colby College (Jun 2016)</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Summer research stipend</p>
+    </div>
 </section>
+
+
 
 <footer>
     <p>&copy; 2025 Liwei Jiang. Last updated: May 2025</p>
