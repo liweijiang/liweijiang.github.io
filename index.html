@@ -278,6 +278,26 @@ h2 {
     font-size: 0.9rem;
 }
 
+.news-item {
+    color: var(--primary-color);
+    /* margin-bottom: 1.5rem; */
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+    /* border-left: 2px solid var(--border-color); */
+}
+
+.news-item h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+/* Add this rule to change the URL color */
+.news-item a {
+    color: var(--secondary-color); 
+    text-decoration: none; 
+}
+
+
 footer {
     text-align: center;
     padding: 2rem 0;
@@ -380,6 +400,7 @@ footer {
 <nav>
     <ul>
         <!-- <li><a href="#about" class="nav-link">About</a></li> -->
+        <li><a href="#news" class="nav-link">News</a></li>
         <li><a href="#publications" class="nav-link">Publications</a></li>
         <li><a href="#experiences" class="nav-link">Education & Experience</a></li>
         <li><a href="#honors" class="nav-link">Honors & Awards</a></li>
@@ -417,9 +438,24 @@ footer {
         <span class="interest-tag">Machine Learning</span>
         <span class="interest-tag">Pluralistic Alignment</span>
         <span class="interest-tag">Human-AI Interaction</span>
-        <!-- <span class="interest-tag">Humanistic AI</span> -->
     </div>
 </section>
+
+
+<section id="news">
+    <h2>News</h2>
+
+    <div class="news-item"> <b>May 2025:</b> Co-organizing another edition of the SoLaR workshop on <a href="https://solar-colm.github.io" target="_blank" rel="noopener noreferrer">Socially Responsible Language Modelling Research</a> at COLM 2025.</div>
+
+    <div class="news-item"> <b>March/May 2025:</b> Gave two guest lectures on <a href="https://drive.google.com/file/d/1C56q1u-ho6-fjJSJpJlmFX6rG6kf1OVn/view?usp=share_link" target="_blank" rel="noopener noreferrer">Red-Teaming and Safeguarding Language Models: Current Practices, Challenges, and Future Directions</a> at CMU and UCLA.</div>
+
+    <div class="news-item"> <b>Oct/Nov 2024:</b> Gave two guest lectures on <a href="https://drive.google.com/file/d/1C1V43nyBUOWjusNiyqLuJPdbNWX8BHkh/view?usp=share_link" target="_blank" rel="noopener noreferrer">How to Build AI with Deep Concerns for Human Traits, Values, and Needs?</a> at UIUC and University of Pittsburgh.</div>
+
+    <div class="news-item"> <b>Oct/Nov 2024:</b> Gave two guest lectures on <a href="https://drive.google.com/file/d/1IxDn0xAuwB1_GA6nKMfUhKLwRf62y7c6/view?usp=share_link" target="_blank" rel="noopener noreferrer">LLM Reasoning (In-Context Learning, Prompting, and Reasoning)</a> at KAIST and UW.</div>
+
+    <div class="news-item"> <b>Jan 2024:</b> Led of TA effort and co-designed (a LLM version!) for the class module of <a href="https://www.notion.so/Winter-24-CSE-447-517-Natural-Language-Processing-4142333a001143d2be5ecff1a535c4ab" target="_blank" rel="noopener noreferrer">CSE 447/517</a>, the undergrad and grad NLP class at UW CSE.</div>
+</section>
+
 
 <section id="publications">
     <h2>Publications <span class="publication-title">(*, + indicate equal contribution)</span> <span class="publication-title"><a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span></h2>
@@ -591,25 +627,6 @@ footer {
             </div>
         </div>
         
-
-        <div class="publication">
-            <div class="publication-title">
-                AI as Humanity's Salieri: Quantifying Linguistic Creativity of Language Models via Systematic Attribution of Machine Text against Web Text
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Ximing Lu, Melanie Sclar, Skyler Hallinan, Niloofar Mireshghallah, Jiacheng Liu, Seungju Han, Allyson Ettinger, <strong>Liwei Jiang</strong>, Khyathi Chandu, Nouha Dziri, Yejin Choi
-                </div>
-                <div class="publication-venue">
-                    ICLR 2025
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2410.04265" target="_blank">PDF</a>
-            </div>
-        </div>
-        
-
         <div class="publication">
             <div class="publication-title">
                 SafetyAnalyst: Interpretable, Transparent, and Steerable Safety Moderation for AI Behavior
@@ -622,6 +639,41 @@ footer {
             </div>
             <div class="publication-links">
                 <a href="https://arxiv.org/abs/2410.16665" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-title">
+                DailyDilemmas: Revealing Value Preferences of LLMs with Quandaries of Daily Life
+            </div>
+            <div class="publication-meta">
+                <div class="publication-authors">
+                    Yu Ying Chiu, <strong>Liwei Jiang</strong>, Yejin Choi
+                </div>
+                <div class="publication-venue">
+                    (Spotlight) ICLR 2025
+                </div>
+            </div>
+            <div class="publication-links">
+                <a href="https://arxiv.org/abs/2410.02683" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        
+        <div class="publication">
+            <div class="publication-title">
+                AI as Humanity's Salieri: Quantifying Linguistic Creativity of Language Models via Systematic Attribution of Machine Text against Web Text
+            </div>
+            <div class="publication-meta">
+                <div class="publication-authors">
+                    Ximing Lu, Melanie Sclar, Skyler Hallinan, Niloofar Mireshghallah, Jiacheng Liu, Seungju Han, Allyson Ettinger, <strong>Liwei Jiang</strong>, Khyathi Chandu, Nouha Dziri, Yejin Choi
+                </div>
+                <div class="publication-venue">
+                    (Oral) ICLR 2025
+                </div>
+            </div>
+            <div class="publication-links">
+                <a href="https://arxiv.org/abs/2410.04265" target="_blank">PDF</a>
             </div>
         </div>
 
