@@ -39,7 +39,7 @@
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: 'Avenir Next', -webkit-system-fallback, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background: white;
@@ -212,6 +212,12 @@ h2 {
     font-style: italic;
     flex: 1;
     min-width: 200px;
+    font-weight: 300;
+}
+
+.publication-authors strong {
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .publication-venue {
@@ -343,7 +349,7 @@ footer {
     <ul>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#publications" class="nav-link">Publications</a></li>
-        <li><a href="#research" class="nav-link">Research</a></li>
+
         <li><a href="#teaching" class="nav-link">Teaching</a></li>
         <li><a href="#cv" class="nav-link">CV</a></li>
     </ul>
@@ -605,6 +611,13 @@ footer {
                 <a href="#" target="_blank">PDF</a>
                 <a href="#" target="_blank">BibTeX</a>
             </div>
+        </div><div class="publication-authors">Valentina Pyatkin, Jena D. Hwang, Vivek Srikumar, Ximing Lu, <strong>Liwei Jiang</strong>, Yejin Choi, Chandra Bhagavatula</div>
+                <div class="publication-venue">ACL</div>
+            </div>
+            <div class="publication-links">
+                <a href="#" target="_blank">PDF</a>
+                <a href="#" target="_blank">BibTeX</a>
+            </div>
         </div>
     </div>
 
@@ -699,60 +712,34 @@ footer {
     </div>
 </section>
 
-<section id="research">
-    <h2>Research</h2>
-    <p class="about-text">
-        My research program focuses on developing next-generation machine learning systems that are both powerful and trustworthy. 
-        I lead several research projects funded by NSF, NIH, and industry partners, with a total funding of over $2.5M.
-    </p>
-    
-    <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Current Projects</h3>
-    
-    <div class="publication">
-        <div class="publication-title">NSF CAREER: Interpretable Deep Learning for Critical Applications</div>
-        <div class="publication-venue">National Science Foundation | 2024-2029 | $750,000</div>
-        <p style="margin-top: 0.8rem; color: var(--dark-gray);">
-            Developing novel techniques for creating interpretable deep learning models that maintain high performance 
-            while providing meaningful explanations for their decisions.
-        </p>
-    </div>
 
-    <div class="publication">
-        <div class="publication-title">AI for Healthcare: Robust Diagnostic Systems</div>
-        <div class="publication-venue">NIH R01 | 2023-2026 | $1,200,000</div>
-        <p style="margin-top: 0.8rem; color: var(--dark-gray);">
-            Collaborating with medical professionals to develop AI systems that can provide reliable diagnostic 
-            assistance while maintaining patient safety and privacy.
-        </p>
-    </div>
-</section>
 
 <section id="teaching">
-    <h2>Teaching</h2>
+    <h2>Teaching & Mentoring</h2>
     
     <div class="education-item">
-        <h3>CS 4501: Advanced Machine Learning</h3>
-        <div class="institution">Fall 2024, Spring 2025</div>
+        <h3>CSE 447/517: Natural Language Processing</h3>
+        <div class="institution">University of Washington, Winter 2024</div>
         <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Graduate-level course covering advanced topics in machine learning, including deep learning, 
-            reinforcement learning, and probabilistic models.
+            Led TA effort and co-renovated/co-designed the class module of the undergrad and grad NLP class (LLM version!). 
+            Helped modernize the curriculum to include cutting-edge developments in large language models.
         </p>
     </div>
 
     <div class="education-item">
-        <h3>CS 3501: Introduction to Artificial Intelligence</h3>
-        <div class="institution">Fall 2023, Fall 2024</div>
+        <h3>Research Mentoring</h3>
+        <div class="institution">Ongoing</div>
         <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Undergraduate course introducing fundamental concepts in AI, including search algorithms, 
-            knowledge representation, and basic machine learning.
+            Actively mentoring undergraduate and junior researchers interested in AI safety, NLP, and human-AI interaction. 
+            Feel free to reach out if you're interested in my work!
         </p>
     </div>
 
     <div class="education-item">
-        <h3>CS 6501: Seminar in AI Ethics</h3>
-        <div class="institution">Spring 2024</div>
+        <h3>Guest Lectures</h3>
+        <div class="institution">Fall 2024</div>
         <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Graduate seminar exploring ethical implications of AI technologies and responsible AI development practices.
+            Delivered guest lectures at UIUC, University of Pittsburgh, and KAIST on topics related to AI safety and alignment.
         </p>
     </div>
 </section>
@@ -764,44 +751,85 @@ footer {
     
     <div class="education-item">
         <h3>Ph.D. in Computer Science</h3>
-        <div class="institution">Top University</div>
-        <div class="year">2018-2023</div>
+        <div class="institution">University of Washington</div>
+        <div class="year">2019-2026 (expected)</div>
         <p style="margin-top: 0.5rem; color: var(--dark-gray);">
-            Dissertation: "Robust and Interpretable Machine Learning for Real-World Applications"<br>
-            Advisor: Prof. Advisor Name
+            Paul G. Allen School of Computer Science & Engineering<br>
+            Advisor: Prof. Yejin Choi<br>
+            Focus: Humanistic AI Safety, Natural Language Processing
         </p>
     </div>
 
     <div class="education-item">
-        <h3>M.S. in Computer Science</h3>
-        <div class="institution">Great University</div>
-        <div class="year">2016-2018</div>
+        <h3>B.A. in Computer Science (Summa Cum Laude)</h3>
+        <div class="institution">Colby College</div>
+        <div class="year">2015-2019</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Phi Beta Kappa Society</p>
     </div>
 
     <div class="education-item">
-        <h3>B.S. in Computer Science</h3>
-        <div class="institution">Excellent College</div>
-        <div class="year">2012-2016</div>
-        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Summa Cum Laude, Phi Beta Kappa</p>
+        <h3>B.A. in Mathematics (Summa Cum Laude)</h3>
+        <div class="institution">Colby College</div>
+        <div class="year">2015-2019</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Phi Beta Kappa Society</p>
     </div>
 
     <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Professional Experience</h3>
     
     <div class="experience-item">
-        <h3>Assistant Professor</h3>
-        <div class="institution">University of Excellence, Department of Computer Science</div>
-        <div class="year">2023-Present</div>
+        <h3>Research Intern</h3>
+        <div class="institution">NVIDIA - NeMo-Guardrails Team</div>
+        <div class="year">March 2025 - Present</div>
     </div>
 
     <div class="experience-item">
-        <h3>Research Intern</h3>
-        <div class="institution">Tech Company AI Research Lab</div>
-        <div class="year">Summer 2022</div>
+        <h3>Graduate Research Intern</h3>
+        <div class="institution">Allen Institute for Artificial Intelligence (AI2)</div>
+        <div class="year">June 2020 - December 2024</div>
+    </div>
+
+    <div class="experience-item">
+        <h3>Visit Student Researcher</h3>
+        <div class="institution">The Future Laboratory, Tsinghua University</div>
+        <div class="year">July 2019 - September 2019</div>
+    </div>
+
+    <div class="experience-item">
+        <h3>Undergraduate Research Intern</h3>
+        <div class="institution">Stanford University</div>
+        <div class="year">June 2017 - September 2019</div>
+    </div>
+
+    <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Honors & Awards</h3>
+    
+    <div class="education-item">
+        <h3>Outstanding Paper Awards</h3>
+        <div class="institution">CHI 2024, EMNLP 2023</div>
+        <div class="year">2023-2024</div>
+    </div>
+
+    <div class="education-item">
+        <h3>Best Paper Award</h3>
+        <div class="institution">NAACL 2022</div>
+        <div class="year">2022</div>
+    </div>
+
+    <div class="education-item">
+        <h3>Anne Dinning - Michael Wolf Endowed Regental Fellowship</h3>
+        <div class="institution">University of Washington</div>
+        <div class="year">2019</div>
+    </div>
+
+    <div class="education-item">
+        <h3>Julius Seelye Bixler Scholar</h3>
+        <div class="institution">Colby College</div>
+        <div class="year">2017</div>
+        <p style="margin-top: 0.5rem; color: var(--dark-gray);">Top two students in the sophomore and junior classes</p>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2025 Dr. Your Name. Last updated: May 2025</p>
+    <p>&copy; 2025 Liwei Jiang. Last updated: May 2025</p>
 </footer>
 </div>
 
