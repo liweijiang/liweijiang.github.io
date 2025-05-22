@@ -152,6 +152,13 @@ h2 {
     text-align: justify;
 }
 
+/* Add this rule to change the URL color */
+.about-text a {
+    color: var(--secondary-color); 
+    text-decoration: none; 
+}
+
+
 .research-interests {
     display: flex;
     flex-wrap: wrap;
@@ -380,17 +387,20 @@ footer {
 <section id="about">
     <!-- <h2>About</h2> -->
     <p class="about-text">
-        I am a Ph.D. candidate at Paul G. Allen School of Computer Science & Engineering, University of Washington, advised by Professor Yejin Choi. I am also a graduate research intern at NVIDIA and was previously a student researcher at Allen Institute for Artificial Intelligence (Ai2). I earned B.A. in Computer Science and B.A. in Mathematics from Colby College.
+        I am a Ph.D. candidate at <a href="https://www.cs.washington.edu">Paul G. Allen School of Computer Science & Engineering, University of Washington</a>, advised by Professor <a href="http://yejinc.github.io">Yejin Choi</a>. I am also a graduate research intern at <a href="https://www.nvidia.com">NVIDIA</a> and was previously a student researcher at <a href="https://allenai.org">Allen Institute for Artificial Intelligence (Ai2)</a>. I earned B.A. in Computer Science and B.A. in Mathematics from <a href="https://www.colby.edu">Colby College</a>.
     </p>
     <p class="about-text">
-        My research centers on humanistic AI safety, aiming to foster the synergistic, secure, and sustainable coexistence of AI and society—ultimately shaping the co-evolution of AI and humanity:
-     
-        From Human to AI: Developing human-centered, continually-evolving, and future-proof AI systems—drawing upon interdisciplinary insights into human intelligence, values, and global needs.
-
-        From AI to Human: Advancing the frontiers of knowledge about individuals and society, augmenting human capabilities, and addressing humanity’s most consequential sociotechnical challenges—through robust, efficient, and scalable innovations in data, learning algorithms, and system design.
+        My research centers on <b>humanistic AI safety</b>, aiming to foster the synergistic, secure, and sustainable coexistence of AI and society—<b>ultimately</b> shaping the <b>co-evolution of AI and humanity</b>:
+    </p>
+    <p class="about-text" style="margin-left: 20px;">
+        <b>From Human to AI:</b> Developing human-centered, continually-evolving, and future-proof AI systems—drawing upon interdisciplinary insights into human intelligence, values, and global needs.
+    </p>
+    <p class="about-text" style="margin-left: 20px;">
+        <b>From AI to Human:</b> Advancing the frontiers of knowledge about individuals and society, augmenting human capabilities, and addressing humanity’s most consequential sociotechnical challenges—through robust, efficient, and scalable innovations in data, learning algorithms, and system design.
     </p>
     <p class="about-text">
-        My current research encompasses topics such as pluralistic alignment, self-improving algorithms for steerable and secure language models, anticipatory strategies for long-term risks—including overreliance and the erosion of human creativity—and socially impactful applications, such as clinical AI.
+        My <b>current research</b> includes topics such as pluralistic alignment, self-improving algorithms for steerable and secure language models, anticipatory strategies for long-term risks—including overreliance and the erosion of human creativity—and socially impactful applications.
+        <!-- , such as clinical AI. -->
     </p>
     <div class="research-interests">
         <span class="interest-tag">Artificial Intelligence</span>
