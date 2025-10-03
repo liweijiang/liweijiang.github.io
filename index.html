@@ -12,7 +12,6 @@
     --light-gray: #f7fafc;
     --border-color: #e2e8f0;
     --dark-gray: #4a5568;
-    /* --yellow-color: #ffde21; */
     --yellow-color: #ffcc00;
     --orange-color: #ff5c00;
 }
@@ -68,7 +67,6 @@ header {
     font-size: 2.8rem;
     font-weight: 400;
     color: var(--primary-color);
-    /* margin-bottom: 0.5rem; */
 }
 
 .title {
@@ -146,7 +144,7 @@ h2 {
 }
 
 .about-text {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     line-height: 1.5;
     font-weight: 400;
     margin-bottom: 0.5rem;
@@ -232,10 +230,9 @@ h2 {
     color: var(--secondary-color);
     font-weight: 400;
     font-style: italic;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     padding-top: 0.3rem;
 }
-
 
 .publication-links {
     display: flex;
@@ -272,8 +269,6 @@ h2 {
 }
 
 .job-market-item {
-    /* margin-top: 0rem;
-    margin-bottom: rem; */
     padding-left: 1rem;
     border-left: 2px solid var(--border-color);
 }
@@ -305,7 +300,7 @@ h2 {
     color: var(--primary-color);
     /* margin-bottom: 1.5rem; */
     padding-left: 1.2rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     /* border-left: 2px solid var(--border-color); */
 }
 
@@ -413,18 +408,10 @@ footer {
                 <a href="https://www.linkedin.com/in/liwei-jiang-jlw/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
                 <a href="https://github.com/liweijiang" target="_blank" rel="noopener noreferrer">GitHub</a> |
                 <a href="https://x.com/liweijianglw" target="_blank" rel="noopener noreferrer">X</a> 
-                <!-- |<a href="static/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a> -->
             </span>
         </div>
-        <!-- <div style="padding-top: 10px;" class="education-item">    
-            <b style="color: var(--orange-color)">I'm on the academic job market for fall 2025!</b> Feel free to reach out if you'd like to share opportunities, collaborate, or just chat!
-        </div> -->
     </div>
 </header>
-
-<!-- <div class="job-market-item">    
-    <b style="color: var(--orange-color)">I'm on the job market for fall 2025!</b> Feel free to reach out if you'd like to share opportunities, collaborate, or just chat!
-</div> -->
 
 <nav>
     <ul>
@@ -438,9 +425,9 @@ footer {
 </nav>
 
 <section id="about">
-    <!-- <h2>About</h2> -->
     <p class="about-text">
-        I am a final-year Ph.D. candidate at <a href="https://www.cs.washington.edu">Paul G. Allen School of Computer Science & Engineering, University of Washington</a>, advised by Professor <a href="http://yejinc.github.io">Yejin Choi</a>. I am also a graduate student researcher at <a href="https://www.nvidia.com">NVIDIA</a> and was previously a student researcher at <a href="https://allenai.org">Allen Institute for Artificial Intelligence (Ai2)</a>. I graduated <i>summa cum laude</i> from <a href="https://www.colby.edu">Colby College</a> with B.A. degrees in Computer Science and Mathematics.
+        I am a final-year Ph.D. candidate at <a href="https://www.cs.washington.edu">Paul G. Allen School of Computer Science & Engineering, University of Washington</a>, advised by Professor <a href="http://yejinc.github.io">Yejin Choi</a>. I am also a graduate student researcher at <a href="https://www.nvidia.com">NVIDIA</a> and was previously a student researcher at <a href="https://allenai.org">Allen Institute for Artificial Intelligence (Ai2)</a>. 
+        <!-- I graduated <i>summa cum laude</i> from <a href="https://www.colby.edu">Colby College</a> with B.A. degrees in Computer Science and Mathematics. -->
     </p>
     <!-- <p class="about-text">
         My research centers on <b>humanistic AI safety</b>, aiming to foster the synergistic, secure, and sustainable coexistence of AI and society—<b>ultimately</b> shaping the <b>co-evolution of AI and humanity</b>:
@@ -456,16 +443,47 @@ footer {
         My <b>current research</b> spans pluralistic alignment, self-improving algorithms for steerable and secure language models, anticipatory technical solutions to long-term risks—such as overreliance and the erosion of human creativity—and the development of socially beneficial applications.
     </p> -->
 
+    <div style="height: 1px;"></div>
+
     <p class="about-text">
-        My research centers on <b>Humanistic, Pluralistic, and Holistic AI Safety and Alignment</b>, aiming to foster secure, sustainable, and synergistic coexistence of AI and society - <b>ultimately</b> shaping the <b>co-evolution of AI and humanity</b>:
+        <p class="about-text">
+            My research centers on
+            <span style="
+                display: inline-block;
+                background: #f1f9fc;
+                border-radius: 6px;
+                margin-bottom: 0.3em;
+                padding: 0.1em 1.02em;
+                box-shadow: 0 2px 4px rgba(111, 206, 243, 0.35),
+                            0 1px 2px rgba(107, 171, 255, 0.25);
+            ">
+                <b>
+                <span style="color:#FF6B6B;">Humanistic</span>, 
+                <span style="color:#5CA9C9;">Pluralistic</span>, and 
+                <span style="color:#ffb300;">Holistic</span> AI Safety and Alignment
+                </b>
+
+                <!-- <b>
+                    <span style="color:#1885b4;">Humanistic</span>, 
+                    <span style="color:#1885b4;">Pluralistic</span>, and 
+                    <span style="color:#1885b4;">Holistic</span> AI Safety and Alignment
+                </b> -->
+
+            </span>
+            
+            aiming to foster the long-term secure, sustainable, and synergistic <b>co-evolution of AI and humanity</b>:
+            </p>
     </p>
+
     <p class="about-text" style="margin-left: 20px;">
-        <b>From Human to AI:</b> Developing human-centered, continually-evolving, and future-oriented AI systems, drawing upon interdisciplinary insights into human intelligence, values, and global needs.
+        <b>From Human to AI:</b> Developing human-centered, ever-evolving, and future-oriented AI systems, anchored in interdisciplinary insights into human intelligence, values, and global needs.
     </p>
-    
+
     <p class="about-text" style="margin-left: 20px;">
-        <b>From AI to Human:</b> Advancing the frontiers of knowledge about individuals and the world, augmenting human capabilities, and addressing consequential sociotechnical challenges, through robust, efficient, and scalable innovations in data, learning algorithms, and system design.
+        <b>From AI to Human:</b> Advancing the frontiers of human knowledge, augmenting human capabilities, and addressing consequential sociotechnical challenges through robust, efficient, and scalable innovations in data, learning algorithms, and AI system design.
     </p>
+
+        
     <!-- <p class="about-text">
         My <b>current research</b> focuses on scalable approaches to <a href="https://arxiv.org/abs/2402.05070">pluralistic alignment</a>, building solutions for tackling sociotechnical challenges in AI safety, proactive interventions addressing long-term risks such as overreliance and the erosion of human creativity, and the development of socially beneficial applications.
     </p> -->
@@ -478,32 +496,18 @@ footer {
         <span class="interest-tag">Human-AI Interaction</span>
     </div>
 
-    <!-- <div class="education-item">
-        <i>I'm always happy to chat about research; feel free to reach out if you're interested in connecting or exploring collaboration opportunities!</i>
-    </div> -->
-
-    <!-- <div class="job-market-item">    
-        <b style="color: var(--orange-color)">I'm on the job market for 2026!</b> Please feel free to reach out if you think my background could be a good fit for your organization.
-    </div> -->
-
-    <!-- <div class="job-market-item" style="background: #fff3cd; border-left: 4px solid #f0ad4e; padding: 0.6em 1em; border-radius: 4px;">
-        <strong style="color: #d35400;">🚀 I'm on the job market for 2026!</strong>
-        <span style="margin-left: 0.3em;">Please feel free to reach out if you think my background could be a good fit for your organization.</span>
-    </div> -->
-
     <div class="job-market-item" 
-        style="background: #fff3cd;
-                border-left: 4px solid #f0ad4e;
-                padding: 0.8em 1em;
-                border-radius: 6px;
-                box-shadow: 0 4px 8px rgba(0,0,0,0.08),
-                            0 2px 4px rgba(0,0,0,0.06);
-                transition: transform 0.2s ease, box-shadow 0.2s ease;">
-        <strong style="color: #d35400; font-size: 1.05em;">🔥 I'm on the job market for 2026!</strong>
-        <span style="margin-left: 0.3em;">Please feel free to reach out if you think my background could be a good fit for your organization.</span>
+        style="background: #ffffff; /* lighter & brighter yellow */
+            border-left: 5px solid #f39c12;
+            padding: 0.8em 1em;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.08),
+                        0 3px 6px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;">
+    <strong style="color: #ff5c00; font-size: 1em;">⛰️ I'm on the job market for 2026!</strong>
+    <span style="margin-left: 0.3em; font-weight: 500;">Please feel free to reach out if you think my background could be a good fit for your organization.</span>
     </div>
 
-      
 </section>
 
 <section id="news">
@@ -677,7 +681,7 @@ footer {
                     Yu Ying Chiu, <strong>Liwei Jiang</strong>, Yejin Choi
                 </div>
                 <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Spotlight)</b> ICLR 2025
+                    <b style="color: var(--orange-color)">(Spotlight, Top 5.1%)</b> ICLR 2025
                 </div>
             </div>
             <div class="publication-links">
@@ -760,7 +764,7 @@ footer {
                     Ximing Lu, Melanie Sclar, Skyler Hallinan, Niloofar Mireshghallah, Jiacheng Liu, Seungju Han, Allyson Ettinger, <strong>Liwei Jiang</strong>, Khyathi Chandu, Nouha Dziri, Yejin Choi
                 </div>
                 <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Oral)</b> ICLR 2025
+                    <b style="color: var(--orange-color)">(Oral, Top 1.8%)</b> ICLR 2025
                 </div>
             </div>
             <div class="publication-links">
@@ -850,7 +854,7 @@ footer {
                     Linlu Qiu, <strong>Liwei Jiang</strong>, Ximing Lu, Melanie Sclar, Valentina Pyatkin, Chandra Bhagavatula, Bailin Wang, Yoon Kim, Yejin Choi, Nouha Dziri, Xiang Ren
                 </div>
                 <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Oral)</b> ICLR 2024
+                    <b style="color: var(--orange-color)">(Oral, Top 1.2%)</b> ICLR 2024
                 </div>
             </div>
             <div class="publication-links">
@@ -1072,7 +1076,7 @@ footer {
                     Nouha Dziri*, Ximing Lu*, Melanie Sclar*, <strong>Liwei Jiang+</strong>, Xiang Lorraine Li+, Bill Yuchen Lin+, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D. Hwang, Soumya Sanyal, Sean Welleck, Xiang Ren, Allyson Ettinger, Zaid Harchaoui, Yejin Choi
                 </div>
                 <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Spotlight)</b> NeurIPS 2023</span>
+                    <b style="color: var(--orange-color)">(Spotlight, Top 3.1%)</b> NeurIPS 2023</span>
                 </div>
             </div>
             <div class="publication-links">
@@ -1333,8 +1337,12 @@ footer {
     </div>
 
     <div class="education-item">
-        <p>Hobbies: switching between hobbies.</p>
+        <p>My current life motto: be happy and be healthy.</p>
     </div>
+
+    <!-- <div class="education-item">
+        <p>Hobbies: switching between hobbies.</p>
+    </div> -->
 </section>
 
 <footer>
