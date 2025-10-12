@@ -1,1521 +1,1667 @@
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Liwei Jiang | 姜力炜</title>
-<style>
-:root {
-    --primary-color: #1a365d;
-    --secondary-color: #2b6cb0;
-    --accent-color: #3182ce;
-    --text-color: #2d3748;
-    --light-gray: #f7fafc;
-    --border-color: #e2e8f0;
-    --dark-gray: #4a5568;
-    --yellow-color: #ffcc00;
-    --orange-color: #ff5c00;
-    --red-color: #ff2600;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liwei Jiang | 姜力炜</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #3182ce;
+            --text-color: #2d3748;
+            --light-gray: #f7fafc;
+            --border-color: #e2e8f0;
+            --dark-gray: #4a5568;
+            --yellow-color: #ffcc00;
+            --orange-color: #ff5c00;
+            --red-color: #ff2600;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: 'Avenir Next', -webkit-system-fallback, 'Segoe UI', Roboto, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background: white;
-}
+        body {
+            font-family: 'Avenir Next', -webkit-system-fallback, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: white;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-header {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid var(--border-color);
-    align-items: center;
-}
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            /* margin-bottom: 3rem; */
+            padding-bottom: 1.0rem;
+            /* border-bottom: 2px solid var(--border-color); */
+            align-items: center;
+        }
 
-.profile-section {
-    text-align: center;
-}
+        .profile-section {
+            text-align: center;
+        }
 
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 8px;
-    margin: 0 auto 1rem;
-    background: var(--light-gray);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--secondary-color);
-    border: 1px solid var(--border-color);
-}
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            margin: 0 auto 1rem;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+        }
 
-.header-content h1 {
-    font-size: 2.8rem;
-    font-weight: 400;
-    color: var(--primary-color);
-}
+        .header-content h1 {
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
 
-.title {
-    font-size: 1rem;
-    color: var(--dark-gray);
-    margin-bottom: 0.8rem;
-    font-weight: 500;
-    font-style: italic;
-    margin-left: 1rem;
-}
+        .header-content h2 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: var(--primary-color);
+        }
 
-.affiliation {
-    font-size: 1rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.8rem;
-    font-weight: 500;
-}
+        .title {
+            font-size: 1rem;
+            color: var(--dark-gray);
+            margin-bottom: 0.9rem;
+            font-weight: 500;
+            /* font-style: italic; */
+            margin-left: 1rem;
+        }
 
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    gap: 0.5rem;
-}
+        .affiliation {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
 
-.contact-info a {
-    color: var(--accent-color);
-    text-decoration: none;
-}
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            gap: 0.5rem;
+        }
 
-.contact-info a:hover {
-    text-decoration: underline;
-}
+        .contact-info a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
 
-nav {
-    background: var(--light-gray);
-    padding: 1rem 0;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-}
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
+        nav {
+            background: var(--light-gray);
+            padding: 0.8rem 0;
+            margin-bottom: 2rem;
+            /* margin-top: -2.0rem; */
+            border-radius: 8px;
+        }
 
-nav a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
-nav a:hover, nav a.active {
-    background: var(--secondary-color);
-    color: white;
-}
+        nav a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
 
-section {
-    margin-bottom: 3rem;
-}
+        nav a:hover,
+        nav a.active {
+            background: var(--secondary-color);
+            color: white;
+        }
 
-h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--secondary-color);
-    font-weight: 400;
-}
+        section {
+            margin-bottom: 2rem;
+            padding: 0.2rem;
+        }
 
-.about-text {
-    font-size: 0.98rem;
-    line-height: 1.5;
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    text-align: justify;
-}
+        h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+            font-weight: 400;
+        }
 
-/* Add this rule to change the URL color */
-.about-text a {
-    color: var(--secondary-color); 
-    text-decoration: none; 
-}
+        .about-text {
+            font-size: 0.98rem;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            text-align: justify;
+        }
 
+        /* Add this rule to change the URL color */
+        .about-text a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
 
-.research-interests {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin: 1.5rem 0;
-}
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
 
-.interest-tag {
-    background: var(--light-gray);
-    padding: 0.4rem 0.6rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    border: 1px solid var(--border-color);
-}
+        .interest-tag {
+            background: var(--light-gray);
+            padding: 0.4rem 0.6rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
 
-/* Compact Publication Styles */
-.publication {
-    background: white;
-    padding: 0.7rem;
-    margin-bottom: 0.7rem;
-    border-left: 3px solid var(--secondary-color);
-    border-radius: 4px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
+        /* Compact Publication Styles */
+        .publication {
+            background: white;
+            padding: 0.7rem;
+            margin-bottom: 0.7rem;
+            border-left: 3px solid var(--secondary-color);
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
 
-.publication-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.2rem;
-    line-height: 1.3;
-}
+        .publication-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.2rem;
+            line-height: 1.3;
+        }
 
-/* Add this rule to change the URL color */
-.publication-title a {
-    color: var(--secondary-color); 
-    text-decoration: none; 
-}
+        /* Add this rule to change the URL color */
+        .publication-title a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
 
-.publication-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.8rem;
-    font-size: 0.9rem;
-    margin-bottom: 0.4rem;
-}
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+        }
 
-.publication-authors {
-    color: var(--dark-gray);
-    font-style: normal;
-    flex: 1;
-    min-width: 200px;
-    font-weight: 400;
-}
+        .publication-authors {
+            color: var(--dark-gray);
+            font-style: normal;
+            flex: 1;
+            min-width: 200px;
+            font-weight: 400;
+        }
 
-.publication-authors strong {
-    font-weight: 600;
-    color: var(--text-color);
-}
+        .publication-authors strong {
+            font-weight: 600;
+            color: var(--text-color);
+        }
 
-.publication-venue {
-    color: var(--secondary-color);
-    font-weight: 500;
-}
+        .publication-venue {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
 
-.workshop-venue {
-    color: var(--secondary-color);
-    font-weight: 400;
-    font-style: italic;
-    font-size: 0.85rem;
-    padding-top: 0.3rem;
-}
+        .workshop-venue {
+            color: var(--secondary-color);
+            font-weight: 400;
+            font-style: italic;
+            font-size: 0.85rem;
+            padding-top: 0.3rem;
+        }
 
-.workshop-award {
-    color: var(--secondary-color);
-    font-weight: 600;
-    /* font-style: italic; */
-    font-size: 0.85rem;
-    padding-top: 0.3rem;
-}
+        .workshop-award {
+            color: var(--secondary-color);
+            font-weight: 600;
+            /* font-style: italic; */
+            font-size: 0.85rem;
+            padding-top: 0.3rem;
+        }
 
-.publication-links {
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-}
+        .paper-award {
+            font-weight: 700;
+            color: var(--red-color);
+        }
 
-.publication-links a {
-    color: var(--accent-color);
-    text-decoration: none;
-    padding: 0.15rem 0.5rem;
-    border: 1px solid var(--accent-color);
-    border-radius: 3px;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-}
+        .publication-links {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
 
-.publication-links a:hover {
-    background: var(--accent-color);
-    color: white;
-}
+        .publication-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 0.15rem 0.5rem;
+            border: 1px solid var(--accent-color);
+            border-radius: 3px;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
 
-.year-section {
-    margin-bottom: 1.2rem;
-}
+        .publication-links a:hover {
+            background: var(--accent-color);
+            color: white;
+        }
 
-.year-header {
-    font-size: 1.2rem;
-    color: var(--yellow-color);
-    margin-bottom: 0.6rem;
-    font-weight: 700;
-    border-left: 10px solid var(--yellow-color);
-    padding-left: 1rem;
-}
+        .year-section {
+            margin-bottom: 1.2rem;
+        }
 
-.job-market-item {
-    padding-left: 1rem;
-    border-left: 2px solid var(--border-color);
-}
+        .year-header {
+            font-size: 1.2rem;
+            color: var(--yellow-color);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            border-left: 10px solid var(--yellow-color);
+            padding-left: 1rem;
+        }
 
-.education-item, .experience-item {
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--border-color);
-}
+        .job-market-item {
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-color);
+        }
 
-.education-item h3, .experience-item h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
+        .education-item,
+        .experience-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid var(--border-color);
+        }
 
-.education-item .institution, .experience-item .institution {
-    color: var(--secondary-color);
-    font-weight: 500;
-    margin-bottom: 0.3rem;
-}
+        .education-item h3,
+        .experience-item h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
 
-.education-item .year, .experience-item .year {
-    color: var(--dark-gray);
-    font-size: 0.9rem;
-}
+        .education-item .institution,
+        .experience-item .institution {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
 
-.news-item {
-    color: var(--primary-color);
-    /* margin-bottom: 1.5rem; */
-    padding-left: 1.2rem;
-    font-size: 0.95rem;
-    /* border-left: 2px solid var(--border-color); */
-}
+        .education-item .year,
+        .experience-item .year {
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
 
-.news-item h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-}
+        #news {
+            max-height: 250px;
+            overflow-y: auto;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
 
-.news-item a {
-    color: var(--secondary-color); 
-    text-decoration: none; 
-}
+        #news h2 {
+            margin-top: 0;
+        }
 
-footer {
-    text-align: center;
-    padding: 2rem 0;
-    border-top: 1px solid var(--border-color);
-    color: var(--dark-gray);
-    font-size: 0.9rem;
-}
+        .news-item {
+            margin-bottom: 1em;
+            line-height: 1.5;
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
+        .news-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
 
-    header {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-    }
+        #news::-webkit-scrollbar {
+            width: 8px;
+        }
 
-    .header-content h1 {
-        font-size: 2.2rem;
-    }
+        #news::-webkit-scrollbar-thumb {
+            background-color: #bbb;
+            border-radius: 4px;
+        }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
+        #news::-webkit-scrollbar-thumb:hover {
+            background-color: #999;
+        }
 
-    .publication-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.3rem;
-    }
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
 
-    .publication-authors {
-        min-width: auto;
-    }
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
 
-    .publication-links {
-        justify-content: flex-start;
-    }
-}
-.social-links {
-  margin-top: 8px;
-  display: flex;
-  gap: 15px;
-}
+            header {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1rem;
+            }
 
-.social-links a {
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
+            .header-content h1 {
+                font-size: 2.2rem;
+            }
 
-.social-links a:hover {
-  color: #004499;
-  text-decoration: underline;
-}
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
 
-.social-links a::before {
-  margin-right: 5px;
-}
+            .publication-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
 
-.social-links a[href*="linkedin"]::before {
-  content: "💼";
-}
+            .publication-authors {
+                min-width: auto;
+            }
 
-.social-links a[href*="scholar"]::before {
-  content: "🎓";
-}
+            .publication-links {
+                justify-content: flex-start;
+            }
+        }
 
-.social-links a[href*="twitter"]::before {
-  content: "🐦";
-}
-</style>
+        .social-links {
+            margin-top: 8px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: #004499;
+            text-decoration: underline;
+        }
+
+        .social-links a::before {
+            margin-right: 5px;
+        }
+
+        .social-links a[href*="linkedin"]::before {
+            content: "💼";
+        }
+
+        .social-links a[href*="scholar"]::before {
+            content: "🎓";
+        }
+
+        .social-links a[href*="twitter"]::before {
+            content: "🐦";
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-<header>
-    <div class="profile-section">
-        <img src="static/avatar.png" alt="Liwei Jiang Profile Picture" class="profile-img">
-    </div>
-    <div class="header-content">
-        <h2><b>Liwei</b> <b style="color: var(--yellow-color);">Jiang</b> | 姜力炜 <span class="title">Ph.D. Candidate</span></h2>
-        <p class="affiliation">Paul G. Allen School of Computer Science & Engineering, University of Washington</p>
-        <div class="contact-info">
-            <span><b>Contact:</b> <a href="mailto:lwjiang@cs.washington.edu">lwjiang@cs.washington.edu</a> | 
-                <a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> | 
-                <a href="https://www.linkedin.com/in/liwei-jiang-jlw/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-                <a href="https://github.com/liweijiang" target="_blank" rel="noopener noreferrer">GitHub</a> |
-                <a href="https://x.com/liweijianglw" target="_blank" rel="noopener noreferrer">X</a> 
-            </span>
-        </div>
-    </div>
-</header>
+    <div class="container">
+        <header>
+            <div class="profile-section">
+                <img src="static/avatar.png" alt="Liwei Jiang Profile Picture" class="profile-img">
+            </div>
+            <div class="header-content">
+                <h2><b>Liwei</b> <b style="color: var(--yellow-color);">Jiang</b> | 姜力炜 <span class="title">Ph.D.
+                        Candidate</span></h2>
+                <p class="affiliation">Paul G. Allen School of Computer Science & Engineering, University of Washington
+                </p>
+                <div class="contact-info">
+                    <span><b>Contact:</b> <a href="mailto:lwjiang@cs.washington.edu">lwjiang@cs.washington.edu</a> |
+                        <a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en" target="_blank"
+                            rel="noopener noreferrer">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/liwei-jiang-jlw/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a> |
+                        <a href="https://github.com/liweijiang" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                        <a href="https://x.com/liweijianglw" target="_blank" rel="noopener noreferrer">X</a>
+                    </span>
+                </div>
+            </div>
+        </header>
 
-<nav>
-    <ul>
-        <li><a href="#news" class="nav-link">News</a></li>
-        <li><a href="#publications" class="nav-link">Publications</a></li>
-        <li><a href="#experiences" class="nav-link">Education & Experience</a></li>
-        <li><a href="#honors" class="nav-link">Honors & Awards</a></li>
-        <li><a href="#personal" class="nav-link">Personal</a></li>
-        <li><a href="static/CV.pdf" class="nav-link">CV</a></li>
-    </ul>
-</nav>
+        <nav>
+            <ul>
+                <li><a href="#news" class="nav-link">News</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#experiences" class="nav-link">Education & Experience</a></li>
+                <li><a href="#honors" class="nav-link">Honors & Awards</a></li>
+                <li><a href="static/CV.pdf" class="nav-link">CV</a></li>
+                <li><a href="#resources" class="nav-link">Resources</a></li>
+                <li><a href="#personal" class="nav-link">Personal</a></li>
+            </ul>
+        </nav>
 
-<section id="about">
-    <p class="about-text">
-        I am a final-year Ph.D. candidate at <a href="https://www.cs.washington.edu">Paul G. Allen School of Computer Science & Engineering, University of Washington</a>, advised by Professor <a href="http://yejinc.github.io">Yejin Choi</a>. I am also a graduate student researcher at <a href="https://www.nvidia.com">NVIDIA</a> and was previously a student researcher at <a href="https://allenai.org">Allen Institute for Artificial Intelligence (Ai2)</a>. 
-        <!-- I graduated <i>summa cum laude</i> from <a href="https://www.colby.edu">Colby College</a> with B.A. degrees in Computer Science and Mathematics. -->
-    </p>
-    <!-- <p class="about-text">
-        My research centers on <b>humanistic AI safety</b>, aiming to foster the synergistic, secure, and sustainable coexistence of AI and society—<b>ultimately</b> shaping the <b>co-evolution of AI and humanity</b>:
-    </p>
-    <p class="about-text" style="margin-left: 20px;">
-        <b>From Human to AI:</b> Developing human-centered, continually-evolving, and future-oriented AI systems—drawing upon interdisciplinary insights into human intelligence, values, and global needs.
-    </p>
-    
-    <p class="about-text" style="margin-left: 20px;">
-        <b>From AI to Human:</b> Advancing the frontiers of knowledge about individuals and the world, augmenting human capabilities, and addressing consequential sociotechnical challenges—through robust, efficient, and scalable innovations in data, learning algorithms, and system design.
-    </p>
-    <p class="about-text">
-        My <b>current research</b> spans pluralistic alignment, self-improving algorithms for steerable and secure language models, anticipatory technical solutions to long-term risks—such as overreliance and the erosion of human creativity—and the development of socially beneficial applications.
-    </p> -->
+        <section id="about">
+            <p class="about-text">
+                I am a final-year Ph.D. candidate at <a href="https://www.cs.washington.edu">Paul G. Allen School of
+                    Computer Science & Engineering, University of Washington</a>, advised by Prof. <a
+                    href="http://yejinc.github.io">Yejin Choi</a>. I am also a graduate student researcher at <a
+                    href="https://www.nvidia.com">NVIDIA</a> and was previously a student researcher at <a
+                    href="https://allenai.org">Allen Institute for Artificial Intelligence (Ai2)</a>.
+                <!-- I graduated <i>summa cum laude</i> from <a href="https://www.colby.edu">Colby College</a> with B.A. degrees in Computer Science and Mathematics. -->
+            </p>
 
-    <div style="height: 1px;"></div>
+            <div style="height: 1px;"></div>
 
-    <p class="about-text">
-        <p class="about-text">
-            My research centers on
-            <span style="
+            <p class="about-text">
+            <p class="about-text">
+                My research centers on
+                <span style="
                 display: inline-block;
                 background: #f1f9fc;
                 border-radius: 6px;
                 margin-bottom: 0.3em;
                 padding: 0.1em 1.02em;
                 box-shadow: 0 2px 4px rgba(111, 206, 243, 0.35),
-                            0 1px 2px rgba(107, 171, 255, 0.25);
-            ">
-                <b>
-                <span style="color:#FF6B6B;">Humanistic</span>, 
-                <span style="color:#5CA9C9;">Pluralistic</span>, and 
-                <span style="color:#ffb300;">Holistic</span> AI Safety and Alignment
-                </b>
+                            0 1px 2px rgba(107, 171, 255, 0.25);">
+                    <b>
+                        <span style="color:#FF6B6B;">Humanistic</span>,
+                        <span style="color:#5CA9C9;">Pluralistic</span>, and
+                        <span style="color:#ffb300;">Holistic</span> AI Safety and Alignment
+                    </b>
 
-                <!-- <b>
-                    <span style="color:#1885b4;">Humanistic</span>, 
-                    <span style="color:#1885b4;">Pluralistic</span>, and 
-                    <span style="color:#1885b4;">Holistic</span> AI Safety and Alignment
-                </b> -->
+                </span>
 
-            </span>
-            
-            aiming to foster the long-term secure, sustainable, and synergistic <b>co-evolution of AI and humanity</b>:
+                aiming to foster the long-term secure, sustainable, and synergistic <b>co-evolution of AI and humanity</b>:
             </p>
-    </p>
+            </p>
 
-    <p class="about-text" style="margin-left: 20px;">
-        <b>From Human to AI:</b> Developing human-centered, ever-evolving, and future-oriented AI systems, anchored in interdisciplinary insights into human intelligence, values, and global needs.
-    </p>
+            <p class="about-text" style="margin-left: 20px;">
+                <b>From Human to AI:</b> Developing human-centered, ever-evolving, and future-oriented AI systems,
+                anchored in interdisciplinary insights into human intelligence, values, and global needs.
+            </p>
 
-    <p class="about-text" style="margin-left: 20px;">
-        <b>From AI to Human:</b> Advancing the frontiers of human knowledge, augmenting human capabilities, and addressing consequential sociotechnical challenges through robust, efficient, and scalable innovations in data, learning algorithms, and AI system design.
-    </p>
+            <p class="about-text" style="margin-left: 20px;">
+                <b>From AI to Human:</b> Advancing the frontiers of human knowledge, augmenting human capabilities, and
+                addressing consequential sociotechnical challenges through robust, efficient, and scalable innovations
+                in data, learning algorithms, and AI system design.
+            </p>
 
-        
-    <p class="about-text">
-        My <b>current research</b> focuses on scalable approaches to <a href="https://arxiv.org/abs/2402.05070">pluralistic alignment</a>, building solutions for tackling sociotechnical challenges in AI safety, proactive interventions addressing long-term risks such as overreliance and the erosion of human creativity, and the development of socially beneficial applications.
-    </p>
+            <p class="about-text">
+                My <b>current research</b> focuses on scalable approaches to <a
+                    href="https://arxiv.org/abs/2402.05070">pluralistic alignment</a>, building solutions for tackling
+                sociotechnical challenges in AI safety, proactive interventions addressing long-term risks such as
+                overreliance and the erosion of human creativity, and the development of socially beneficial
+                applications.
+            </p>
 
 
-    <!-- <p class="about-text">
+            <!-- <p class="about-text">
         My <b>current research</b> focuses on scalable approaches to <a href="https://arxiv.org/abs/2402.05070">pluralistic alignment</a>, building solutions for tackling sociotechnical challenges in AI safety, proactive interventions addressing long-term risks such as overreliance and the erosion of human creativity, and the development of socially beneficial applications.
     </p> -->
 
-    <div class="research-interests">
-        <span class="interest-tag">Artificial Intelligence</span>
-        <span class="interest-tag">Machine Learning</span>
-        <span class="interest-tag">Natural Language Processing</span>
-        <span class="interest-tag">AI Safety</span>
-        <span class="interest-tag">Pluralistic Alignment</span>
-        <span class="interest-tag">Human-AI Interaction</span>
-    </div>
+            <div class="research-interests">
+                <span class="interest-tag">Artificial Intelligence</span>
+                <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">AI Safety</span>
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Pluralistic Alignment</span>
+                <span class="interest-tag">Human-AI Interaction</span>
+            </div>
 
-    <div class="job-market-item" 
-        style="background: #ffffff; /* lighter & brighter yellow */
+            <div class="job-market-item" style="background: #ffffff; /* lighter & brighter yellow */
             border-left: 5px solid #f39c12;
             padding: 0.8em 1em;
             border-radius: 6px;
             box-shadow: 0 5px 10px rgba(0,0,0,0.08),
                         0 3px 6px rgba(0,0,0,0.06);
             transition: transform 0.2s ease, box-shadow 0.2s ease;">
-    <strong style="color: #ff2600; font-size: 1em;">⛰️ I'm on the job market for 2026!</strong>
-    <span style="margin-left: 0.3em; font-weight: 500;">Please feel free to reach out if you think my background could be a good fit for your organization.</span>
-    </div>
-
-</section>
-
-<!-- <section id="news">
-    <h2>News</h2>
-    <div class="news-item"> <b>Dec 2025:</b> I'll be traveling to San Diego for NeurIPS 2025 for presenting two accepted papers (oral for Artificial Hivemind; poster for AI debates for controversial claims). I'll also be attending the <a href="https://www.far.ai/events/alignment-workshop">Alignment Workshop</a>! Please feel free to reach out if you'd like to chat!</div>
-
-    <div class="news-item"> <b>Oct 2025:</b> Co-organize another edition of the SoLaR workshop on <a href="https://solar-colm.github.io">Socially Responsible Language Modelling Research</a> at COLM 2025.</div>
-    
-    <div class="news-item"> <b>July 2025:</b> Co-present our tutorial on <a href="https://llm-guardrails-security.github.io">Guardrails and Security for LLMs: Safe, Secure, and Controllable Steering of LLM Applications</a> at ACL 2025! Check out the slides at the tutorial website!</div>
-
-    <div class="news-item"> <b>March/May 2025:</b> Give two guest lectures on <a href="https://drive.google.com/file/d/1C56q1u-ho6-fjJSJpJlmFX6rG6kf1OVn/view?usp=share_link" target="_blank" rel="noopener noreferrer">Red-Teaming and Safeguarding Language Models: Current Practices, Challenges, and Future Directions</a> at CMU and UCLA.</div>
-
-    <div class="news-item"> <b>Oct/Nov 2024:</b> Give two guest lectures on <a href="https://drive.google.com/file/d/1C1V43nyBUOWjusNiyqLuJPdbNWX8BHkh/view?usp=share_link" target="_blank" rel="noopener noreferrer">How to Build AI with Deep Concerns for Human Traits, Values, and Needs?</a> at UIUC and University of Pittsburgh.</div>
-
-    <div class="news-item"> <b>Oct/Nov 2024:</b> Give two guest lectures on <a href="https://drive.google.com/file/d/1IxDn0xAuwB1_GA6nKMfUhKLwRf62y7c6/view?usp=share_link" target="_blank" rel="noopener noreferrer">LLM Reasoning (In-Context Learning, Prompting, and Reasoning)</a> at KAIST and UW.</div>
-
-    <div class="news-item"> <b>Jan 2024:</b> Lead of TA effort and co-design (a LLM version!) for the class module of <a href="https://www.notion.so/Winter-24-CSE-447-517-Natural-Language-Processing-4142333a001143d2be5ecff1a535c4ab" target="_blank" rel="noopener noreferrer">CSE 447/517</a>, the undergrad and grad NLP class at UW CSE.</div>
-</section> -->
-
-
-<section id="news">
-    <h2>News</h2>
-    <div class="news-container">
-      <div class="news-item">
-        <span class="news-date">December 2025:</span>
-        Traveling to San Diego for NeurIPS 2025 to present two accepted papers (oral for Artificial Hivemind; poster for AI debates on controversial claims). Also attending the <a href="https://www.far.ai/events/alignment-workshop">Alignment Workshop</a>. Please reach out if you'd like to chat!
-      </div>
-      
-      <div class="news-item">
-        <span class="news-date">October 2025:</span>
-        Co-organizing the <a href="https://solar-colm.github.io">SoLaR workshop on Socially Responsible Language Modelling Research</a> at COLM 2025.
-      </div>
-      
-      <div class="news-item">
-        <span class="news-date">July 2025:</span>
-        Co-presented tutorial on <a href="https://llm-guardrails-security.github.io">Guardrails and Security for LLMs: Safe, Secure, and Controllable Steering of LLM Applications</a> at ACL 2025. Slides available on the tutorial website.
-      </div>
-      
-      <div class="news-item">
-        <span class="news-date">March/May 2025:</span>
-        Guest lectures on <a href="https://drive.google.com/file/d/1C56q1u-ho6-fjJSJpJlmFX6rG6kf1OVn/view?usp=share_link" target="_blank" rel="noopener noreferrer">Red-Teaming and Safeguarding Language Models</a> at CMU and UCLA.
-      </div>
-      
-      <div class="news-item">
-        <span class="news-date">October/November 2024:</span>
-        Guest lectures on <a href="https://drive.google.com/file/d/1C1V43nyBUOWjusNiyqLuJPdbNWX8BHkh/view?usp=share_link" target="_blank" rel="noopener noreferrer">Building AI with Deep Concerns for Human Traits, Values, and Needs</a> at UIUC and University of Pittsburgh.
-      </div>
-      
-      <div class="news-item">
-        <span class="news-date">October/November 2024:</span>
-        Guest lectures on <a href="https://drive.google.com/file/d/1IxDn0xAuwB1_GA6nKMfUhKLwRf62y7c6/view?usp=share_link" target="_blank" rel="noopener noreferrer">LLM Reasoning (In-Context Learning, Prompting, and Reasoning)</a> at KAIST and UW.
-      </div>
-      
-      <div class="news-item">
-        <span class="news-date">January 2024:</span>
-        Lead TA and co-designer for <a href="https://www.notion.so/Winter-24-CSE-447-517-Natural-Language-Processing-4142333a001143d2be5ecff1a535c4ab" target="_blank" rel="noopener noreferrer">CSE 447/517</a>, the undergrad and grad NLP class at UW CSE (LLM version).
-      </div>
-    </div>
-  </section>
-
-<section id="publications">
-    <h2>Publications <span class="publication-title">(*, + indicate equal contribution)</span> <span class="publication-title"><a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a></span></h2>
-    
-    <div class="year-section">
-        <div class="year-header">Preprints</div>
-
-        <div class="publication">
-            <div class="publication-title">Chasing Moving Targets with Online Self-Play Reinforcement Learning for Safer Language Models</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Mickel Liu*, Yancheng Liang, Simon S. Du, Yejin Choi, Tim Althoff+, Natasha Jaques+</div>
-                <div class="publication-venue">In submission</div>
+                <strong style="color: #ff2600; font-size: 1em;">⛰️ I'm on the job market for 2026!</strong>
+                <span style="margin-left: 0.3em; font-weight: 500;">Please feel free to reach out if you think my
+                    background could be a good fit for your organization.</span>
             </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2506.07468" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Multi-Agent Systems in the Era of Foundation Models (MAS) Workshop @ ICML 2025</div>
+
+        </section>
+
+        <h2>News</h2>
+        <section id="news">
+            <div class="news-item"><b>Dec 2025:</b> I'll be traveling to San Diego for NeurIPS 2025 for presenting two
+                accepted papers (<b>⭐ oral; top 0.35%</b> for Artificial Hivemind; poster for AI debates for
+                controversial claims). I'll
+                also be attending the <a href="https://www.far.ai/events/alignment-workshop">Alignment Workshop</a>!
+                Please feel free to reach out if you'd like to chat!</div>
+
+            <div class="news-item"><b>Oct 2025:</b> Our paper <a href="https://arxiv.org/abs/2506.07468">Chasing Moving
+                    Targets with Online Self-Play Reinforcement
+                    Learning
+                    for Safer Language Models</a> won the 🏆 <b>Outstanding Paper Award</b> at the AIA workshop @ COLM
+                2025!</div>
+
+            <div class="news-item"><b>Oct 2025:</b> Co-organize another edition of the SoLaR workshop on <a
+                    href="https://solar-colm.github.io">Socially Responsible Language Modelling Research</a> at COLM
+                2025.</div>
+
+            <div class="news-item"><b>July 2025:</b> Co-present our tutorial on <a
+                    href="https://llm-guardrails-security.github.io">Guardrails and Security for LLMs: Safe, Secure, and
+                    Controllable Steering of LLM Applications</a> at ACL 2025! Check out the slides at the tutorial
+                website!</div>
+
+            <div class="news-item"><b>March/May 2025:</b> Give two guest lectures on <a
+                    href="https://drive.google.com/file/d/1C56q1u-ho6-fjJSJpJlmFX6rG6kf1OVn/view?usp=share_link"
+                    target="_blank" rel="noopener noreferrer">Red-Teaming and Safeguarding Language Models: Current
+                    Practices, Challenges, and Future Directions</a> at CMU and UCLA.</div>
+
+            <div class="news-item"><b>Oct/Nov 2024:</b> Give two guest lectures on <a
+                    href="https://drive.google.com/file/d/1C1V43nyBUOWjusNiyqLuJPdbNWX8BHkh/view?usp=share_link"
+                    target="_blank" rel="noopener noreferrer">How to Build AI with Deep Concerns for Human Traits,
+                    Values, and Needs?</a> at UIUC and University of Pittsburgh.</div>
+
+            <div class="news-item"><b>Oct/Nov 2024:</b> Give two guest lectures on <a
+                    href="https://drive.google.com/file/d/1IxDn0xAuwB1_GA6nKMfUhKLwRf62y7c6/view?usp=share_link"
+                    target="_blank" rel="noopener noreferrer">LLM Reasoning (In-Context Learning, Prompting, and
+                    Reasoning)</a> at KAIST and UW.</div>
+
+            <div class="news-item"><b>May 2024:</b> Our paper <a
+                    href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642075">MigraineTracker: Examining Patient
+                    Experiences with Goal-Directed Self-Tracking for a Chronic Health Condition</a> recieved the 🏆
+                <b>Best Paper Award</b> at CHI 2024!
             </div>
-            <div class="publication-links">
-                <div class="publication-authors"></div>
-                <b class="workshop-award" style="color: var(--red-color);">🏆 Outstanding Paper Award (Oral)</b> <div class="workshop-venue">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025</div>
+
+            <div class="news-item"><b>Jan 2024:</b> Lead of TA effort and co-design (<b>a LLM version!</b>) for the
+                class
+                module of <a
+                    href="https://www.notion.so/Winter-24-CSE-447-517-Natural-Language-Processing-4142333a001143d2be5ecff1a535c4ab"
+                    target="_blank" rel="noopener noreferrer">CSE 447/517</a>, the undergrad and grad NLP class at UW
+                CSE.</div>
+
+            <div class="news-item"><b>Dec 2023:</b> Our paper <a href="https://arxiv.org/abs/2212.10465">SODA:
+                    Million-scale Dialogue Distillation with Social Commonsense Contextualization</a> recieved the 🏆
+                <b>Outstanding Paper Award</b> at EMNLP 2023!
             </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">
-                HieraSuite: A Holistic Toolkit for Building Versatile System-User Instruction Hierarchy
+
+            <div class="news-item"><b>July 2022:</b> Our paper <a href="https://arxiv.org/abs/2112.08726">NeuroLogic
+                    A*esque Decoding: Constrained Text Generation with Lookahead Heuristics</a> recieved the 🏆
+                <b>Best Paper Award</b> at NAACL 2022!
             </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    <strong>Liwei Jiang</strong>, Erick Galinkin, Makesh Narsimhan Sreedhar, Chong Xiang, Yejin Choi, Traian Rebedea, Christopher Parisien
+        </section>
+
+        <section id="publications">
+            <h2>Publications <span class="publication-title">(*, + indicate equal contribution)</span> <span
+                    class="publication-title"><a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en"
+                        target="_blank" rel="noopener noreferrer">Google Scholar</a></span></h2>
+
+            <div class="year-section">
+                <div class="year-header">Preprints</div>
+
+                <div class="publication">
+                    <div class="publication-title">Chasing Moving Targets with Online Self-Play Reinforcement Learning
+                        for Safer Language Models</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang*</strong>, Mickel Liu*, Yancheng Liang,
+                            Simon S. Du, Yejin Choi, Tim Althoff+, Natasha Jaques+</div>
+                        <div class="publication-venue">In submission</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2506.07468" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Multi-Agent Systems in the Era of Foundation Models (MAS) Workshop @
+                            ICML 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <div class="publication-authors"></div>
+                        <b class="workshop-award" style="color: var(--red-color);">🏆 Outstanding Paper Award (Oral)</b>
+                        <div class="workshop-venue">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025</div>
+                    </div>
                 </div>
-                <div class="publication-venue">In submission</div>
-            </div>
-            <div class="publication-links">
-                <a href="" target="_blank">PDF (Forthcoming)</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Spectrum Tuning: Post-Training for Distributional Coverage and In-Context Steerability
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Taylor Sorensen, Benjamin Newman, Jared Moore, Chan Young Park, Jillian Fisher, Niloofar Mireshghallah, <strong>Liwei Jiang</strong>, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        HieraSuite: A Holistic Toolkit for Building Versatile System-User Instruction Hierarchy
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            <strong>Liwei Jiang</strong>, Erick Galinkin, Makesh Narsimhan Sreedhar, Chong Xiang, Yejin
+                            Choi, Traian Rebedea, Christopher Parisien
+                        </div>
+                        <div class="publication-venue">In submission</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="" target="_blank">PDF (Forthcoming)</a>
+                    </div>
                 </div>
-                <div class="publication-venue">In submission</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2510.06084" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Activation Steering for LLM Alignment via a Unified ODE-Based Framework
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Hongjue Zhao, Haosen Sun, Jiangtao Kong, Xiaochang Li, Qineng Wang, <strong>Liwei Jiang</strong>, Qi Zhu, Tarek F. Abdelzaher, Yejin Choi, Manling Li, Huajie Shao
+                <div class="publication">
+                    <div class="publication-title">
+                        Spectrum Tuning: Post-Training for Distributional Coverage and In-Context Steerability
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Taylor Sorensen, Benjamin Newman, Jared Moore, Chan Young Park, Jillian Fisher, Niloofar
+                            Mireshghallah, <strong>Liwei Jiang</strong>, Yejin Choi
+                        </div>
+                        <div class="publication-venue">In submission</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2510.06084" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">In submission</div>
-            </div>
-            <div class="publication-links">
-                <a href="" target="_blank">PDF (Forthcoming)</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                PluralisticBehaviorSuite: Stress-Testing Multi-Turn Adherence to Custom Behavioral Policies
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Prasoon Varshney*, Makesh Narsimhan Sreedhar*, <strong>Liwei Jiang</strong>, Traian Rebedea, Christopher Parisien
+                <div class="publication">
+                    <div class="publication-title">
+                        Activation Steering for LLM Alignment via a Unified ODE-Based Framework
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Hongjue Zhao, Haosen Sun, Jiangtao Kong, Xiaochang Li, Qineng Wang, <strong>Liwei
+                                Jiang</strong>, Qi Zhu, Tarek F. Abdelzaher, Yejin Choi, Manling Li, Huajie Shao
+                        </div>
+                        <div class="publication-venue">In submission</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="" target="_blank">PDF (Forthcoming)</a>
+                    </div>
                 </div>
-                <div class="publication-venue">In submission</div>
-            </div>
-            <div class="publication-links">
-                <a href="" target="_blank">PDF (Forthcoming)</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Multi-Turn Interactions in Large Language Models (MTI-LLM) Workshop @ NeurIPS 2025</div>
-            </div>
 
-        </div>
+                <div class="publication">
+                    <div class="publication-title">
+                        PluralisticBehaviorSuite: Stress-Testing Multi-Turn Adherence to Custom Behavioral Policies
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Prasoon Varshney*, Makesh Narsimhan Sreedhar*, <strong>Liwei Jiang</strong>, Traian Rebedea,
+                            Christopher Parisien
+                        </div>
+                        <div class="publication-venue">In submission</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="" target="_blank">PDF (Forthcoming)</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Multi-Turn Interactions in Large Language Models (MTI-LLM) Workshop
+                            @ NeurIPS 2025</div>
+                    </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                WildHallucination: Evaluating Long-Form Factuality in LLMs with Real-World Entity Queries
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Wenting Zhao, Tanya Goyal, Yu Ying Chiu, <strong>Liwei Jiang</strong>, Benjamin Newman, Abhilasha Ravichander, Khyathi Chandu, Ronan Le Bras, Claire Cardie, Yuntian Deng, Yejin Choi
                 </div>
-                <div class="publication-venue">Preprint</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2407.17468" target="_blank">PDF</a>
-            </div>
-        </div>
-        
-    </div>
 
-
-    <div class="year-section">
-        <div class="year-header">2025</div>
-        <div class="publication">
-            <div class="publication-title">
-                Investigating Machine Moral Judgment through the Delphi Experiment
-                <span class="journal-icon" title="Published in Nature Machine Intelligence">📘</span>
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    <strong>Liwei Jiang</strong>, Jena D. Hwang, Chandra Bhagavatula, Ronan Le Bras, Jenny Liang, Sydney Levine, Jesse Dodge, Keisuke Sakaguchi, Maxwell Forbes, Taylor Sorensen, Jon Borchardt, Jack Hessel, Saadia Gabriel, Yulia Tsvetkov, Oren Etzioni, Maarten Sap, Regina Rini, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        WildHallucination: Evaluating Long-Form Factuality in LLMs with Real-World Entity Queries
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Wenting Zhao, Tanya Goyal, Yu Ying Chiu, <strong>Liwei Jiang</strong>, Benjamin Newman,
+                            Abhilasha Ravichander, Khyathi Chandu, Ronan Le Bras, Claire Cardie, Yuntian Deng, Yejin
+                            Choi
+                        </div>
+                        <div class="publication-venue">Preprint</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2407.17468" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    <em>Nature Machine Intelligence</em>, 2025
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://www.nature.com/articles/s42256-024-00969-6" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Yuanjun Chai, Margaret Li, Mickel Liu, Raymond Fok, Nouha Dziri, Yulia Tsvetkov, Maarten Sap, Alon Albalak, Yejin Choi</div>
-                <div class="publication-venue"><b style="color: var(--orange-color)">(Oral, Top 0.35%)</b> NeurIPS D&B 2025</div>
             </div>
-            <div class="publication-links">
-                <a href="#" target="_blank">PDF (Forthcoming)</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">Can Language Models Reason about Individualistic Human Values and Preferences?</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Taylor Sorensen, Sydney Levine, Yejin Choi</div>
-                <div class="publication-venue">ACL 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2410.03868" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Pluralistic Alignment Workshop @ NeurIPS 2024 </div>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">X-Teaming: Multi-Turn Jailbreaks and Defenses with Adaptive Multi-Agents</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Salman Rahman*, James Shiffer*, Genglin Liu, Sheriff Issaka, Md Rizwan Parvez, Hamid Palangi, Kai-Wei Chang, Yejin Choi, Saadia Gabriel</div>
-                <div class="publication-venue">COLM 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2504.13203" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Multi-Agent Systems in the Era of Foundation Models (MAS) Workshop @ ICML 2025</div>
-            </div>
-        </div>
+            <div class="year-section">
+                <div class="year-header">2025</div>
+                <div class="publication">
+                    <div class="publication-title">
+                        Investigating Machine Moral Judgment through the Delphi Experiment
+                        <span class="journal-icon" title="Published in Nature Machine Intelligence">📘</span>
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            <strong>Liwei Jiang</strong>, Jena D. Hwang, Chandra Bhagavatula, Ronan Le Bras, Jenny
+                            Liang, Sydney Levine, Jesse Dodge, Keisuke Sakaguchi, Maxwell Forbes, Taylor Sorensen, Jon
+                            Borchardt, Jack Hessel, Saadia Gabriel, Yulia Tsvetkov, Oren Etzioni, Maarten Sap, Regina
+                            Rini, Yejin Choi
+                        </div>
+                        <div class="publication-venue">
+                            <em>Nature Machine Intelligence</em>, 2025
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://www.nature.com/articles/s42256-024-00969-6" target="_blank">PDF</a>
+                    </div>
+                </div>
 
-        <div class="publication">
-            <div class="publication-title">CulturalBench: Building a Robust, Diverse, and Challenging Cultural Benchmark by Human-AI CulturalTeaming</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Yu Ying Chiu, <strong>Liwei Jiang</strong>, Bill Yuchen Lin, Chan Young Park, Shuyue Stella Li, Sahithya Ravi, Mehar Bhatia, Maria Antoniak, Yulia Tsvetkov, Vered Shwartz, Yejin Choi</div>
-                <div class="publication-venue">ACL 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2410.02677" target="_blank">PDF</a>
-            </div>
-        </div>
+                <div class="publication">
+                    <div class="publication-title">Artificial Hivemind: The Open-Ended Homogeneity of Language Models
+                        (and Beyond)</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang</strong>, Yuanjun Chai, Margaret Li, Mickel
+                            Liu, Raymond Fok, Nouha Dziri, Yulia Tsvetkov, Maarten Sap, Alon Albalak, Yejin Choi</div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral, Top 0.35%)</b>
+                            NeurIPS D&B 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">PDF (Forthcoming)</a>
+                    </div>
+                </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                AI Debate Aids Assessment of Controversial Claims
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Salman Rahman, Sheriff Issaka, Ashima Suvarna, Genglin Liu, James Shiffer, Jaeyoung Lee, Md Rizwan Parvez, Hamid Palangi, Shi Feng, Nanyun Peng, Yejin Choi, Julian Michael, <strong>Liwei Jiang</strong>, Saadia Gabriel
+                <div class="publication">
+                    <div class="publication-title">Can Language Models Reason about Individualistic Human Values and
+                        Preferences?</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang</strong>, Taylor Sorensen, Sydney Levine,
+                            Yejin Choi</div>
+                        <div class="publication-venue">ACL 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2410.03868" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Pluralistic Alignment Workshop @ NeurIPS 2024 </div>
+                    </div>
                 </div>
-                <div class="publication-venue">NeurIPS 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://salmanrahman.net/assets/pdf/debate_claim_%20manuscript.pdf" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Multi-Agent Systems in the Era of Foundation Models (MAS) Workshop @ ICML 2025 </div>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                DailyDilemmas: Revealing Value Preferences of LLMs with Quandaries of Daily Life
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Yu Ying Chiu, <strong>Liwei Jiang</strong>, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">X-Teaming: Multi-Turn Jailbreaks and Defenses with Adaptive
+                        Multi-Agents</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang*</strong>, Salman Rahman*, James Shiffer*,
+                            Genglin Liu, Sheriff Issaka, Md Rizwan Parvez, Hamid Palangi, Kai-Wei Chang, Yejin Choi,
+                            Saadia Gabriel</div>
+                        <div class="publication-venue">COLM 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2504.13203" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Multi-Agent Systems in the Era of Foundation Models (MAS) Workshop @
+                            ICML 2025</div>
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Spotlight, Top 5.1%)</b> ICLR 2025
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2410.02683" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                PolyGuard: A Multilingual Safety Moderation Tool for 17 Languages
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Priyanshu Kumar*, Devansh Jain*, Akhila Yerukola, <strong>Liwei Jiang</strong>, Himanshu Beniwal, Tom Hartvigsen, Maarten Sap
+                <div class="publication">
+                    <div class="publication-title">CulturalBench: Building a Robust, Diverse, and Challenging Cultural
+                        Benchmark by Human-AI CulturalTeaming</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Yu Ying Chiu, <strong>Liwei Jiang</strong>, Bill Yuchen Lin,
+                            Chan Young Park, Shuyue Stella Li, Sahithya Ravi, Mehar Bhatia, Maria Antoniak, Yulia
+                            Tsvetkov, Vered Shwartz, Yejin Choi</div>
+                        <div class="publication-venue">ACL 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2410.02677" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">COLM 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2504.04377" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                HAICosystem: An Ecosystem for Sandboxing Safety Risks in Human-AI Interactions
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Xuhui Zhou, Hyunwoo Kim*, Faeze Brahman*, <strong>Liwei Jiang</strong>, Hao Zhu, Ximing Lu, Frank Xu, Bill Yuchen Lin, Yejin Choi, Niloofar Mireshghallah, Ronan Le Bras, Maarten Sap
+                <div class="publication">
+                    <div class="publication-title">
+                        AI Debate Aids Assessment of Controversial Claims
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Salman Rahman, Sheriff Issaka, Ashima Suvarna, Genglin Liu, James Shiffer, Jaeyoung Lee, Md
+                            Rizwan Parvez, Hamid Palangi, Shi Feng, Nanyun Peng, Yejin Choi, Julian Michael,
+                            <strong>Liwei Jiang</strong>, Saadia Gabriel
+                        </div>
+                        <div class="publication-venue">NeurIPS 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://salmanrahman.net/assets/pdf/debate_claim_%20manuscript.pdf"
+                            target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Multi-Agent Systems in the Era of Foundation Models (MAS) Workshop @
+                            ICML 2025 </div>
+                    </div>
                 </div>
-                <div class="publication-venue">COLM 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/pdf/2409.16427" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Towards Safe & Trustworthy Agents Workshop @ NeurIPS 2024 </div>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Position Paper: Political Neutrality in AI is Impossible—But Here is How to Approximate it
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Jillian Fisher, Ruth Elisabeth Appel, Chan Young Park, Yujin Potter, <strong>Liwei Jiang</strong>, Taylor Sorensen, Shangbin Feng, Yulia Tsvetkov, Margaret Roberts, Jennifer Pan, Dawn Song, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        DailyDilemmas: Revealing Value Preferences of LLMs with Quandaries of Daily Life
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Yu Ying Chiu, <strong>Liwei Jiang</strong>, Yejin Choi
+                        </div>
+                        <div class="publication-venue">
+                            <b style="color: var(--orange-color)">(Spotlight, Top 5.1%)</b> ICLR 2025
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2410.02683" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Oral, Top 3.3%)</b> ICML 2025
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="http://arxiv.org/abs/2503.05728" target="_blank">PDF</a>
-            </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">
-                SafetyAnalyst: Interpretable, Transparent, and Steerable Safety Moderation for AI Behavior
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Jing-Jing Li, Valentina Pyatkin, Max Kleiman-Weiner, <strong>Liwei Jiang</strong>, Nouha Dziri, Anne G. E. Collins, Jana Schaich Borg, Maarten Sap, Yejin Choi, Sydney Levine
-                </div>
-                <div class="publication-venue">ICML 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2410.16665" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">Pluralistic Alignment Workshop @ NeurIPS 2024 </div>
-            </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">
-                AI as Humanity's Salieri: Quantifying Linguistic Creativity of Language Models via Systematic Attribution of Machine Text against Web Text
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Ximing Lu, Melanie Sclar, Skyler Hallinan, Niloofar Mireshghallah, Jiacheng Liu, Seungju Han, Allyson Ettinger, <strong>Liwei Jiang</strong>, Khyathi Chandu, Nouha Dziri, Yejin Choi
-                </div>
-                <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Oral, Top 1.8%)</b> ICLR 2025
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2410.04265" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                To Err is AI: A Case Study Informing LLM Flaw Reporting Practices
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Sean McGregor, Allyson Ettinger, Nick Judd, Paul Albee, <strong>Liwei Jiang</strong>, Kavel Rao, Will Smith, Shayne Longpre, Avijit Ghosh, Christopher Fiorelli, Michelle Hoang, Sven Cattell, Nouha Dziri
+                <div class="publication">
+                    <div class="publication-title">
+                        PolyGuard: A Multilingual Safety Moderation Tool for 17 Languages
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Priyanshu Kumar*, Devansh Jain*, Akhila Yerukola, <strong>Liwei Jiang</strong>, Himanshu
+                            Beniwal, Tom Hartvigsen, Maarten Sap
+                        </div>
+                        <div class="publication-venue">COLM 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2504.04377" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">IAAI 2025</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://ojs.aaai.org/index.php/AAAI/article/view/35162" target="_blank">PDF</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="year-section">
-        <div class="year-header">2024</div>
-        
-        <div class="publication">
-            <div class="publication-title">WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially) Safer Language Models</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Kavel Rao*, Seungju Han*, Allyson Ettinger, Faeze Brahman, Sachin Kumar, Niloofar Mireshghallah, Ximing Lu, Maarten Sap, Yejin Choi, Nouha Dziri</div>
-                <div class="publication-venue">NeurIPS 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2406.18510" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">NextGenAISafety Workshop @ ICML 2024 </div>
-            </div>
-        </div>
-
-        <div class="publication">
-            <div class="publication-title">WildGuard: Open One-Stop Moderation Tools for Safety Risks, Jailbreaks, and Refusals of LLMs</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Seungju Han*, Kavel Rao*, <strong>Liwei Jiang+</strong>, Allyson Ettinger+, Bill Yuchen Lin, Nathan Lambert, Yejin Choi, Nouha Dziri</div>
-                <div class="publication-venue">NeurIPS D&B 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2406.18495" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">Value Kaleidoscope: Engaging AI with Pluralistic Human Values, Rights, and Duties</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Taylor Sorensen, <strong>Liwei Jiang</strong>, Jena D. Hwang, Sydney Levine, Valentina Pyatkin, Peter West, Nouha Dziri, Ximing Lu, Kavel Rao, Chandra Bhagavatula, Maarten Sap, John Tasioulas, Yejin Choi</div>
-                <div class="publication-venue"><b style="color: var(--orange-color)">(Oral, Top 1.5%)</b> AAAI 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2309.00779" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
-
-        <div class="publication">
-            <div class="publication-title">
-                Culture-Gen: Revealing Global Cultural Perception in Language Models through Natural Language Prompting
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Huihan Li, <strong>Liwei Jiang</strong>, Jena D. Huang, Hyunwoo Kim, Sebastin Santy, Taylor Sorensen, Bill Yuchen Lin, Nouha Dziri, Xiang Ren, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        HAICosystem: An Ecosystem for Sandboxing Safety Risks in Human-AI Interactions
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Xuhui Zhou, Hyunwoo Kim*, Faeze Brahman*, <strong>Liwei Jiang</strong>, Hao Zhu, Ximing Lu,
+                            Frank Xu, Bill Yuchen Lin, Yejin Choi, Niloofar Mireshghallah, Ronan Le Bras, Maarten Sap
+                        </div>
+                        <div class="publication-venue">COLM 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/pdf/2409.16427" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Towards Safe & Trustworthy Agents Workshop @ NeurIPS 2024 </div>
+                    </div>
                 </div>
-                <div class="publication-venue">COLM 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2404.10199" target="_blank">PDF</a>
-                <div class="publication-authors"></div>
-                <div class="workshop-venue">TrustNLP Workshop @ NAACL 2024 </div>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Phenomenal Yet Puzzling: Testing Inductive Reasoning Capabilities of Language Models with Hypothesis Refinement
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Linlu Qiu, <strong>Liwei Jiang</strong>, Ximing Lu, Melanie Sclar, Valentina Pyatkin, Chandra Bhagavatula, Bailin Wang, Yoon Kim, Yejin Choi, Nouha Dziri, Xiang Ren
+                <div class="publication">
+                    <div class="publication-title">
+                        Position Paper: Political Neutrality in AI is Impossible—But Here is How to Approximate it
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Jillian Fisher, Ruth Elisabeth Appel, Chan Young Park, Yujin Potter, <strong>Liwei
+                                Jiang</strong>, Taylor Sorensen, Shangbin Feng, Yulia Tsvetkov, Margaret Roberts,
+                            Jennifer Pan, Dawn Song, Yejin Choi
+                        </div>
+                        <div class="publication-venue">
+                            <b style="color: var(--orange-color)">(Oral, Top 3.3%)</b> ICML 2025
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="http://arxiv.org/abs/2503.05728" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Oral, Top 1.2%)</b> ICLR 2024
+
+                <div class="publication">
+                    <div class="publication-title">
+                        SafetyAnalyst: Interpretable, Transparent, and Steerable Safety Moderation for AI Behavior
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Jing-Jing Li, Valentina Pyatkin, Max Kleiman-Weiner, <strong>Liwei Jiang</strong>, Nouha
+                            Dziri, Anne G. E. Collins, Jana Schaich Borg, Maarten Sap, Yejin Choi, Sydney Levine
+                        </div>
+                        <div class="publication-venue">ICML 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2410.16665" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Pluralistic Alignment Workshop @ NeurIPS 2024 </div>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        AI as Humanity's Salieri: Quantifying Linguistic Creativity of Language Models via Systematic
+                        Attribution of Machine Text against Web Text
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Ximing Lu, Melanie Sclar, Skyler Hallinan, Niloofar Mireshghallah, Jiacheng Liu, Seungju
+                            Han, Allyson Ettinger, <strong>Liwei Jiang</strong>, Khyathi Chandu, Nouha Dziri, Yejin Choi
+                        </div>
+                        <div class="publication-venue">
+                            <b style="color: var(--orange-color)">(Oral, Top 1.8%)</b> ICLR 2025
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2410.04265" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        To Err is AI: A Case Study Informing LLM Flaw Reporting Practices
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Sean McGregor, Allyson Ettinger, Nick Judd, Paul Albee, <strong>Liwei Jiang</strong>, Kavel
+                            Rao, Will Smith, Shayne Longpre, Avijit Ghosh, Christopher Fiorelli, Michelle Hoang, Sven
+                            Cattell, Nouha Dziri
+                        </div>
+                        <div class="publication-venue">IAAI 2025</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/35162" target="_blank">PDF</a>
+                    </div>
                 </div>
             </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2310.08559" target="_blank">PDF</a>
-            </div>
-        </div>
 
+            <div class="year-section">
+                <div class="year-header">2024</div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Particip-AI: A Democratic Surveying Framework for Anticipating Future AI Use Cases, Harms and Benefits
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Jimin Mun, <strong>Liwei Jiang</strong>, Jenny Liang, Inyoung Cheong, Nicole DeCario, Yejin Choi, Tadayoshi Kohno, Maarten Sap
+                <div class="publication">
+                    <div class="publication-title">WildTeaming at Scale: From In-the-Wild Jailbreaks to (Adversarially)
+                        Safer Language Models</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang</strong>, Kavel Rao*, Seungju Han*, Allyson
+                            Ettinger, Faeze Brahman, Sachin Kumar, Niloofar Mireshghallah, Ximing Lu, Maarten Sap, Yejin
+                            Choi, Nouha Dziri</div>
+                        <div class="publication-venue">NeurIPS 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2406.18510" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">NextGenAISafety Workshop @ ICML 2024 </div>
+                    </div>
                 </div>
-                <div class="publication-venue">AIES 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2403.14791" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Information-Theoretic Distillation for Reference-less Summarization
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Jaehun Jung, Ximing Lu, <strong>Liwei Jiang</strong>, Faeze Brahman, Peter West, Pang Wei Koh, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">WildGuard: Open One-Stop Moderation Tools for Safety Risks,
+                        Jailbreaks, and Refusals of LLMs</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Seungju Han*, Kavel Rao*, <strong>Liwei Jiang+</strong>,
+                            Allyson Ettinger+, Bill Yuchen Lin, Nathan Lambert, Yejin Choi, Nouha Dziri</div>
+                        <div class="publication-venue">NeurIPS D&B 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2406.18495" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
                 </div>
-                <div class="publication-venue">COLM 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2403.13780" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Position Paper: A Roadmap to Pluralistic Alignment
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Taylor Sorensen, Jared Moore, Jillian Fisher, Mitchell Gordon, Niloofar Mireshghallah, Christopher Michael Rytting, Andre Ye, <strong>Liwei Jiang</strong>, Ximing Lu, Nouha Dziri, Tim Althoff, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">Value Kaleidoscope: Engaging AI with Pluralistic Human Values,
+                        Rights, and Duties</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Taylor Sorensen, <strong>Liwei Jiang</strong>, Jena D. Hwang,
+                            Sydney Levine, Valentina Pyatkin, Peter West, Nouha Dziri, Ximing Lu, Kavel Rao, Chandra
+                            Bhagavatula, Maarten Sap, John Tasioulas, Yejin Choi</div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral, Top 1.5%)</b> AAAI
+                            2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2309.00779" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
                 </div>
-                <div class="publication-venue">ICML 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2402.05070" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Impossible Distillation: from Low-Quality Model to High-Quality Dataset &amp; Model for Summarization and Paraphrasing
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Jaehun Jung, Peter West, <strong>Liwei Jiang</strong>, Faeze Brahman, Ximing Lu, Jillian Fisher, Taylor Sorensen, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        Culture-Gen: Revealing Global Cultural Perception in Language Models through Natural Language
+                        Prompting
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Huihan Li, <strong>Liwei Jiang</strong>, Jena D. Huang, Hyunwoo Kim, Sebastin Santy, Taylor
+                            Sorensen, Bill Yuchen Lin, Nouha Dziri, Xiang Ren, Yejin Choi
+                        </div>
+                        <div class="publication-venue">COLM 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2404.10199" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">TrustNLP Workshop @ NAACL 2024 </div>
+                    </div>
                 </div>
-                <div class="publication-venue">NAACL 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2305.16635" target="_blank">PDF</a>
-            </div>
-        </div>
-        
 
-        <div class="publication">
-            <div class="publication-title">
-                JAMDEC: Unsupervised Authorship Obfuscation Using Constrained Decoding Over Small Language Models
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Jillian Fisher, Ximing Lu, Jaehun Jung, <strong>Liwei Jiang</strong>, Zaid Harchaoui, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        Phenomenal Yet Puzzling: Testing Inductive Reasoning Capabilities of Language Models with
+                        Hypothesis Refinement
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Linlu Qiu, <strong>Liwei Jiang</strong>, Ximing Lu, Melanie Sclar, Valentina Pyatkin,
+                            Chandra Bhagavatula, Bailin Wang, Yoon Kim, Yejin Choi, Nouha Dziri, Xiang Ren
+                        </div>
+                        <div class="publication-venue">
+                            <b style="color: var(--orange-color)">(Oral, Top 1.2%)</b> ICLR 2024
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2310.08559" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">NAACL 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2402.08761" target="_blank">PDF</a>
-            </div>
-        </div>
-        
 
-        <div class="publication">
-            <div class="publication-title">
-                MigraineTracker: Examining Patient Experiences with Goal-Directed Self-Tracking for a Chronic Health Condition
-                <span class="award-icon" title="Outstanding Paper Award">🏆 <b style="color: var(--red-color)">Best Paper Award</b></span>
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Yasaman S. Sefidgar, Carla L. Castillo, Shaan Chopra, <strong>Liwei Jiang</strong>, Tae Jones, Anant Mittal, Hyeyoung Ryu, Jessica Schroeder, Allison Cole, Natalia Murinova, Sean A. Munson, James Fogarty
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Particip-AI: A Democratic Surveying Framework for Anticipating Future AI Use Cases, Harms and
+                        Benefits
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Jimin Mun, <strong>Liwei Jiang</strong>, Jenny Liang, Inyoung Cheong, Nicole DeCario, Yejin
+                            Choi, Tadayoshi Kohno, Maarten Sap
+                        </div>
+                        <div class="publication-venue">AIES 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2403.14791" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    <span class="award-text"><strong style="color: var(--orange-color)">(Oral)</strong></span> CHI 2024
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Information-Theoretic Distillation for Reference-less Summarization
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Jaehun Jung, Ximing Lu, <strong>Liwei Jiang</strong>, Faeze Brahman, Peter West, Pang Wei
+                            Koh, Yejin Choi
+                        </div>
+                        <div class="publication-venue">COLM 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2403.13780" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Position Paper: A Roadmap to Pluralistic Alignment
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Taylor Sorensen, Jared Moore, Jillian Fisher, Mitchell Gordon, Niloofar Mireshghallah,
+                            Christopher Michael Rytting, Andre Ye, <strong>Liwei Jiang</strong>, Ximing Lu, Nouha Dziri,
+                            Tim Althoff, Yejin Choi
+                        </div>
+                        <div class="publication-venue">ICML 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2402.05070" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Impossible Distillation: from Low-Quality Model to High-Quality Dataset &amp; Model for
+                        Summarization and Paraphrasing
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Jaehun Jung, Peter West, <strong>Liwei Jiang</strong>, Faeze Brahman, Ximing Lu, Jillian
+                            Fisher, Taylor Sorensen, Yejin Choi
+                        </div>
+                        <div class="publication-venue">NAACL 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2305.16635" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+
+                <div class="publication">
+                    <div class="publication-title">
+                        JAMDEC: Unsupervised Authorship Obfuscation Using Constrained Decoding Over Small Language
+                        Models
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Jillian Fisher, Ximing Lu, Jaehun Jung, <strong>Liwei Jiang</strong>, Zaid Harchaoui, Yejin
+                            Choi
+                        </div>
+                        <div class="publication-venue">NAACL 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2402.08761" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+
+                <div class="publication">
+                    <div class="publication-title">
+                        MigraineTracker: Examining Patient Experiences with Goal-Directed Self-Tracking for a Chronic
+                        Health Condition
+                        <span class="award-icon paper-award" title="Outstanding Paper Award">🏆 Best Paper Award</span>
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Yasaman S. Sefidgar, Carla L. Castillo, Shaan Chopra, <strong>Liwei Jiang</strong>, Tae
+                            Jones, Anant Mittal, Hyeyoung Ryu, Jessica Schroeder, Allison Cole, Natalia Murinova, Sean
+                            A. Munson, James Fogarty
+                        </div>
+                        <div class="publication-venue">
+                            <span class="award-text"><strong style="color: var(--orange-color)">(Oral)</strong></span>
+                            CHI 2024
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642075" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+
+                <div class="publication">
+                    <div class="publication-title">
+                        The Generative AI Paradox: "What It Can Create, It <em>May</em> Not Understand"
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Peter West*, Ximing Lu*, Nouha Dziri*, Faeze Brahman*, Linjie Li*, Jena D. Hwang,
+                            <strong>Liwei Jiang</strong>, Jillian Fisher, Abhilasha Ravichander, Khyathi Chandu,
+                            Benjamin Newman, Pang Wei Koh, Allyson Ettinger, Yejin Choi
+                        </div>
+                        <div class="publication-venue">ICLR 2024</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2311.00059" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="year-section">
+                <div class="year-header">2023</div>
+
+                <div class="publication">
+                    <div class="publication-title">What Makes it Ok to Set a Fire? Iterative Self-distillation of
+                        Contexts and Rationales for Disambiguating Defeasible Social and Moral Situations</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang*</strong>, Kavel Rao*, Valentina Pyatkin,
+                            Yuling Gu, Niket Tandon, Nouha Dziri, Faeze Brahman, Yejin Choi</div>
+                        <div class="publication-venue">(Findings) EMNLP 2023</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2310.15431" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        NovaCOMET: Open Commonsense Foundation Models with Symbolic Knowledge Distillation
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Peter West, Ronan Le Bras, Taylor Sorensen, Bill Yuchen Lin, <strong>Liwei Jiang</strong>,
+                            Ximing Lu, Khyathi Chandu, Jack Hessel, Ashutosh Baheti, Chandra Bhagavatula, Yejin Choi
+                        </div>
+                        <div class="publication-venue">(Findings) EMNLP 2023</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2312.05979" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization
+                        <span class="award-icon paper-award" title="Outstanding Paper Award">🏆 Outstanding Paper
+                            Award</span>
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Hyunwoo Kim, Jack Hessel, <strong>Liwei Jiang</strong>, Peter West, Ximing Lu, Youngjae Yu,
+                            Pei Zhou, Ronan Le Bras, Malihe Alikhani, Gunhee Kim, Maarten Sap, Yejin Choi
+                        </div>
+                        <div class="publication-venue">
+                            <span class="award-text"><strong style="color: var(--orange-color)">(Oral)</strong></span>
+                            EMNLP 2023
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2212.10465" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible
+                        Commonsense Norms
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Seungju Han, Junhyeok Kim, Jack Hessel, <strong>Liwei Jiang</strong>, Jiwan Chung, Yejin
+                            Son, Yejin Choi, Youngjae Yu
+                        </div>
+                        <div class="publication-venue">
+                            EMNLP 2023
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2310.10418" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Inference-Time Policy Adapters (IPA): Tailoring Extreme-Scale LMs without Fine-tuning
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Ximing Lu, Faeze Brahman, Peter West, Jaehun Jang, Khyathi Chandu, Abhilasha Ravichander,
+                            Lianhui Qin, Prithviraj Ammanabrolu, <strong>Liwei Jiang</strong>, Sahana Ramnath, Nouha
+                            Dziri, Jillian Fisher, Bill Yuchen Lin, Skyler Hallinan, Xiang Ren, Sean Welleck, Yejin Choi
+                        </div>
+                        <div class="publication-venue">EMNLP 2023</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2305.15065" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+
+                <div class="publication">
+                    <div class="publication-title">BiasX: "Thinking Slow" in Toxic Content Moderation with Explanations
+                        of Implied Social Biases</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Yiming Zhang, Sravani Nanduri, <strong>Liwei Jiang</strong>,
+                            Tongshuang Wu, Maarten Sap</div>
+                        <div class="publication-venue">(Short Paper) EMNLP 2023</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2305.13589" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Faith and Fate: Limits of Transformers on Compositionality</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Nouha Dziri*, Ximing Lu*, Melanie Sclar*, <strong>Liwei Jiang+</strong>, Xiang Lorraine Li+,
+                            Bill Yuchen Lin+, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D. Hwang, Soumya
+                            Sanyal, Sean Welleck, Xiang Ren, Allyson Ettinger, Zaid Harchaoui, Yejin Choi
+                        </div>
+                        <div class="publication-venue">
+                            <b style="color: var(--orange-color)">(Spotlight, Top 3.1%)</b> NeurIPS 2023</span>
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2305.18654" target="_blank">PDF</a>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">ClarifyDelphi: Reinforced Clarification Questions with Defeasibility
+                        Rewards for Social and Moral Situations</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Valentina Pyatkin, Jena D. Hwang, Vivek Srikumar, Ximing Lu,
+                            <strong>Liwei Jiang</strong>, Yejin Choi, Chandra Bhagavatula
+                        </div>
+                        <div class="publication-venue">ACL 2023</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2212.10409" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
                 </div>
             </div>
-            <div class="publication-links">
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642075" target="_blank">PDF</a>
-            </div>
-        </div>
-        
 
-        <div class="publication">
-            <div class="publication-title">
-                The Generative AI Paradox: "What It Can Create, It <em>May</em> Not Understand"
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Peter West*, Ximing Lu*, Nouha Dziri*, Faeze Brahman*, Linjie Li*, Jena D. Hwang, <strong>Liwei Jiang</strong>, Jillian Fisher, Abhilasha Ravichander, Khyathi Chandu, Benjamin Newman, Pang Wei Koh, Allyson Ettinger, Yejin Choi
-                </div>
-                <div class="publication-venue">ICLR 2024</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2311.00059" target="_blank">PDF</a>
-            </div>
-        </div>
+            <div class="year-section">
+                <div class="year-header">2022</div>
 
-    </div>
+                <div class="publication">
+                    <div class="publication-title">Aligning to Social Norms and Values in Interactive Narratives</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Prithviraj Ammanabrolu, <strong>Liwei Jiang</strong>, Maarten
+                            Sap, Hannaneh Hajishirzi, Yejin Choi</div>
+                        <div class="publication-venue">NAACL 2022</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2205.01975" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
+                </div>
 
-    <div class="year-section">
-        <div class="year-header">2023</div>
-        
-        <div class="publication">
-            <div class="publication-title">What Makes it Ok to Set a Fire? Iterative Self-distillation of Contexts and Rationales for Disambiguating Defeasible Social and Moral Situations</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Kavel Rao*, Valentina Pyatkin, Yuling Gu, Niket Tandon, Nouha Dziri, Faeze Brahman, Yejin Choi</div>
-                <div class="publication-venue">(Findings) EMNLP 2023</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2310.15431" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
-                
-        <div class="publication">
-            <div class="publication-title">
-                NovaCOMET: Open Commonsense Foundation Models with Symbolic Knowledge Distillation
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Peter West, Ronan Le Bras, Taylor Sorensen, Bill Yuchen Lin, <strong>Liwei Jiang</strong>, Ximing Lu, Khyathi Chandu, Jack Hessel, Ashutosh Baheti, Chandra Bhagavatula, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        Symbolic Knowledge Distillation: from General Language Models to Commonsense Models
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Peter West, Chandra Bhagavatula*, Jack Hessel*, Jena D. Hwang*, <strong>Liwei
+                                Jiang*</strong>, Ronan Le Bras*, Ximing Lu*, Sean Welleck*, Yejin Choi
+                        </div>
+                        <div class="publication-venue">NAACL 2022</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2110.07178" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">(Findings) EMNLP 2023</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2312.05979" target="_blank">PDF</a>
-            </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">
-                SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization
-                <span class="award-icon" title="Outstanding Paper Award">🏆 <b style="color: var(--red-color)">Outstanding Paper Award</b></span>
-            </div> 
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Hyunwoo Kim, Jack Hessel, <strong>Liwei Jiang</strong>, Peter West, Ximing Lu, Youngjae Yu, Pei Zhou, Ronan Le Bras, Malihe Alikhani, Gunhee Kim, Maarten Sap, Yejin Choi 
-                </div>
-                <div class="publication-venue">
-                    <span class="award-text"><strong style="color: var(--orange-color)">(Oral)</strong></span> EMNLP 2023
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2212.10465" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Reading Books is Great, But Not if You Are Driving! Visually Grounded Reasoning about Defeasible Commonsense Norms
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Seungju Han, Junhyeok Kim, Jack Hessel, <strong>Liwei Jiang</strong>, Jiwan Chung, Yejin Son, Yejin Choi, Youngjae Yu
+                <div class="publication">
+                    <div class="publication-title">
+                        NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics
+                        <span class="award-icon paper-award" title="Best Paper Award">🏆 Best
+                            Paper Award</span>
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Ximing Lu, Sean Welleck*, Peter West*, <strong>Liwei Jiang+</strong>, Jungo Kasai+, Daniel
+                            Khashabi+, Ronan Le Bras+, Lianhui Qin+, Youngjae Yu+, Rowan Zellers+, Noah A. Smith, Yejin
+                            Choi
+                        </div>
+                        <div class="publication-venue">
+                            <span class="award-text"><strong style="color: var(--orange-color)">(Oral)</strong></span>
+                            NAACL 2022
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2112.08726" target="_blank">PDF</a>
+                        <!-- <a href="https://dblp.org/rec/conf/naacl/LuWJKKBLQYZSC22.bib" target="_blank">BibTeX</a> -->
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    EMNLP 2023
+
+                <div class="publication">
+                    <div class="publication-title">ProsocialDialog: A Prosocial Backbone for Conversational Agents</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Hyunwoo Kim*, Youngjae Yu*, <strong>Liwei Jiang</strong>,
+                            Ximing Lu, Daniel Khashabi, Gunhee Kim, Yejin Choi, Maarten Sap</div>
+                        <div class="publication-venue">EMNLP 2022</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2205.12688" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
                 </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2310.10418" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">
-                Inference-Time Policy Adapters (IPA): Tailoring Extreme-Scale LMs without Fine-tuning
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Ximing Lu, Faeze Brahman, Peter West, Jaehun Jang, Khyathi Chandu, Abhilasha Ravichander, Lianhui Qin, Prithviraj Ammanabrolu, <strong>Liwei Jiang</strong>, Sahana Ramnath, Nouha Dziri, Jillian Fisher, Bill Yuchen Lin, Skyler Hallinan, Xiang Ren, Sean Welleck, Yejin Choi
+                <div class="publication">
+                    <div class="publication-title">
+                        Quark: Controllable Text Generation with Reinforced Unlearning
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Ximing Lu, Sean Welleck*, Jack Hessel*, <strong>Liwei Jiang</strong>, Lianhui Qin, Peter
+                            West, Prithviraj Ammanabrolu, Yejin Choi
+                        </div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> NeurIPS 2022
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2205.13636" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">EMNLP 2023</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2305.15065" target="_blank">PDF</a>
-            </div>
-        </div>
 
-
-        <div class="publication">
-            <div class="publication-title">BiasX: "Thinking Slow" in Toxic Content Moderation with Explanations of Implied Social Biases</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Yiming Zhang, Sravani Nanduri, <strong>Liwei Jiang</strong>, Tongshuang Wu, Maarten Sap</div>
-                <div class="publication-venue">(Short Paper) EMNLP 2023</div>
             </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2305.13589" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">Faith and Fate: Limits of Transformers on Compositionality</div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Nouha Dziri*, Ximing Lu*, Melanie Sclar*, <strong>Liwei Jiang+</strong>, Xiang Lorraine Li+, Bill Yuchen Lin+, Peter West, Chandra Bhagavatula, Ronan Le Bras, Jena D. Hwang, Soumya Sanyal, Sean Welleck, Xiang Ren, Allyson Ettinger, Zaid Harchaoui, Yejin Choi
+            <div class="year-section">
+                <div class="year-header">2021</div>
+
+                <div class="publication">
+                    <div class="publication-title">“I’m Not Mad”: Commonsense Implications of Negation and Contradiction
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang</strong>, Antoine Bosselut, Chandra
+                            Bhagavatula, Yejin Choi</div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> NAACL-HLT 2021
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://aclanthology.org/2021.naacl-main.346/" target="_blank">PDF</a>
+                    </div>
                 </div>
-                <div class="publication-venue">
-                    <b style="color: var(--orange-color)">(Spotlight, Top 3.1%)</b> NeurIPS 2023</span>
+
+                <div class="publication">
+                    <div class="publication-title">EnglishBot: An AI-Powered Conversational System for Second Language
+                        Learning</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors"><strong>Liwei Jiang*</strong>, Sherry Ruan*, Qianyao Xu*,
+                            Zhiyuan Liu, Glenn M. Davis, Emma Brunskill, James A. Landay</div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> ACM IUI 2021
+                        </div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3397481.3450648" target="_blank">PDF</a>
+                    </div>
                 </div>
             </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2305.18654" target="_blank">PDF</a>
-            </div>
-        </div>
 
-        <div class="publication">
-            <div class="publication-title">ClarifyDelphi: Reinforced Clarification Questions with Defeasibility Rewards for Social and Moral Situations</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Valentina Pyatkin, Jena D. Hwang, Vivek Srikumar, Ximing Lu, <strong>Liwei Jiang</strong>, Yejin Choi, Chandra Bhagavatula</div>
-                <div class="publication-venue">ACL 2023</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2212.10409" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
-    </div>
+            <div class="year-section">
+                <div class="year-header">2019</div>
 
-    <div class="year-section">
-        <div class="year-header">2022</div>
-
-        <div class="publication">
-            <div class="publication-title">Aligning to Social Norms and Values in Interactive Narratives</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Prithviraj Ammanabrolu, <strong>Liwei Jiang</strong>, Maarten Sap, Hannaneh Hajishirzi, Yejin Choi</div>
-                <div class="publication-venue">NAACL 2022</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2205.01975" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
-
-        <div class="publication">
-            <div class="publication-title">
-                Symbolic Knowledge Distillation: from General Language Models to Commonsense Models
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Peter West, Chandra Bhagavatula*, Jack Hessel*, Jena D. Hwang*, <strong>Liwei Jiang*</strong>, Ronan Le Bras*, Ximing Lu*, Sean Welleck*, Yejin Choi
-                </div>
-                <div class="publication-venue">NAACL 2022</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2110.07178" target="_blank">PDF</a>
-            </div>
-        </div>
-
-        <div class="publication">
-            <div class="publication-title">
-                NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics 
-                <span class="award-icon" title="Best Paper Award">🏆 <b style="color: var(--red-color)">Best Paper Award</b></span>
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Ximing Lu, Sean Welleck*, Peter West*, <strong>Liwei Jiang+</strong>, Jungo Kasai+, Daniel Khashabi+, Ronan Le Bras+, Lianhui Qin+, Youngjae Yu+, Rowan Zellers+, Noah A. Smith, Yejin Choi
-                </div>
-                <div class="publication-venue">
-                    <span class="award-text"><strong style="color: var(--orange-color)">(Oral)</strong></span> NAACL 2022
+                <div class="publication">
+                    <div class="publication-title">QuizBot: A Dialogue-Based Adaptive Learning System for Factual
+                        Knowledge</div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">Sherry Ruan, <strong>Liwei Jiang</strong>, Justin Xu, Bryce
+                            Joe-Kun Tham, Zhengneng Qiu, Yeshuang Zhu, Elizabeth L. Murnane, Emma Brunskill, James A.
+                            Landay</div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> CHI 2019</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://dl.acm.org/doi/10.1145/3290605.3300587" target="_blank">PDF</a>
+                        <!-- <a href="#" target="_blank">BibTeX</a> -->
+                    </div>
                 </div>
             </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2112.08726" target="_blank">PDF</a>
-                <!-- <a href="https://dblp.org/rec/conf/naacl/LuWJKKBLQYZSC22.bib" target="_blank">BibTeX</a> -->
+        </section>
+
+
+        <section id="experiences">
+            <h2>Education & Experience</h2>
+
+            <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Education</h3>
+
+            <div class="education-item">
+                <h3>University of Washington</h3>
+                <div class="institution">Ph.D. in Computer Science and Engineering</div>
+                <div class="year">Sept 2019 - Dec 2025 (expected), Seattle, Washington</div>
             </div>
+
+            <div class="education-item">
+                <h3>Colby College</h3>
+                <div class="institution">B.A. in Computer Science and Mathematics (Summa Cum Laude, Top 0.5%)</div>
+                <div class="year">Sept 2015 - Dec 2018, Waterville, Maine</div>
+            </div>
+
+            <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Professional Experience
+            </h3>
+
+            <div class="experience-item">
+                <h3>NVIDIA</h3>
+                <div class="institution">Graduate Student Researcher at Nemo-Guardrail Team</div>
+                <div class="year">March 2025 - Present, Santa Clara, California</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Allen Institute for Artificial Intelligence (Ai2)</h3>
+                <div class="institution">Graduate Student Researcher at Mosaic and AllenNLP Teams</div>
+                <div class="year">June 2020 - December 2024, Seattle, Washington</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>Stanford University</h3>
+                <div class="institution">Undergraduate Research Intern at the Computer Science Department</div>
+                <div class="year">June 2017 - September 2019, Stanford, California</div>
+            </div>
+
+            <div class="experience-item">
+                <h3>The Future Laboratory, Tsinghua University</h3>
+                <div class="institution">Visiting Student Researcher</div>
+                <div class="year">July 2019 - September 2019, Beijing, China</div>
+            </div>
+
+        </section>
+
+
+        <section id="honors">
+            <h2>Honors & Awards</h2>
+
+            <div class="education-item">
+                <h3>Outstanding Paper Award</h3>
+                <div class="institution">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025 (Oct 2025)</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Best Paper Award</h3>
+                <div class="institution">CHI 2024 (May 2024)</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Outstanding Paper Award</h3>
+                <div class="institution">EMNLP 2023 (Dec 2023)</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Best Paper Award</h3>
+                <div class="institution">NAACL 2022 (Jul 2022)</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Anne Dinning - Michael Wolf Endowed Regental Fellowship</h3>
+                <div class="institution">University of Washington (2019)</div>
+                <div class="year">Paul G. Allen School First-Year Ph.D. Fellowship</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Member of the Phi Beta Kappa Society</h3>
+                <div class="institution">Colby College (2018)</div>
+                <div class="year">Elected as a member of Phi Beta Kappa with junior standing</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Honorable Mention of Interdisciplinary Contest in Modeling (ICM)</h3>
+                <div class="institution">COMAP (2018)</div>
+                <div class="year">20th annual Interdisciplinary Contest in Modeling (ICM)</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Phi Beta Kappa Undergraduate Scholastic Achievement Award</h3>
+                <div class="institution">Colby College (2017)</div>
+                <div class="year">Top two students in the sophomore and junior classes</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Julius Seelye Bixler Scholar</h3>
+                <div class="institution">Colby College (2016, 2017, 2018)</div>
+                <div class="year">Top-ranking students as determined by the cumulative academic record, three-time
+                    recipient</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Phi Beta Kappa Summer Research Scholar</h3>
+                <div class="institution">Colby College (2016)</div>
+                <div class="year">Summer research stipend</div>
+            </div>
+        </section>
+
+        <section id="personal"></section>
+        <h2>Personal</h2>
+
+        <div class="education-item">
+            <p>I firmly believe that everyone has the potential to achieve anything they set their mind to. Keep going
+                and try again.</p>
         </div>
 
-        <div class="publication">
-            <div class="publication-title">ProsocialDialog: A Prosocial Backbone for Conversational Agents</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Hyunwoo Kim*, Youngjae Yu*, <strong>Liwei Jiang</strong>, Ximing Lu, Daniel Khashabi, Gunhee Kim, Yejin Choi, Maarten Sap</div>
-                <div class="publication-venue">EMNLP 2022</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2205.12688" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
-        </div>
-        
-        <div class="publication">
-            <div class="publication-title">
-                Quark: Controllable Text Generation with Reinforced Unlearning
-            </div>
-            <div class="publication-meta">
-                <div class="publication-authors">
-                    Ximing Lu, Sean Welleck*, Jack Hessel*, <strong>Liwei Jiang</strong>, Lianhui Qin, Peter West, Prithviraj Ammanabrolu, Yejin Choi
-                </div>
-                <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> NeurIPS 2022
-                </div>
-            </div>
-            <div class="publication-links">
-                <a href="https://arxiv.org/abs/2205.13636" target="_blank">PDF</a>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="year-section">
-        <div class="year-header">2021</div>
-        
-        <div class="publication">
-            <div class="publication-title">“I’m Not Mad”: Commonsense Implications of Negation and Contradiction</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang</strong>, Antoine Bosselut, Chandra Bhagavatula, Yejin Choi</div>
-                <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> NAACL-HLT 2021</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://aclanthology.org/2021.naacl-main.346/" target="_blank">PDF</a>
-            </div>
+        <div class="education-item">
+            <p>Your path is uniquely yours. Follow what ignites you. Every twist, every turn, every unexpected direction
+                is exactly where you need to be.</p>
         </div>
 
-        <div class="publication">
-            <div class="publication-title">EnglishBot: An AI-Powered Conversational System for Second Language Learning</div>
-            <div class="publication-meta">
-                <div class="publication-authors"><strong>Liwei Jiang*</strong>, Sherry Ruan*, Qianyao Xu*, Zhiyuan Liu, Glenn M. Davis, Emma Brunskill, James A. Landay</div>
-                <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> ACM IUI 2021</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://dl.acm.org/doi/10.1145/3397481.3450648" target="_blank">PDF</a>
-            </div>
+        <div class="education-item">
+            <p>Two cats, an orange tabby named <a href="static/loopy.JPG" style="color: var(--secondary-color);"
+                    target="_blank">Loopy</a> and an orange british shorthair named <a href="static/loafy.JPG"
+                    style="color: var(--secondary-color);" target="_blank">Loafy</a>, adopted me as their owner.</p>
         </div>
-    </div>
 
-    <div class="year-section">
-        <div class="year-header">2019</div>
-        
-        <div class="publication">
-            <div class="publication-title">QuizBot: A Dialogue-Based Adaptive Learning System for Factual Knowledge</div>
-            <div class="publication-meta">
-                <div class="publication-authors">Sherry Ruan, <strong>Liwei Jiang</strong>, Justin Xu, Bryce Joe-Kun Tham, Zhengneng Qiu, Yeshuang Zhu, Elizabeth L. Murnane, Emma Brunskill, James A. Landay</div>
-                <div class="publication-venue"><b style="color: var(--orange-color)">(Oral)</b> CHI 2019</div>
-            </div>
-            <div class="publication-links">
-                <a href="https://dl.acm.org/doi/10.1145/3290605.3300587" target="_blank">PDF</a>
-                <!-- <a href="#" target="_blank">BibTeX</a> -->
-            </div>
+        <div class="education-item">
+            <p>My current life motto: be happy and be healthy.</p>
         </div>
-    </div>
-</section>
 
-
-<section id="experiences">
-    <h2>Education & Experience</h2>
-    
-    <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Education</h3>
-    
-    <div class="education-item">
-        <h3>University of Washington</h3>
-        <div class="institution">Ph.D. in Computer Science and Engineering</div>
-        <div class="year">Sept 2019 - Dec 2025 (expected), Seattle, Washington</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Colby College</h3>
-        <div class="institution">B.A. in Computer Science and Mathematics (Summa Cum Laude, Top 0.5%)</div>
-        <div class="year">Sept 2015 - Dec 2018, Waterville, Maine</div>
-    </div>
-
-    <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Professional Experience</h3>
-    
-    <div class="experience-item">
-        <h3>NVIDIA</h3>
-        <div class="institution">Graduate Student Researcher at Nemo-Guardrail Team</div>
-        <div class="year">March 2025 - Present, Santa Clara, California</div>
-    </div>
-
-    <div class="experience-item">
-        <h3>Allen Institute for Artificial Intelligence (Ai2)</h3>
-        <div class="institution">Graduate Student Researcher at Mosaic and AllenNLP Teams</div>
-        <div class="year">June 2020 - December 2024, Seattle, Washington</div>
-    </div>
-
-    <div class="experience-item">
-        <h3>Stanford University</h3>
-        <div class="institution">Undergraduate Research Intern at the Computer Science Department</div>
-        <div class="year">June 2017 - September 2019, Stanford, California</div>
-    </div>
-
-    <div class="experience-item">
-        <h3>The Future Laboratory, Tsinghua University</h3>
-        <div class="institution">Visiting Student Researcher</div>
-        <div class="year">July 2019 - September 2019, Beijing, China</div>
-    </div>
-
-</section>
-
-
-<section id="honors">
-    <h2>Honors & Awards</h2>
-
-    <div class="education-item">
-        <h3>Outstanding Paper Award</h3>
-        <div class="institution">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025 (Oct 2025)</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Best Paper Award</h3>
-        <div class="institution">CHI 2024 (May 2024)</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Outstanding Paper Award</h3>
-        <div class="institution">EMNLP 2023 (Dec 2023)</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Best Paper Award</h3>
-        <div class="institution">NAACL 2022 (Jul 2022)</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Anne Dinning - Michael Wolf Endowed Regental Fellowship</h3>
-        <div class="institution">University of Washington (2019)</div>
-        <div class="year">Paul G. Allen School First-Year Ph.D. Fellowship</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Member of the Phi Beta Kappa Society</h3>
-        <div class="institution">Colby College (2018)</div>
-        <div class="year">Elected as a member of Phi Beta Kappa with junior standing</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Honorable Mention of Interdisciplinary Contest in Modeling (ICM)</h3>
-        <div class="institution">COMAP (2018)</div>
-        <div class="year">20th annual Interdisciplinary Contest in Modeling (ICM)</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Phi Beta Kappa Undergraduate Scholastic Achievement Award</h3>
-        <div class="institution">Colby College (2017)</div>
-        <div class="year">Top two students in the sophomore and junior classes</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Julius Seelye Bixler Scholar</h3>
-        <div class="institution">Colby College (2016, 2017, 2018)</div>
-        <div class="year">Top-ranking students as determined by the cumulative academic record, three-time recipient</div>
-    </div>
-
-    <div class="education-item">
-        <h3>Phi Beta Kappa Summer Research Scholar</h3>
-        <div class="institution">Colby College (2016)</div>
-        <div class="year">Summer research stipend</div>
-    </div>
-</section>
-
-<section id="personal"></section>
-    <h2>Personal</h2>
-
-    <div class="education-item">
-        <p>I firmly believe that everyone has the potential to achieve anything they set their mind to. Keep going and try again.</p>
-    </div>
-
-    <div class="education-item">
-        <p>Your path is uniquely yours. Follow what ignites you. Every twist, every turn, every unexpected direction is exactly where you need to be.</p>
-    </div>
-
-    <div class="education-item">
-        <p>Two cats, an orange tabby named <a href="static/loopy.JPG" style="color: var(--secondary-color);" target="_blank">Loopy</a> and an orange british shorthair named <a href="static/loafy.JPG" style="color: var(--secondary-color);" target="_blank">Loafy</a>, adopted me as their owner.</p>
-    </div>
-
-    <div class="education-item">
-        <p>My current life motto: be happy and be healthy.</p>
-    </div>
-
-    <!-- <div class="education-item">
+        <!-- <div class="education-item">
         <p>Hobbies: switching between hobbies.</p>
     </div> -->
-</section>
+        </section>
 
-<footer>
-    <p>&copy; 2025 Liwei Jiang. Last updated: September 2025</p>
-</footer>
-</div>
+        <footer>
+            <p>&copy; 2025 Liwei Jiang. Last updated: September 2025</p>
+        </footer>
+    </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Update active nav link
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
                 });
-                
-                // Update active nav link
-                document.querySelectorAll('.nav-link').forEach(link => {
+            });
+
+            // Highlight active section in navigation
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
                     link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
                 });
-                this.classList.add('active');
-            }
+            });
+
+            // Fade-in animation for sections
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            document.querySelectorAll('section, .publication').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(element);
+            });
         });
-    });
-
-    // Highlight active section in navigation
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Fade-in animation for sections
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    });
-
-    document.querySelectorAll('section, .publication').forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(element);
-    });
-});
-</script>
+    </script>
 </body>
+
 </html>
