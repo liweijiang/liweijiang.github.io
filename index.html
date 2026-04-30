@@ -508,6 +508,41 @@
         .social-links a[href*="twitter"]::before {
             content: "🐦";
         }
+
+        .year-section details {
+            width: 100%;
+        }
+
+        .year-section summary.year-header {
+            cursor: pointer;
+            list-style: none;
+            transition: color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .year-section summary.year-header::-webkit-details-marker {
+            display: none;
+        }
+
+        .year-section summary.year-header::after {
+            content: "▾";
+            margin-left: 0.5em;
+            font-size: 0.8em;
+            transition: transform 0.2s ease;
+        }
+
+        .year-section summary.year-header:hover {
+            color: var(--primary-color);
+            transform: translateX(4px);
+            opacity: 0.85;
+        }
+
+        .year-section summary.year-header:hover::after {
+            transform: translateX(2px);
+        }
+
+        .year-section details:not([open]) summary.year-header::after {
+            content: "▸";
+        }
     </style>
 </head>
 
@@ -858,29 +893,34 @@
                         <div class="workshop-venue">Multi-Turn Interactions in Large Language Models (MTI-LLM) Workshop
                             @ NeurIPS 2025</div>
                     </div>
-
-                </div>
-
-                <div class="publication">
-                    <div class="publication-title">
-                        WildHallucination: Evaluating Long-Form Factuality in LLMs with Real-World Entity Queries
-                    </div>
-                    <div class="publication-meta">
-                        <div class="publication-authors">
-                            Wenting Zhao, Tanya Goyal, Yu Ying Chiu, <strong>Liwei Jiang</strong>, Benjamin Newman,
-                            Abhilasha Ravichander, Khyathi Chandu, Ronan Le Bras, Claire Cardie, Yuntian Deng, Yejin
-                            Choi
-                        </div>
-                        <div class="publication-venue">Preprint</div>
-                    </div>
-                    <div class="publication-links">
-                        <a href="https://arxiv.org/abs/2407.17468" target="_blank">PDF</a>
-                        <a href="https://techcrunch.com/2024/08/14/study-suggests-that-even-the-best-ai-models-hallucinate-a-bunch/" target="_blank">🎙️ TechCrunch</a>
-                    </div>
                 </div>
 
             </div>
 
+
+            <div class="year-section">
+                <details close>
+                    <summary class="year-header">Old Preprints</summary>
+            
+                    <div class="publication">
+                        <div class="publication-title">
+                            WildHallucination: Evaluating Long-Form Factuality in LLMs with Real-World Entity Queries
+                        </div>
+                        <div class="publication-meta">
+                            <div class="publication-authors">
+                                Wenting Zhao, Tanya Goyal, Yu Ying Chiu, <strong>Liwei Jiang</strong>, Benjamin Newman,
+                                Abhilasha Ravichander, Khyathi Chandu, Ronan Le Bras, Claire Cardie, Yuntian Deng, Yejin
+                                Choi
+                            </div>
+                            <div class="publication-venue">Preprint</div>
+                        </div>
+                        <div class="publication-links">
+                            <a href="https://arxiv.org/abs/2407.17468" target="_blank">PDF</a>
+                            <a href="https://techcrunch.com/2024/08/14/study-suggests-that-even-the-best-ai-models-hallucinate-a-bunch/" target="_blank">🎙️ TechCrunch</a>
+                        </div>
+                    </div>
+                </details>
+            </div>
 
             <div class="year-section">
                 
