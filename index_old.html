@@ -2,7 +2,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liwei Jiang</title>
     <style>
@@ -35,7 +34,7 @@
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 0.75rem 2rem 2rem;
+            padding: 2rem;
         }
 
         header {
@@ -43,7 +42,7 @@
             grid-template-columns: auto 1fr;
             gap: 2rem;
             /* margin-bottom: 3rem; */
-            padding-bottom: 0.3rem;
+            padding-bottom: 1.0rem;
             /* border-bottom: 2px solid var(--border-color); */
             align-items: center;
         }
@@ -53,8 +52,8 @@
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 8px;
             margin: 0 auto 1rem;
             background: var(--light-gray);
@@ -63,9 +62,7 @@
             justify-content: center;
             font-size: 4rem;
             color: var(--secondary-color);
-            border: none;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15), 0 2px 6px rgba(0, 0, 0, 0.10);
-            filter: brightness(1.15);
+            border: 1px solid var(--border-color);
         }
 
         .header-content h1 {
@@ -78,15 +75,10 @@
             font-size: 2.2rem;
             font-weight: 400;
             color: var(--primary-color);
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
         }
 
-
-
         .title {
-            font-size: 1.15rem;
+            font-size: 1rem;
             color: var(--dark-gray);
             margin-bottom: 0.9rem;
             font-weight: 500;
@@ -95,13 +87,10 @@
         }
 
         .affiliation {
-            font-size: 0.9rem;
+            font-size: 1rem;
+            color: var(--secondary-color);
             margin-bottom: 0.5rem;
             font-weight: 500;
-            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .contact-info {
@@ -120,168 +109,35 @@
             text-decoration: underline;
         }
 
-        .social-btn-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.4rem;
-        }
-
-        .social-btn-row a {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            text-decoration: none;
-            padding: 0.3rem 0.75rem;
-            border: none;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #f5faff 0%, #eef5fd 100%);
-            box-shadow: 0 3px 0 #ccdcec, 0 4px 8px rgba(0, 0, 0, 0.06);
-            transition: background 0.2s ease, color 0.2s ease, box-shadow 0.1s ease, transform 0.1s ease;
-        }
-
-        .social-btn-row a:hover {
-            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 3px 0 #1a365d, 0 4px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .social-btn-row a:active {
-            transform: translateY(2px);
-            box-shadow: 0 1px 0 #c5d3e0, 0 2px 4px rgba(0, 0, 0, 0.10);
-        }
-
-        .social-btn-row a svg {
-            width: 15px;
-            height: 15px;
-            flex-shrink: 0;
-        }
-
-
-
-        .email-copy-btn {
-            position: relative;
-        }
-
-        .email-tooltip {
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            bottom: calc(100% + 2px);
-            right: 0;
-            font-size: 0.58rem;
-            font-weight: 500;
-            color: #4a5568;
-            background: rgba(255, 255, 255, 0.75);
-            padding: 1px 5px;
-            border-radius: 99px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
-            letter-spacing: 0.03em;
-            white-space: nowrap;
-            pointer-events: none;
-            transition: opacity 0.15s ease, visibility 0.15s ease;
-        }
-
-        .email-copy-btn:hover .email-tooltip {
-            opacity: 1;
-            visibility: visible;
-        }
-
         nav {
-            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
-            padding: 0.65rem 2rem;
+            background: var(--light-gray);
+            padding: 0.8rem 0;
             margin-bottom: 2rem;
-            margin-left: -2rem;
-            margin-right: -2rem;
-            border-radius: 0 0 12px 12px;
-            border: none;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.12);
-        }
-
-        .nav-inner {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            max-width: 1060px;
-            margin: 0 auto;
-        }
-
-        .nav-monogram {
-            font-weight: 700;
-            font-size: 1.05rem;
-            color: var(--yellow-color);
-            letter-spacing: -0.02em;
-            margin-right: 0.5rem;
-            white-space: nowrap;
-        }
-
-        .nav-divider {
-            width: 1px;
-            height: 1.2rem;
-            background: rgba(255, 255, 255, 0.2);
-            margin-right: 0.25rem;
-            flex-shrink: 0;
+            /* margin-top: -2.0rem; */
+            border-radius: 8px;
         }
 
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 0.15rem;
+            gap: 1rem;
             flex-wrap: wrap;
-            flex: 1;
-        }
-
-        .nav-cv-btn {
-            margin-left: auto;
-            flex-shrink: 0;
-        }
-
-        .nav-cv-btn a {
-            background: var(--yellow-color) !important;
-            color: var(--primary-color) !important;
-            font-weight: 700 !important;
-            padding: 0.4rem 1rem !important;
-            border-radius: 6px !important;
-        }
-
-        .nav-cv-btn a:hover {
-            background: var(--orange-color) !important;
-            color: white !important;
         }
 
         nav a {
-            color: rgba(255, 255, 255, 0.75);
+            color: var(--primary-color);
             text-decoration: none;
             font-weight: 500;
-            padding: 0.4rem 0.7rem;
+            padding: 0.5rem 0.8rem;
             border-radius: 6px;
-            transition: background 0.2s ease, color 0.2s ease;
-            font-size: 0.9rem;
+            transition: background 0.3s ease;
         }
 
         nav a:hover,
         nav a.active {
-            background: rgba(255, 255, 255, 0.15);
+            background: var(--secondary-color);
             color: white;
-        }
-
-        .nav-cv-btn a {
-            color: rgba(255, 255, 255, 0.75) !important;
-            background: none !important;
-            font-weight: 500 !important;
-        }
-
-        .nav-cv-btn a:hover {
-            background: rgba(255, 255, 255, 0.15) !important;
-            color: white !important;
         }
 
         section {
@@ -697,55 +553,39 @@
                 <img src="static/avatar.png" alt="Liwei Jiang Profile Picture" class="profile-img">
             </div>
             <div class="header-content">
-                <h2>
-                    <b style="background: linear-gradient(135deg, #1a4f8c 0%, #2176c7 50%, #3a9de0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Liwei</b> <b style="background: linear-gradient(135deg, #f6a800 0%, #ffcc00 50%, #ffe566 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Jiang</b> 🌊 <span style="font-family: 'Ma Shan Zheng', cursive;">姜力炜</span> 
-                    <!-- <span class="title">Ph.D. Paul G. Allen School of Computer Science & Engineering, University of Washington</span> -->
-                    <span class="title" style="font-weight: 600; background: linear-gradient(135deg, #4a7c00 0%, #76b900 50%, #8ec200 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research Scientist at NVIDIA</span>
-                </h2>
-                <p class="affiliation">Ph.D. from Paul G. Allen School of Computer Science & Engineering, University of Washington</p>
+                <h2><b>Liwei</b> <b style="color: var(--yellow-color);">Jiang</b> 🌊 姜力炜 
+                    <span class="title">Ph.D.</span>
+                    <!-- <span class="title">Research Scientist</span> -->
+                    </h2>
+                <p class="affiliation">Paul G. Allen School of Computer Science & Engineering, University of Washington</p>
                 <div class="contact-info">
-                    <div class="social-btn-row">
-                        <a href="#" id="email-btn" onclick="copyEmail(event)" class="email-copy-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                            <span id="email-label">lwjiang@cs.washington.edu</span>
-                            <span class="email-tooltip">Copy</span>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 10a8 8 0 0 1 7.162 3.44L24 9.5z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/liwei-jiang-jlw/" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="https://github.com/liweijiang" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                        </a>
-                        <a href="https://x.com/liweijianglw" target="_blank" rel="noopener noreferrer">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
-                            <!-- X -->
-                        </a>
-                    </div>
+                    <span><b>Contact:</b> <a href="mailto:lwjiang@cs.washington.edu">lwjiang@cs.washington.edu</a> |
+                        <a href="https://scholar.google.com/citations?user=lcPsDgUAAAAJ&hl=en" target="_blank"
+                            rel="noopener noreferrer">Google Scholar</a> |
+                        <a href="https://www.linkedin.com/in/liwei-jiang-jlw/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a> |
+                        <a href="https://github.com/liweijiang" target="_blank" rel="noopener noreferrer">GitHub</a> |
+                        <a href="https://x.com/liweijianglw" target="_blank" rel="noopener noreferrer">X</a>
+                    </span>
                 </div>
     
             </div>
         </header>
 
-        <nav>
-            <div class="nav-inner">
-                <!-- <span class="nav-monogram">Liwei Jiang</span> -->
-                <!-- <div class="nav-divider"></div> -->
-                <ul>
-                    <li><a href="#news" class="nav-link">News</a></li>
-                    <li><a href="#publications" class="nav-link">Publications</a></li>
-                    <li><a href="#honors" class="nav-link">Awards</a></li>
-                    <li><a href="#experiences" class="nav-link">Experience</a></li>
-                    <li><a href="#talks" class="nav-link">Talks</a></li>
-                    <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                    <li><a href="#bio" class="nav-link">Bio</a></li>
-                    <li><a href="#personal" class="nav-link">Personal</a></li>
-                    <li><a href="#blog" class="nav-link">Blog</a></li>
-                </ul>
-                <div class="nav-cv-btn"><a href="static/CV.pdf" target="_blank">CV</a></div>
-            </div>
+        <nav style="padding-top: 0.5em; padding-bottom: 0.5em">
+            <ul>
+                <li><a href="#news" class="nav-link">News</a></li>
+                <li><a href="#publications" class="nav-link">Publication</a></li>
+                <li><a href="#honors" class="nav-link">Award</a></li>
+                <li><a href="#experiences" class="nav-link">Experience</a></li>
+                <li><a href="#talks" class="nav-link">Talk</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching & Service</a></li>
+                <li><a href="#bio" class="nav-link">Bio</a></li>
+                <li><a href="#personal" class="nav-link">Personal</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <!-- <li><a href="#" class="nav-link">Lab</a></li> -->
+                <li><a href="static/CV.pdf" class="nav-link">CV</a></li>
+            </ul>
         </nav>
 
         <!-- <section id="about">
@@ -2429,11 +2269,6 @@
     </div>
 
     <script>
-
-        function copyEmail(e) {
-            e.preventDefault();
-            navigator.clipboard.writeText('lwjiang@cs.washington.edu');
-        }
         document.addEventListener('DOMContentLoaded', function () {
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
