@@ -379,6 +379,7 @@
         section {
             margin-bottom: 2rem;
             padding: 0.2rem;
+            scroll-margin-top: 70px;
         }
 
         h2 {
@@ -443,12 +444,19 @@
 
         /* Compact Publication Styles */
         .publication {
-            background: white;
-            padding: 0.7rem;
+            background: #fff;
+            padding: 0.85rem 1rem;
             margin-bottom: 0.7rem;
-            border-left: 3px solid var(--secondary-color);
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef1f5;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(26, 54, 93, 0.05);
+            transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .publication:hover {
+            box-shadow: 0 4px 12px rgba(26, 54, 93, 0.08);
+            transform: translateY(-2px);
+            border-color: #e2e8f0;
         }
 
         .publication-title {
@@ -465,14 +473,34 @@
             text-decoration: none;
         }
 
+        /* hover: color change (no underline) for all text hyperlinks */
+        .about-text a,
+        .news-item a,
+        .publication-title a,
+        .publication-authors a,
+        .education-item p a,
+        .experience-item p a,
+        .talk-item p a,
+        .education-item .institution a,
+        .experience-item .institution a,
+        .talk-item .institution a,
         .scholar-link {
-            transition: color 0.2s ease, text-decoration-color 0.2s ease;
+            transition: color 0.2s ease;
         }
 
+        .about-text a:hover,
+        .news-item a:hover,
+        .publication-title a:hover,
+        .publication-authors a:hover,
+        .education-item p a:hover,
+        .experience-item p a:hover,
+        .talk-item p a:hover,
+        .education-item .institution a:hover,
+        .experience-item .institution a:hover,
+        .talk-item .institution a:hover,
         .scholar-link:hover {
-            color: var(--accent-color);
-            text-decoration: underline;
-            text-underline-offset: 2px;
+            color: #4299e1 !important;
+            text-decoration: none;
         }
 
         .publication-meta {
@@ -574,8 +602,96 @@
             color: var(--yellow-color);
             margin-bottom: 0.6rem;
             font-weight: 700;
-            border-left: 10px solid var(--yellow-color);
             padding-left: 1rem;
+            position: relative;
+        }
+
+        .year-header::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            border-radius: 3px;
+            background: linear-gradient(180deg, #ffe066 0%, #ffcc00 55%, #f2b400 100%);
+        }
+
+        /* Awards — timeline (matches News) */
+        .awards-grid {
+            position: relative;
+            margin-left: 6px;
+            padding-left: 1.4rem;
+        }
+
+        .awards-grid::before {
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 0.4rem;
+            bottom: 0.2rem;
+            width: 2px;
+            background: linear-gradient(180deg, #ffcc00, var(--border-color));
+        }
+
+        .awards-card {
+            position: relative;
+            padding: 0 0 0.9rem 0;
+        }
+
+        .awards-card:last-child {
+            padding-bottom: 0;
+        }
+
+        .awards-card::before {
+            content: "";
+            position: absolute;
+            left: -1.4rem;
+            top: 0.45rem;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--secondary-color);
+            transform: translateX(-1px);
+        }
+
+        .awards-card.gold::before {
+            border-color: var(--yellow-color);
+            background: var(--yellow-color);
+        }
+
+        .awards-card .award-year {
+            float: right;
+            margin-left: 0.8rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            white-space: nowrap;
+        }
+
+        .awards-card .award-name {
+            display: inline;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 0.98rem;
+            line-height: 1.5;
+        }
+
+        .awards-card .award-venue {
+            display: inline;
+            color: var(--secondary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .awards-card .award-venue::before {
+            content: "— ";
+        }
+
+        .awards-card .award-desc {
+            color: var(--dark-gray);
+            font-size: 0.85rem;
         }
 
         .job-market-item {
@@ -665,6 +781,7 @@
             overflow-y: auto;
             padding-left: 0.25rem;
             padding-right: 0.5rem;
+            scroll-margin-top: 132px;
         }
 
         #news h2 {
@@ -2241,73 +2358,89 @@
         <section id="honors">
             <h2>Awards</h2>
 
-            <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</h3>
-                <div class="institution">NeurIPS 2025 (Dec 2025)</div>
-            </div>
+            <div class="awards-grid">
 
+                <div class="awards-card gold">
+                    <span class="award-year">Dec 2025</span>
+                    <div class="award-name"><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</div>
+                    <div class="award-venue">NeurIPS 2025</div>
+                </div>
 
-            <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award</h3>
-                <div class="institution">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025 (Oct 2025)</div>
-            </div>
+                <div class="awards-card gold">
+                    <span class="award-year">Oct 2025</span>
+                    <div class="award-name"><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award</div>
+                    <div class="award-venue">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025</div>
+                </div>
 
-            <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</h3>
-                <div class="institution">CHI 2024 (May 2024)</div>
-            </div>
+                <div class="awards-card gold">
+                    <span class="award-year">May 2024</span>
+                    <div class="award-name"><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</div>
+                    <div class="award-venue">CHI 2024</div>
+                </div>
 
-            <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award</h3>
-                <div class="institution">EMNLP 2023 (Dec 2023)</div>
-            </div>
+                <div class="awards-card gold">
+                    <span class="award-year">Dec 2023</span>
+                    <div class="award-name"><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award</div>
+                    <div class="award-venue">EMNLP 2023</div>
+                </div>
 
-            <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</h3>
-                <div class="institution">NAACL 2022 (Jul 2022)</div>
-            </div>
+                <div class="awards-card gold">
+                    <span class="award-year">Jul 2022</span>
+                    <div class="award-name"><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</div>
+                    <div class="award-venue">NAACL 2022</div>
+                </div>
 
-            <div class="education-item">
-                <h3>Anne Dinning - Michael Wolf Endowed Regental Fellowship</h3>
-                <div class="institution">University of Washington (2019)</div>
-                <div class="year">Paul G. Allen School First-Year Ph.D. Fellowship</div>
-            </div>
+                <div class="awards-card">
+                    <span class="award-year">2019</span>
+                    <div class="award-name">Anne Dinning - Michael Wolf Endowed Regental Fellowship</div>
+                    <div class="award-venue">University of Washington</div>
+                    <div class="award-desc">Paul G. Allen School First-Year Ph.D. Fellowship</div>
+                </div>
 
-            <div class="education-item">
-                <h3>Member of the Phi Beta Kappa Society</h3>
-                <div class="institution">Colby College (2018)</div>
-                <div class="year">Elected as a member of Phi Beta Kappa with junior standing</div>
-            </div>
+                <div class="awards-card">
+                    <span class="award-year">2018</span>
+                    <div class="award-name">Member of the Phi Beta Kappa Society</div>
+                    <div class="award-venue">Colby College</div>
+                    <div class="award-desc">Elected as a member of Phi Beta Kappa with junior standing</div>
+                </div>
 
-            <div class="education-item">
-                <h3>Honorable Mention of Interdisciplinary Contest in Modeling (ICM)</h3>
-                <div class="institution">COMAP (2018)</div>
-                <div class="year">20th annual Interdisciplinary Contest in Modeling (ICM)</div>
-            </div>
+                <div class="awards-card">
+                    <span class="award-year">2018</span>
+                    <div class="award-name">Honorable Mention of Interdisciplinary Contest in Modeling (ICM)</div>
+                    <div class="award-venue">COMAP</div>
+                    <div class="award-desc">20th annual Interdisciplinary Contest in Modeling (ICM)</div>
+                </div>
 
-            <div class="education-item">
-                <h3>Phi Beta Kappa Undergraduate Scholastic Achievement Award</h3>
-                <div class="institution">Colby College (2017)</div>
-                <div class="year">Top two students in the sophomore and junior classes</div>
-            </div>
+                <div class="awards-card">
+                    <span class="award-year">2017</span>
+                    <div class="award-name">Phi Beta Kappa Undergraduate Scholastic Achievement Award</div>
+                    <div class="award-venue">Colby College</div>
+                    <div class="award-desc">Top two students in the sophomore and junior classes</div>
+                </div>
 
-            <div class="education-item">
-                <h3>Julius Seelye Bixler Scholar</h3>
-                <div class="institution">Colby College (2016, 2017, 2018)</div>
-                <div class="year">Top-ranking students as determined by the cumulative academic record, three-time
-                    recipient</div>
-            </div>
+                <div class="awards-card">
+                    <span class="award-year">2016–2018</span>
+                    <div class="award-name">Julius Seelye Bixler Scholar</div>
+                    <div class="award-venue">Colby College</div>
+                    <div class="award-desc">Top-ranking students as determined by the cumulative academic record, three-time recipient</div>
+                </div>
 
-            <div class="education-item">
-                <h3>Phi Beta Kappa Summer Research Scholar</h3>
-                <div class="institution">Colby College (2016)</div>
-                <div class="year">Summer research stipend</div>
+                <div class="awards-card">
+                    <span class="award-year">2016</span>
+                    <div class="award-name">Phi Beta Kappa Summer Research Scholar</div>
+                    <div class="award-venue">Colby College</div>
+                    <div class="award-desc">Summer research stipend</div>
+                </div>
+
             </div>
 
             <h2>Grants</h2>
-            <div class="education-item">
-                <h3>AI2050 Compute Grant (100K hours of NVIDIA H100 compute)</h3>
-                <div class="institution">Schmidt Sciences (Jan 2026)</div>
+            <div class="awards-grid">
+                <div class="awards-card">
+                    <span class="award-year">Jan 2026</span>
+                    <div class="award-name">AI2050 Compute Grant (100K hours of NVIDIA H100 compute)</div>
+                    <div class="award-venue">Schmidt Sciences</div>
+                </div>
             </div>
         </section>
 
@@ -2319,7 +2452,7 @@
             <div class="education-item">
                 <h3>University of Washington</h3>
                 <div class="institution">Ph.D. in Computer Science and Engineering</div>
-                <div class="year">Sept 2019 - March 2026 (expected), Seattle, Washington</div>
+                <div class="year">Sept 2019 - May 2026, Seattle, Washington</div>
             </div>
 
             <div class="education-item">
@@ -2776,15 +2909,13 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
                     }
                 });
             });
 
             document.querySelectorAll('section, .publication').forEach(element => {
                 element.style.opacity = '0';
-                element.style.transform = 'translateY(20px)';
-                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                element.style.transition = 'opacity 0.6s ease';
                 observer.observe(element);
             });
         });
