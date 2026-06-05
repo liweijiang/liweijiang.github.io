@@ -737,7 +737,7 @@
             background: var(--red-color);
         }
 
-        /* themed trophy icon (replaces the trophy emoji) */
+        /* themed trophy icon (replaces the 🏆 emoji) */
         .trophy {
             display: inline-block;
             width: 1.05em;
@@ -1103,7 +1103,7 @@
 
             <div class="news-item"><span class="news-date">Jan 2026:</span> Honored to receive the <a href="https://ai2050.schmidtsciences.org/about/">AI2050 Compute Grant from Schmidt Sciences</a> with 100K hours of NVIDIA H100 compute to advance our research on <b>Pluralistic Alignment</b>.</div>
 
-            <div class="news-item"><span class="news-date">Dec 2025</span> <span class="news-badge award">Award</span> Our paper <a href="https://openreview.net/forum?id=saDOrrnNTz&referrer=%5Bthe%20profile%20of%20Liwei%20Jiang%5D(%2Fprofile%3Fid%3D~Liwei_Jiang2)">Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)</a> received the <span class="trophy" role="img" aria-label="award"></span> <b>Best Paper Award</b> at NeurIPS 2025!</div>
+            <div class="news-item"><span class="news-date">Dec 2025</span> <span class="news-badge award">Award</span> Our paper <a href="https://openreview.net/forum?id=saDOrrnNTz&referrer=%5Bthe%20profile%20of%20Liwei%20Jiang%5D(%2Fprofile%3Fid%3D~Liwei_Jiang2)">Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)</a> received the 🏆 <b>Best Paper Award</b> at NeurIPS 2025!</div>
 
             <div class="news-item"><span class="news-date">Dec 2025:</span> I'll be traveling to San Diego for NeurIPS 2025 for presenting two
                 accepted papers: Oral for Artificial Hivemind and poster for AI debates for
@@ -1118,7 +1118,7 @@
             <div class="news-item"><span class="news-date">Oct 2025</span> <span class="news-badge award">Award</span> Our paper <a href="https://arxiv.org/abs/2506.07468">Chasing Moving
                     Targets with Online Self-Play Reinforcement
                     Learning
-                    for Safer Language Models</a> won the <span class="trophy" role="img" aria-label="award"></span> <b>Outstanding Paper Award</b> at the AIA workshop @ COLM
+                    for Safer Language Models</a> won the 🏆 <b>Outstanding Paper Award</b> at the AIA workshop @ COLM
                 2025!</div>
 
             <div class="news-item"><span class="news-date">Oct 2025:</span> Co-organize the 3rd edition of the <a
@@ -1159,7 +1159,8 @@
 
             <div class="news-item"><span class="news-date">May 2024</span> <span class="news-badge award">Award</span> Our paper <a
                     href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642075">MigraineTracker: Examining Patient
-                    Experiences with Goal-Directed Self-Tracking for a Chronic Health Condition</a> recieved the <span class="trophy" role="img" aria-label="award"></span>                 <b>Best Paper Award</b> at CHI 2024!</div>
+                    Experiences with Goal-Directed Self-Tracking for a Chronic Health Condition</a> recieved the 🏆
+                <b>Best Paper Award</b> at CHI 2024!</div>
 
             <div class="news-item"><span class="news-date">Jan 2024:</span> Lead of TA effort and co-design (<b>a LLM version!</b>) for the
                 class
@@ -1173,10 +1174,12 @@
                     Workshop</a> at NeurIPS 2023.</div>
 
             <div class="news-item"><span class="news-date">Dec 2023</span> <span class="news-badge award">Award</span> Our paper <a href="https://arxiv.org/abs/2212.10465">SODA:
-                    Million-Scale Dialogue Distillation with Social Commonsense Contextualization</a> recieved the <span class="trophy" role="img" aria-label="award"></span>                 <b>Outstanding Paper Award</b> at EMNLP 2023!</div>
+                    Million-Scale Dialogue Distillation with Social Commonsense Contextualization</a> recieved the 🏆
+                <b>Outstanding Paper Award</b> at EMNLP 2023!</div>
 
             <div class="news-item"><span class="news-date">July 2022</span> <span class="news-badge award">Award</span> Our paper <a href="https://arxiv.org/abs/2112.08726">NeuroLogic
-                    A*esque Decoding: Constrained Text Generation with Lookahead Heuristics</a> recieved the <span class="trophy" role="img" aria-label="award"></span>                 <b>Best Paper Award</b> at NAACL 2022!</div>
+                    A*esque Decoding: Constrained Text Generation with Lookahead Heuristics</a> recieved the 🏆
+                <b>Best Paper Award</b> at NAACL 2022!</div>
 
             <div class="news-item"><span class="news-date">June 2020:</span> Started my internship at Ai2!</div>
 
@@ -1290,7 +1293,7 @@
                     </div>
                     <div class="publication-links">
                         <div class="publication-authors"></div>
-                        <b class="workshop-award" style="color: var(--red-color);"><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award (Oral)</b>
+                        <b class="workshop-award" style="color: var(--red-color);">🏆 Outstanding Paper Award (Oral)</b>
                         <div class="workshop-venue">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025</div>
                     </div>
                 </div>
@@ -1363,7 +1366,7 @@
                 <div class="publication">
                     <div class="publication-title">
                         Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)
-                        <span class="award-icon paper-award" title="Outstanding Paper Award"><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</span>
+                        <span class="award-icon paper-award" title="Outstanding Paper Award">🏆 Best Paper Award</span>
                     </div>
                     <div class="publication-meta">
                         <div class="publication-authors"><strong>Liwei Jiang</strong>, Yuanjun Chai, Margaret Li, Mickel
@@ -1791,7 +1794,7 @@
                     <div class="publication-title">
                         MigraineTracker: Examining Patient Experiences with Goal-Directed Self-Tracking for a Chronic
                         Health Condition
-                        <span class="award-icon paper-award" title="Outstanding Paper Award"><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</span>
+                        <span class="award-icon paper-award" title="Outstanding Paper Award">🏆 Best Paper Award</span>
                     </div>
                     <div class="publication-meta">
                         <div class="publication-authors">
@@ -1867,7 +1870,7 @@
                 <div class="publication">
                     <div class="publication-title">
                         SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization
-                        <span class="award-icon paper-award" title="Outstanding Paper Award"><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper
+                        <span class="award-icon paper-award" title="Outstanding Paper Award">🏆 Outstanding Paper
                             Award</span>
                     </div>
                     <div class="publication-meta">
@@ -2015,7 +2018,7 @@
                 <div class="publication">
                     <div class="publication-title">
                         NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics
-                        <span class="award-icon paper-award" title="Best Paper Award"><span class="trophy" role="img" aria-label="award"></span> Best
+                        <span class="award-icon paper-award" title="Best Paper Award">🏆 Best
                             Paper Award</span>
                     </div>
                     <div class="publication-meta">
@@ -2135,28 +2138,28 @@
             <h2>Awards</h2>
 
             <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</h3>
+                <h3>🏆 Best Paper Award</h3>
                 <div class="institution">NeurIPS 2025 (Dec 2025)</div>
             </div>
 
 
             <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award</h3>
+                <h3>🏆 Outstanding Paper Award</h3>
                 <div class="institution">AI Agents: Capabilities and Safety (AIA) Workshop @ COLM 2025 (Oct 2025)</div>
             </div>
 
             <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</h3>
+                <h3>🏆 Best Paper Award</h3>
                 <div class="institution">CHI 2024 (May 2024)</div>
             </div>
 
             <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Outstanding Paper Award</h3>
+                <h3>🏆 Outstanding Paper Award</h3>
                 <div class="institution">EMNLP 2023 (Dec 2023)</div>
             </div>
 
             <div class="education-item">
-                <h3><span class="trophy" role="img" aria-label="award"></span> Best Paper Award</h3>
+                <h3>🏆 Best Paper Award</h3>
                 <div class="institution">NAACL 2022 (Jul 2022)</div>
             </div>
 
