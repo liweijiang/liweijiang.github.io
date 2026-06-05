@@ -41,11 +41,92 @@
         header {
             display: grid;
             grid-template-columns: auto 1fr;
-            gap: 2rem;
+            gap: 2.5rem;
             /* margin-bottom: 3rem; */
             padding-bottom: 0.3rem;
             /* border-bottom: 2px solid var(--border-color); */
             align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .loafy-wrap {
+            position: absolute;
+            right: 100px;
+            bottom: -110px;
+            width: 140px;
+            height: 200px;
+            cursor: default;
+        }
+        .loafy-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center bottom;
+            filter: brightness(1.5) saturate(1.5);
+            opacity: 0.88;
+            display: block;
+        }
+        .loafy-tooltip {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 30px;
+            right: calc(100% + 10px);
+            transform: none;
+            font-size: 0.62rem;
+            font-weight: 500;
+            color: #4a5568;
+            background: rgba(255, 255, 255, 0.82);
+            padding: 2px 8px;
+            border-radius: 99px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.15s ease, visibility 0.15s ease;
+        }
+        .loafy-wrap:hover .loafy-tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        .loopy-wrap {
+            position: absolute;
+            right: 0;
+            bottom: -25px;
+            width: 120px;
+            height: 172px;
+            cursor: default;
+        }
+        .loopy-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center bottom;
+            transform: scaleX(-1);
+            filter: brightness(1.6) saturate(1.5);
+            opacity: 0.92;
+            display: block;
+        }
+        .loopy-tooltip {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            font-size: 0.62rem;
+            font-weight: 500;
+            color: #4a5568;
+            background: rgba(255, 255, 255, 0.82);
+            padding: 2px 8px;
+            border-radius: 99px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            white-space: nowrap;
+            pointer-events: none;
+            transition: opacity 0.15s ease, visibility 0.15s ease;
+        }
+        .loopy-wrap:hover .loopy-tooltip {
+            opacity: 1;
+            visibility: visible;
         }
 
         .profile-section {
@@ -53,8 +134,8 @@
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 8px;
             margin: 0 auto 1rem;
             background: var(--light-gray);
@@ -81,6 +162,7 @@
             border-bottom: none;
             padding-bottom: 0;
             margin-bottom: 0;
+            margin-top: -1.5rem;
         }
 
 
@@ -95,7 +177,8 @@
         }
 
         .affiliation {
-            font-size: 0.9rem;
+            font-size: 1rem;
+            margin-top: 0.2rem;
             margin-bottom: 0.5rem;
             font-weight: 500;
             background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
@@ -131,11 +214,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 500;
             color: var(--primary-color);
             text-decoration: none;
-            padding: 0.3rem 0.75rem;
+            padding: 0.32rem 0.8rem;
             border: none;
             border-radius: 20px;
             background: linear-gradient(135deg, #f5faff 0%, #eef5fd 100%);
@@ -193,10 +276,10 @@
 
         nav {
             background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
-            padding: 0.65rem 2rem;
+            padding: 0.85rem 2rem;
             margin-bottom: 2rem;
-            margin-left: -2rem;
-            margin-right: -2rem;
+            margin-left: -1rem;
+            margin-right: -1rem;
             border-radius: 0 0 12px 12px;
             border: none;
             position: sticky;
@@ -264,9 +347,8 @@
             padding: 0.4rem 0.7rem;
             border-radius: 6px;
             transition: background 0.2s ease, color 0.2s ease;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
-
         nav a:hover,
         nav a.active {
             background: rgba(255, 255, 255, 0.15);
@@ -290,12 +372,21 @@
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 1.75rem;
             color: var(--primary-color);
             margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--secondary-color);
-            font-weight: 400;
+            padding-bottom: 0;
+            border-bottom: none;
+            font-weight: 600;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 36px;
+            height: 3px;
+            background: linear-gradient(90deg, #1a365d, #4299e1);
+            border-radius: 2px;
+            margin-top: 1px;
         }
 
         .about-text {
@@ -321,13 +412,23 @@
         }
 
         .interest-tag {
-            background: var(--light-gray);
-            padding: 0.4rem 0.6rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            padding: 0.32rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.88rem;
             font-weight: 500;
             color: var(--primary-color);
-            border: 1px solid var(--border-color);
+            border: none;
+            background: linear-gradient(135deg, #f5faff 0%, #eef5fd 100%);
+            box-shadow: 0 3px 0 #ccdcec, 0 4px 8px rgba(0, 0, 0, 0.06);
+            transition: background 0.2s ease, color 0.2s ease, box-shadow 0.1s ease, transform 0.1s ease;
+            cursor: default;
+        }
+        .interest-tag:hover {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
+            color: white;
+            box-shadow: 0 3px 0 #1a365d, 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* Compact Publication Styles */
@@ -694,13 +795,13 @@
     <div class="container">
         <header>
             <div class="profile-section">
-                <img src="static/avatar.png" alt="Liwei Jiang Profile Picture" class="profile-img">
+                <img src="static/avatar.png" alt="Liwei Jiang Profile Picture" class="profile-img" onmouseover="this.src='static/avatar2.png'" onmouseout="this.src='static/avatar.png'">
             </div>
             <div class="header-content">
                 <h2>
-                    <b style="background: linear-gradient(135deg, #1a4f8c 0%, #2176c7 50%, #3a9de0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Liwei</b> <b style="background: linear-gradient(135deg, #f6a800 0%, #ffcc00 50%, #ffe566 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Jiang</b> 🌊 <span style="font-family: 'Ma Shan Zheng', cursive;">姜力炜</span> 
+                    <b style="background: linear-gradient(135deg, #1a4f8c 0%, #2176c7 50%, #3a9de0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Liwei</b> <b style="background: linear-gradient(135deg, #f6a800 0%, #ffcc00 50%, #ffe566 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Jiang</b> <span style="-webkit-text-fill-color: initial;">🌊</span> <span style="font-family: 'Ma Shan Zheng', cursive; -webkit-text-fill-color: initial;">姜力炜</span> 
                     <!-- <span class="title">Ph.D. Paul G. Allen School of Computer Science & Engineering, University of Washington</span> -->
-                    <span class="title" style="font-weight: 600; background: linear-gradient(135deg, #4a7c00 0%, #76b900 50%, #8ec200 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research Scientist at NVIDIA</span>
+                    <span class="title" style="font-weight: 550; background: linear-gradient(135deg, #4a7c00 0%, #76b900 50%, #8ec200 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research Scientist at NVIDIA</span>
                 </h2>
                 <p class="affiliation"><b>Ph.D.</b> Paul G. Allen School of Computer Science & Engineering, University of Washington</p>
                 <div class="contact-info">
@@ -726,6 +827,14 @@
                     </div>
                 </div>
     
+            </div>
+            <div class="loafy-wrap">
+                <img src="static/loafyheader.png" alt="Loafy">
+                <span class="loafy-tooltip">Hi, Loafy!</span>
+            </div>
+            <div class="loopy-wrap">
+                <img src="static/loopyheader.png" alt="Loopy">
+                <span class="loopy-tooltip">Hi, Loopy!</span>
             </div>
         </header>
 
@@ -881,9 +990,9 @@
             <div class="research-interests">
                 <span class="interest-tag">Artificial Intelligence</span>
                 <span class="interest-tag">Machine Learning</span>
-                <span class="interest-tag">Natural Language Processing</span>
-                <span class="interest-tag">AI Safety and Alignment</span>
-                <!-- <span class="interest-tag">Pluralistic Alignment</span> -->
+                <!-- <span class="interest-tag">Natural Language Processing</span> -->
+                <span class="interest-tag">AI Safety & Security</span>
+                <span class="interest-tag">Physical & Embodied AI Alignment</span>
                 <span class="interest-tag">Human-AI Collaborative Intelligence</span>
             </div>
 
@@ -968,8 +1077,7 @@
             <div class="news-item"><b>May 2024:</b> Our paper <a
                     href="https://dl.acm.org/doi/pdf/10.1145/3613904.3642075">MigraineTracker: Examining Patient
                     Experiences with Goal-Directed Self-Tracking for a Chronic Health Condition</a> recieved the 🏆
-                <b>Best Paper Award</b> at CHI 2024!
-            </div>
+                <b>Best Paper Award</b> at CHI 2024!</div>
 
             <div class="news-item"><b>Jan 2024:</b> Lead of TA effort and co-design (<b>a LLM version!</b>) for the
                 class
@@ -980,18 +1088,15 @@
 
             <div class="news-item"><b>Dec 2023:</b> Co-organize the <a href="https://aipsychphil.github.io">AI Meets
                     Moral Philosophy and Moral Psychology: An Interdisciplinary Dialogue about Computational Ethics (MP2)
-                    Workshop</a> at NeurIPS 2023.
-            </div>
+                    Workshop</a> at NeurIPS 2023.</div>
 
             <div class="news-item"><b>Dec 2023:</b> Our paper <a href="https://arxiv.org/abs/2212.10465">SODA:
                     Million-Scale Dialogue Distillation with Social Commonsense Contextualization</a> recieved the 🏆
-                <b>Outstanding Paper Award</b> at EMNLP 2023!
-            </div>
+                <b>Outstanding Paper Award</b> at EMNLP 2023!</div>
 
             <div class="news-item"><b>July 2022:</b> Our paper <a href="https://arxiv.org/abs/2112.08726">NeuroLogic
                     A*esque Decoding: Constrained Text Generation with Lookahead Heuristics</a> recieved the 🏆
-                <b>Best Paper Award</b> at NAACL 2022!
-            </div>
+                <b>Best Paper Award</b> at NAACL 2022!</div>
 
             <div class="news-item"><b>June 2020:</b> Started my internship at Ai2!</div>
         </section>
