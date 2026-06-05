@@ -63,15 +63,20 @@
             object-fit: contain;
             object-position: center bottom;
             filter: brightness(1.5) saturate(1.5) drop-shadow(0 5px 7px rgba(0, 0, 0, 0.18));
-            opacity: 0.88;
+            opacity: 1;
             display: block;
+            transform-origin: center bottom;
+            transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+        }
+        .loafy-wrap:hover img {
+            transform: scale(1.02) translateY(-1px);
         }
         .loafy-tooltip {
             opacity: 0;
             visibility: hidden;
             position: absolute;
             top: 30px;
-            right: calc(100% + 10px);
+            right: calc(100% - 8px);
             transform: none;
             font-size: 0.62rem;
             font-weight: 500;
@@ -102,9 +107,14 @@
             object-fit: contain;
             object-position: center bottom;
             transform: scaleX(-1);
-            filter: brightness(1.6) saturate(1.5) drop-shadow(0 5px 7px rgba(0, 0, 0, 0.18));
+            filter: brightness(1.6) saturate(1.5) drop-shadow(0 5px 7px rgba(0, 0, 0, 0.12));
             opacity: 0.92;
             display: block;
+            transform-origin: center bottom;
+            transition: transform 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+        }
+        .loopy-wrap:hover img {
+            transform: scaleX(-1) scale(1.02) translateY(-1px);
         }
         .loopy-tooltip {
             opacity: 0;
@@ -740,9 +750,9 @@
         /* themed trophy icon (replaces the trophy emoji) */
         .trophy {
             display: inline-block;
-            width: 1.05em;
-            height: 1.05em;
-            vertical-align: -0.18em;
+            width: 1.7em;
+            height: 1.7em;
+            vertical-align: -0.5em;
             background: linear-gradient(135deg, #f6a800 0%, #ffcc00 50%, #ffe566 100%);
             -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 4h-2V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v1H5a2 2 0 0 0-2 2v1a4 4 0 0 0 4 4h.3A5 5 0 0 0 11 14.9V17H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.1a5 5 0 0 0 3.7-2.9H17a4 4 0 0 0 4-4V6a2 2 0 0 0-2-2zM5 7V6h2v3a2 2 0 0 1-2-2zm14 0a2 2 0 0 1-2 2V6h2v1z'/%3E%3C/svg%3E") center / contain no-repeat;
             mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 4h-2V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v1H5a2 2 0 0 0-2 2v1a4 4 0 0 0 4 4h.3A5 5 0 0 0 11 14.9V17H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.1a5 5 0 0 0 3.7-2.9H17a4 4 0 0 0 4-4V6a2 2 0 0 0-2-2zM5 7V6h2v3a2 2 0 0 1-2-2zm14 0a2 2 0 0 1-2 2V6h2v1z'/%3E%3C/svg%3E") center / contain no-repeat;
