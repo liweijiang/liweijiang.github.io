@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Kaushan+Script&family=Parisienne&family=Dancing+Script:wght@500&family=Great+Vibes&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liwei Jiang</title>
     <style>
@@ -165,6 +165,19 @@
             color: var(--primary-color);
         }
 
+        /* English name font. To switch, comment out the active font-family
+           below and uncomment one of the alternatives. */
+        .name-en {
+            color: var(--primary-color);
+            font-family: 'Kaushan Script', cursive;
+            font-weight: 400;
+            font-size: 1em;
+            /* font-family: 'Parisienne', cursive; font-size: 1.15em; */
+            /* font-family: 'Dancing Script', cursive; */
+            /* font-family: 'Great Vibes', cursive; font-size: 1.25em; */
+            /* font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 1em; */
+        }
+
         .header-content h2 {
             font-size: 2.2rem;
             font-weight: 400;
@@ -182,8 +195,12 @@
             color: var(--dark-gray);
             margin-bottom: 0.9rem;
             font-weight: 500;
-            /* font-style: italic; */
             margin-left: 1rem;
+        }
+
+        .title .nvidia {
+            font-weight: 600;
+            color: #76b900;
         }
 
         .affiliation {
@@ -285,17 +302,18 @@
         }
 
         nav {
-            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
+            background: #ffffff;
             padding: 0.85rem 2rem;
             margin-bottom: 2rem;
             margin-left: -1rem;
             margin-right: -1rem;
             border-radius: 0 0 12px 12px;
-            border: none;
+            border: 2px solid var(--secondary-color);
+            border-top: none;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 16px rgba(26, 54, 93, 0.10), 0 2px 6px rgba(26, 54, 93, 0.08);
         }
 
         .nav-inner {
@@ -309,7 +327,7 @@
         .nav-monogram {
             font-weight: 700;
             font-size: 1.05rem;
-            color: var(--yellow-color);
+            color: var(--primary-color);
             letter-spacing: -0.02em;
             margin-right: 0.5rem;
             white-space: nowrap;
@@ -318,7 +336,7 @@
         .nav-divider {
             width: 1px;
             height: 1.2rem;
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(43, 108, 176, 0.25);
             margin-right: 0.25rem;
             flex-shrink: 0;
         }
@@ -351,7 +369,7 @@
         }
 
         nav a {
-            color: rgba(255, 255, 255, 0.75);
+            color: var(--secondary-color);
             text-decoration: none;
             font-weight: 500;
             padding: 0.4rem 0.7rem;
@@ -361,19 +379,19 @@
         }
         nav a:hover,
         nav a.active {
-            background: rgba(255, 255, 255, 0.15);
-            color: white;
+            background: #e6f1fb;
+            color: var(--primary-color);
         }
 
         .nav-cv-btn a {
-            color: rgba(255, 255, 255, 0.75) !important;
+            color: var(--secondary-color) !important;
             background: none !important;
             font-weight: 500 !important;
         }
 
         .nav-cv-btn a:hover {
-            background: rgba(255, 255, 255, 0.15) !important;
-            color: white !important;
+            background: #e6f1fb !important;
+            color: var(--primary-color) !important;
         }
 
         section {
@@ -1445,9 +1463,9 @@
             </div>
             <div class="header-content">
                 <h2>
-                    <b style="background: linear-gradient(135deg, #1a4f8c 0%, #2176c7 50%, #3a9de0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Liwei</b> <b style="background: linear-gradient(135deg, #f6a800 0%, #ffcc00 50%, #ffe566 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Jiang</b> <span style="-webkit-text-fill-color: initial;"> </span> <span style="font-family: 'Ma Shan Zheng', cursive; -webkit-text-fill-color: initial;">姜力炜</span> 
+                    <span class="name-en">Liwei Jiang</span> <span style="-webkit-text-fill-color: initial;"> </span> <span style="font-family: 'Ma Shan Zheng', cursive; -webkit-text-fill-color: initial;">姜力炜</span> 
                     <!-- <span class="title">Ph.D. Paul G. Allen School of Computer Science & Engineering, University of Washington</span> -->
-                    <span class="title" style="font-weight: 550; background: linear-gradient(135deg, #4a7c00 0%, #76b900 50%, #8ec200 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Research Scientist at NVIDIA</span>
+                    <span class="title">Research Scientist at <span class="nvidia">NVIDIA</span></span>
 
                     <!-- <span class="title" style="font-weight: 550; background: #76B900; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Incoming Assistant Professor, Dept of Computer Science, University of California, Irvine</span> -->
                 </h2>
@@ -1555,9 +1573,15 @@
         <h2>News</h2>
         <section id="news">
             <div class="news-timeline">
-            <div class="news-item upcoming"><span class="news-date">August 2026</span> <span class="news-badge upcoming">Upcoming</span> I will attend <a href="https://ai4.io/?utm_source=google&utm_campaign=ai4-search-all-locations-branded-exact-match&utm_term=e&utm_content=ai4%20conference&gad_source=1&gad_campaignid=23526119493&gbraid=0AAAAADQPaBIf8UrZjiS5YFKC079ueHfeJ&gclid=Cj0KCQjwsMLSBhD9ARIsAIpUTDo7tJ_v6vRh5_bXgrVr239S4opfc-mhwg09FDIxVd9vCj7kPOtterwaAn9ZEALw_wcB">Ai4 2026</a> from August 4–6 at Las Vegas to give an invited talk!</div>
 
-            <div class="news-item upcoming"><span class="news-date">July 2026</span> <span class="news-badge upcoming">Upcoming</span> I will be attending <a href="https://u.osu.edu/mindmachinealignment/">Mind & Machine Alignment Summit</a> from July 19–21 at OSU, where I'll be a panelist to talk about "How well can AI model us?"!</div>
+            <div class="news-item upcoming"><span class="news-date">December 2026</span> <span class="news-badge upcoming">Upcoming</span> I will give an invited talk at the <a href="https://neurips2026haic.com/">Second Workshop on Human-AI Coevolution (HAIC)</a> at NeurIPS 2026 in Atlanta!</div>
+
+            <!-- <div class="news-item upcoming"><span class="news-date">November 2026</span> <span class="news-badge upcoming">Upcoming</span> I will give a talk at MIT NLP seminar.</div> -->
+
+            <div class="news-item"><span class="news-date">August 2026</span> I will attend <a href="https://ai4.io/?utm_source=google&utm_campaign=ai4-search-all-locations-branded-exact-match&utm_term=e&utm_content=ai4%20conference&gad_source=1&gad_campaignid=23526119493&gbraid=0AAAAADQPaBIf8UrZjiS5YFKC079ueHfeJ&gclid=Cj0KCQjwsMLSBhD9ARIsAIpUTDo7tJ_v6vRh5_bXgrVr239S4opfc-mhwg09FDIxVd9vCj7kPOtterwaAn9ZEALw_wcB">Ai4 2026</a> from August 4–6 at Las Vegas to give an invited talk!</div>
+
+
+            <div class="news-item"><span class="news-date">July 2026</span> I will be attending <a href="https://u.osu.edu/mindmachinealignment/">Mind & Machine Alignment Summit</a> from July 19–21 at OSU, where I'll be a panelist to talk about "How well can AI model us?"!</div>
 
             <div class="news-item"><span class="news-date">July 2026</span> Unfortunately, due to visa issues, I was unable to travel to Seoul, South Korea, for ICML 2026 (July 6–11). My wonderful co-author presented our accepted paper, <a href="https://arxiv.org/abs/2506.07468">Chasing Moving Targets with Online Self-Play RL for Safer LMs</a>, on my behalf. My co-organizers also hosted two workshops on <a href="https://pluralistic-alignment.github.io">Pluralistic Alignment</a> and <a href="https://genaicreativity.org/icml2026/">Human-AI Co-Creativity</a>. Hope to see you at a future conference!</div>
 
@@ -2925,6 +2949,20 @@
             <h2>Talks</h2>
 
             <div class="talk-item">
+                <h3>Invited Talk at the Second Workshop on Human-AI Coevolution (HAIC) at NeurIPS 2026</h3>
+                <div class="year"> (Upcoming) Dec 2026, Speaker</div>
+            </div>
+
+
+            <div class="talk-item">
+                <h3>Invited Talk at the MIT NLP Seminar</h3>
+                <!-- <div class="talk-links">
+                    Towards Humanistic, Pluralistic, and Coevolutionary AI Safety and Alignment
+                </div> -->
+                <div class="year"> (Upcoming) Nov 2026, Speaker</div>
+            </div>
+
+            <div class="talk-item">
                 <h3>UCLA NLP Seminar | UIUC NLP Seminar | UIUC ECE (Hosted by Prof. Huan Zhang)</h3>
                 <div class="talk-links">
                     Humanistic, Pluralistic, and Coevolutionary AI Safety and Alignment
@@ -2934,7 +2972,7 @@
             </div>
 
             <div class="talk-item">
-                <h3>NeurIPS 2025 | NVIDIA | Ploutos | University of Toronto (Hosted by Prof. Ebrahim Bagheri) | Zhiyuan Talk | AI TIME</h3>
+                <h3>NeurIPS 2025 | NVIDIA | Ploutos | University of Toronto (Hosted by Prof. Ebrahim Bagheri) | Zhiyuan Talk | AI TIME | Ai4 2026</h3>
                 <div class="talk-links">
                     Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)
                     <a href="https://drive.google.com/file/d/1p1UwQTk4NrhusRKU9hzZCMcaOxGn8GPj/view?usp=share_link" target="_blank">Slides</a>

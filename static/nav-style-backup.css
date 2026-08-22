@@ -1,0 +1,61 @@
+/* Original navigation bar styles (dark blue gradient, white text).
+   Backed up 2026-08-21 before switching to the white box / blue text look.
+   To restore: copy these rules over the matching rules in index.html <style>. */
+
+nav {
+    background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 60%, #4299e1 100%);
+    padding: 0.85rem 2rem;
+    margin-bottom: 2rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0 0 12px 12px;
+    border: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.nav-monogram {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--yellow-color);
+    letter-spacing: -0.02em;
+    margin-right: 0.5rem;
+    white-space: nowrap;
+}
+
+.nav-divider {
+    width: 1px;
+    height: 1.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    margin-right: 0.25rem;
+    flex-shrink: 0;
+}
+
+nav a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.4rem 0.7rem;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+    font-size: 1rem;
+}
+
+nav a:hover,
+nav a.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.nav-cv-btn a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    background: none !important;
+    font-weight: 500 !important;
+}
+
+.nav-cv-btn a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+}
