@@ -440,6 +440,10 @@
             background: linear-gradient(transparent 60%, #ffe98a 60%);
         }
 
+        .topic-hl {
+            background: linear-gradient(transparent 60%, #eef5fd 60%);
+        }
+
         .topic-list {
             list-style: none;
             margin: 0.55rem 0 0;
@@ -452,7 +456,8 @@
             display: flex;
             gap: 14px;
             align-items: flex-start;
-            padding: 5px 0;
+            padding: 2px 0;
+            font-size: 0.92rem;
         }
 
         .topic-list li::before {
@@ -460,9 +465,9 @@
             flex-shrink: 0;
             width: 6px;
             height: 6px;
-            border: 2px solid var(--yellow-color);
+            border: 2px solid var(--secondary-color);
             border-radius: 50%;
-            margin-top: 7px;
+            margin-top: 6px;
         }
 
         /* Add this rule to change the URL color */
@@ -1579,14 +1584,15 @@
             </p>
 
             <div class="about-text">
-                <div class="topics-heading"><span>Topics I've been exploring and thinking about lately</span></div>
+                <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
                 <ul class="topic-list">
-                    <li><span>Alignment, safety, and reasoning for physical AI and robotics in a multisensory, multimodal, interactive world</span></li>
-                    <li><span>High-fidelity simulation environments that enable long-horizon capability and practical security in digital and physical agents</span></li>
-                    <li><span>Democratizing AI in socially consequential but privacy-sensitive domains, starting with synthetic data for biomedicine and healthcare</span></li>
-                    <li><span>Elevating human cognition, creativity, decision-making, and everyday well-being through AI</span></li>
-                    <li><span>Tracking the long-tail, long-run societal impact of AI, particularly on underrepresented users and latent human abilities</span></li>
-                    <li><span>AI for education, and education in the age of AI</span></li>
+                    <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                    <li><span><span class="topic-hl">High-fidelity simulation environments</span> that scale long-horizon capability and practical security in digital and physical agents</span></li>
+                    <li><span><span class="topic-hl">Democratizing AI in socially consequential but privacy-sensitive domains</span>, starting with synthetic data for biomedicine and healthcare</span></li>
+                    <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                    <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                    <li><span>Tracking the long-tail, long-run <span class="topic-hl">societal impact of AI</span>, particularly on underrepresented users and latent human abilities</span></li>
+                    <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
                 </ul>
             </div>
 
