@@ -430,6 +430,41 @@
             text-align: justify;
         }
 
+        .topics-heading {
+            font-weight: 600;
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        .topics-heading span {
+            background: linear-gradient(transparent 60%, #ffe98a 60%);
+        }
+
+        .topic-list {
+            list-style: none;
+            margin: 0.55rem 0 0;
+            padding: 0 0 0 1.5rem;
+            display: grid;
+            text-align: left;
+        }
+
+        .topic-list li {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 5px 0;
+        }
+
+        .topic-list li::before {
+            content: "";
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border: 2px solid var(--yellow-color);
+            border-radius: 50%;
+            margin-top: 7px;
+        }
+
         /* Add this rule to change the URL color */
         .about-text a {
             color: var(--secondary-color);
@@ -1543,10 +1578,17 @@
                 The <b>North Star</b> of my research is to <b>build AI that genuinely benefits humanity</b>. My <b>deeper calling</b> is to <b>inspire and empower young scholars</b> to pursue that same vision and embark on bold intellectual adventures.
             </p>
 
-            <!-- <p class="about-text">
-                My <b>current research</b> focuses on developing data, algorithmic, and system-level solutions to address sociotechnical challenges in AI safety, security, and LLM alignment, often through multi-agent, RL, and data synthesis angles. My works have spearheaded research on moral and (pluralistic) value reasoning of LLMs. 
-                <b>An overview of my research:</b>
-            </p> -->
+            <div class="about-text">
+                <div class="topics-heading"><span>Topics I've been exploring and thinking about lately</span></div>
+                <ul class="topic-list">
+                    <li><span>Alignment, safety, and reasoning for physical AI and robotics in a multisensory, multimodal, interactive world</span></li>
+                    <li><span>High-fidelity simulation environments for building long-horizon capability and practical security into digital and physical agents</span></li>
+                    <li><span>Democratizing AI in socially consequential yet sensitive domains, such as synthetic biomedical and healthcare data</span></li>
+                    <li><span>Elevating human cognition, creativity, decision-making, and everyday well-being through AI</span></li>
+                    <li><span>Tracking the long-tail, long-run societal impact of AI, particularly on underrepresented users and latent human abilities</span></li>
+                    <li><span>AI for education, and education in the age of AI</span></li>
+                </ul>
+            </div>
 
             <!-- <div style="text-align: center; margin-top: 0.9em; margin-bottom: 1.2em;">
                 <img src="static/overview.png" alt="Research Overview" style="max-width: 95%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
