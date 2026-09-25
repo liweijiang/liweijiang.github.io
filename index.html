@@ -587,6 +587,92 @@
             color: var(--text-color);
         }
 
+        .publication-authors-group {
+            flex: 1;
+            min-width: 200px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 0.25rem;
+        }
+
+        .publication-authors-preview {
+            color: var(--dark-gray);
+            font-weight: 400;
+        }
+
+        .publication-authors-preview strong {
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .year-section details.publication-authors-collapsible {
+            flex: 0 0 auto;
+            min-width: 0;
+            width: auto;
+        }
+
+        .year-section details.publication-authors-collapsible[open] {
+            flex-basis: 100%;
+            width: 100%;
+        }
+
+        .publication-authors-collapsible summary {
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: inline;
+            list-style: none;
+            font-size: inherit;
+            font-weight: 400;
+            line-height: inherit;
+            opacity: 0.82;
+            white-space: nowrap;
+            transition: color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .publication-authors-collapsible summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .publication-authors-collapsible summary::marker {
+            content: "";
+        }
+
+        .publication-authors-collapsible summary:hover {
+            color: var(--accent-color);
+            opacity: 1;
+            text-decoration: underline;
+            text-underline-offset: 0.15em;
+        }
+
+        .publication-authors-collapsible summary:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 3px;
+            border-radius: 2px;
+        }
+
+        .publication-authors-collapsible .authors-toggle-less {
+            display: none;
+        }
+
+        .publication-authors-group:has(.publication-authors-collapsible[open]) .publication-authors-preview,
+        .publication-authors-collapsible[open] .authors-toggle-more {
+            display: none;
+        }
+
+        .publication-authors-collapsible[open] .authors-toggle-less {
+            display: inline;
+        }
+
+        .publication-authors-collapsible[open] summary {
+            float: right;
+            margin-left: 0.75rem;
+        }
+
+        .publication-authors-collapsible .publication-authors {
+            line-height: 1.5;
+        }
+
         .publication-venue {
             color: var(--secondary-color);
             font-weight: 500;
@@ -632,6 +718,16 @@
         .publication-links a:hover {
             background: var(--accent-color);
             color: white;
+        }
+
+        .publication-links .upcoming-link {
+            color: var(--dark-gray);
+            padding: 0.15rem 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            background: var(--light-gray);
+            font-size: 0.8rem;
+            cursor: default;
         }
 
         .material-links {
@@ -1631,6 +1727,8 @@
 
             <div class="news-item upcoming"><span class="news-date">October 2026</span> <span class="news-badge upcoming">Upcoming</span> I will give an invited talk at the UCI CS Seminar on Oct 2 2026.</div>
 
+            <div class="news-item"><span class="news-date">September 2026:</span> Our paper <a href="" target="_blank" rel="noopener noreferrer">HearsayBench: Can LLMs Navigate from Abstract Human Rights to Lived Lives?</a> was accepted to NeurIPS 2026 (Evaluations & Datasets Track) as an <b>Oral</b> (Top 0.4%)!</div>
+
             <div class="news-item"><span class="news-date">September 2026:</span> Give a guest lectures on <a
                 href="https://drive.google.com/file/d/1cuhbNenATJiksN42bKqJaqEJsongrtjd/view?usp=share_link"
                 target="_blank" rel="noopener noreferrer">Humanistic, Pluralistic, and Coevolutionary AI Safety and Alignment</a> at University of Pittsburgh.</div>
@@ -1651,7 +1749,7 @@
                 also be attending the <a href="https://www.far.ai/events/alignment-workshop">Alignment Workshop</a>!
                 Please feel free to reach out if you'd like to chat!</div>
 
-            <div class="news-item"><span class="news-date">Nov 2025:</span> Give a guest lectures on <a
+            <div class="news-item"><span class="news-date">Nov 2025:</span> Give a guest lecture on <a
                 href="https://drive.google.com/file/d/13FPewuQi80mzEo8WRgHfgKSXhP9wRXai/view?usp=share_link"
                 target="_blank" rel="noopener noreferrer">In-Context Learning, Prompting, and Basics of Reasoning</a> at CSE 447 (Undergrad NLP) at UW.</div>
 
@@ -1744,6 +1842,8 @@
                     </div>
                     <div class="publication-links">
                         <a href="https://arxiv.org/abs/2609.14896" target="_blank">PDF</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">GenAICreativity Workshop @ ICML 2026</div>
                     </div>
                 </div>
 
@@ -1814,6 +1914,57 @@
             <div class="year-section">
                 
                 <div class="year-header">2026</div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        HearsayBench: Can LLMs Navigate from Abstract Human Rights to Lived Lives?
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Ava Iranmanesh*, Sobhan Lotfi*, Ali Iranmanesh*, <strong>Liwei Jiang</strong>
+                        </div>
+                        <div class="publication-venue"><b style="color: var(--orange-color)">(Oral, Top 0.4%)</b> NeurIPS 2026, Evaluations &amp; Datasets Track</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="" target="_blank">PDF (Upcoming)</a>
+                        <div class="publication-authors"></div>
+                        <div class="workshop-venue">Pluralistic Alignment Workshop @ ICML 2026</div>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        JARVIS-Bench: Benchmarking Personal Intelligence Agents on Long-Horizon Real-User Daily Traces
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors-group">
+                            <div class="publication-authors-preview">
+                                Weizhi Zhang, Wei-Chieh Huang, Yueqing Liang, <strong>Liwei Jiang</strong>
+                            </div>
+                            <details class="publication-authors-collapsible">
+                                <summary aria-label="Toggle the full author list">
+                                    <span class="authors-toggle-more">+ 55 more authors</span>
+                                    <span class="authors-toggle-less">Show fewer</span>
+                                </summary>
+                                <div class="publication-authors">
+                                    Weizhi Zhang, Wei-Chieh Huang, Yueqing Liang, <strong>Liwei Jiang</strong>, Zhengxiang
+                                    Wang, Liangwei Yang, Zechen Li, Yuchen Wu, Haozhen Zhang, Yu Wang, Yuanchen Bei, Yue
+                                    Zhou, Siqi Zhu, Henry Peng Zou, Jiahong Liu, Xinni Zhang, Paul Martin, Joseph Marvin
+                                    Imperial, Yuyang Luo, Xiongxiao Xu, Baixiang Huang, Shanglin Wu, Lucas Resck, Yibo Wang,
+                                    Yuqing Liu, Langzhou He, Chengze Li, Yuxin Tian, Kening Zheng, Enze Ma, Boi Huynh, Zheng
+                                    Hui, Rui Yang, Tao Feng, Jie Yang, Shanghao Li, Haoran Wang, Wooseong Yang, Hanrong Zhang,
+                                    Huanhuan Ma, Daye Yoon, Yaozu Wu, Shikan Lian, Xiaoqian Ruan, Fangxin Wang, Hyeonjeong
+                                    Park, Hins Hu, Wenzhe Fan, Chen Wang, Yifan Gu, Dongyuan Li, Song Wang, Aylin Caliskan,
+                                    Jindong Wang, Xiao Luo, Yankai Chen, Kai Shu, Xue Liu, Philip S. Yu
+                                </div>
+                            </details>
+                        </div>
+                        <div class="publication-venue">NeurIPS 2026, Evaluations &amp; Datasets Track</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="" target="_blank">PDF (Upcoming)</a>
+                    </div>
+                </div>
 
                 <div class="publication">
                     <div class="publication-title">
