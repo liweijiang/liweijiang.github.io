@@ -1589,6 +1589,129 @@
             }
         }
     </style>
+
+    <!-- ===== OPTION B: yellow band header (override layer) ===== -->
+    <style>
+        :root {
+            --band-yellow: #ffd426;
+            --band-navy: #16304f;
+        }
+
+        header {
+            background: var(--band-yellow);
+            border-radius: 14px 14px 0 0;
+            margin: 0 -1rem;
+            padding: 2.1rem 2.5rem 1.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-section { order: 2; margin-left: auto; margin-right: 11.5rem; }
+
+        .profile-img {
+            width: 104px;
+            height: 104px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0;
+            border: none;
+            filter: none;
+            box-shadow: 0 0 0 4px #fff3c4;
+        }
+
+        .header-content { order: 1; }
+
+        .header-content h2 {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.15;
+            color: var(--band-navy);
+            display: block;
+        }
+
+        .name-en {
+            font-family: 'Kaushan Script', cursive;
+            font-size: 2.9rem;
+            color: var(--band-navy);
+        }
+
+        .header-content h2 > span[style*="Ma Shan Zheng"] {
+            font-size: 2.1rem;
+            color: #1a365d;
+            margin-left: 0.35rem;
+        }
+
+        .title {
+            display: block;
+            margin: 0.5rem 0 0;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--band-navy);
+        }
+
+        .title .nvidia { color: var(--band-navy); font-weight: 600; }
+
+        .contact-info { margin-top: 1.1rem; }
+
+        .social-btn-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+
+        .social-btn-row a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--band-navy);
+            background: transparent;
+            border: 1.5px solid rgba(22, 48, 79, 0.45);
+            border-radius: 99px;
+            padding: 0.33rem 0.8rem;
+            text-decoration: none;
+            box-shadow: none;
+            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+
+        .social-btn-row a:hover {
+            background: var(--band-navy);
+            border-color: var(--band-navy);
+            color: #ffe98a;
+            text-decoration: none;
+        }
+
+        .social-btn-row a svg { width: 14px; height: 14px; fill: currentColor; }
+
+        .social-btn-row #email-btn {
+            background: var(--band-navy);
+            border-color: var(--band-navy);
+            color: #ffe98a;
+        }
+        .social-btn-row #email-btn:hover { background: #0f2238; }
+
+        .loafy-wrap { right: 102px; bottom: -18px; width: 108px; height: 152px; }
+        .loopy-wrap { right: 8px; bottom: -8px; width: 92px; height: 130px; }
+        .loafy-wrap img, .loopy-wrap img { filter: none; opacity: 1; }
+        .loopy-wrap img { transform: scaleX(-1); }
+
+        nav { margin-top: 0; border-color: var(--band-navy); }
+
+        @media (max-width: 860px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.25rem;
+                padding: 1.6rem 1.4rem;
+            }
+            .profile-section { order: 1; margin: 0; }
+            .header-content { order: 2; }
+            .name-en { font-size: 2.1rem; }
+            .header-content h2 > span[style*="Ma Shan Zheng"] { font-size: 1.6rem; }
+            .loafy-wrap, .loopy-wrap { display: none; }
+        }
+    </style>
 </head>
 
 <body>
@@ -3309,11 +3432,7 @@
             <ul class="mentoring-list">
                 <li>
                     <span class="mentoring-date">2026–Present</span>
-                    <div class="mentoring-body"><a href="https://junwoop0.github.io/" target="_blank" rel="noopener noreferrer">Junwoo Park</a><span class="mentoring-affil">Master Student at UC Irvine</span></div>
-                </li>
-                <li>
-                    <span class="mentoring-date">2026–Present</span>
-                    <div class="mentoring-body"><a href="https://ava-iranmanesh.github.io/" target="_blank" rel="noopener noreferrer">Ava Iranmanesh</a><span class="mentoring-affil">Undergraduate Researcher at Pennsylvania State University</span></div>
+                    <div class="mentoring-body"><a href="https://minsik-ai.github.io/" target="_blank" rel="noopener noreferrer">Minsik Oh</a><span class="mentoring-affil">Master student at Stanford</span></div>
                 </li>
                 <li>
                     <span class="mentoring-date">2026–Present</span>
@@ -3321,34 +3440,33 @@
                 </li>
                 <li>
                     <span class="mentoring-date">2026–Present</span>
-                    <div class="mentoring-body"><a href="https://www.linkedin.com/in/aliiranmanesh/?isSelfProfile=false" target="_blank" rel="noopener noreferrer">Ali Iranmanesh</a><span class="mentoring-affil">Undergraduate Researcher at Pennsylvania State University</span></div>
+                    <div class="mentoring-body"><a href="https://emplab.la.psu.edu/people/ava-iranmanesh/" target="_blank" rel="noopener noreferrer">Ava Iranmanesh</a><span class="mentoring-affil">Undergraduate Researcher at Pennsylvania State University</span></div>
                 </li>
                 <li>
                     <span class="mentoring-date">2026–Present</span>
-                    <div class="mentoring-body"><a href="https://minsik-ai.github.io/" target="_blank" rel="noopener noreferrer">Minsik Oh</a><span class="mentoring-affil">Master student at Stanford</span></div>
+                    <div class="mentoring-body"><a href="https://www.linkedin.com/in/aliiranmanesh/" target="_blank" rel="noopener noreferrer">Ali Iranmanesh</a><span class="mentoring-affil">Undergraduate Researcher at Pennsylvania State University</span></div>
+                </li>
+                <li>
+                    <span class="mentoring-date">2025–Present</span>
+                    <div class="mentoring-body"><a href="https://yuanjiayiy.github.io/" target="_blank" rel="noopener noreferrer">Carrie Yuan</a><span class="mentoring-affil">PhD student at UW CSE</span><span class="mentoring-note">Co-mentored with Natasha Jaques</span></div>
+                </li>
+                <li>
+                    <span class="mentoring-date">2025–Present</span>
+                    <div class="mentoring-body"><a href="https://scholar.google.com/citations?user=db_dyb0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Hangoo Kang</a><span class="mentoring-affil">Master student at Stanford</span><span class="mentoring-note">Co-mentored with Natasha Jaques</span></div>
+                </li>
+                <li>
+                    <span class="mentoring-date">2025–Present</span>
+                    <div class="mentoring-body"><a href="https://profiles.stanford.edu/james-liu" target="_blank" rel="noopener noreferrer">James (Jihao) Liu</a><span class="mentoring-affil">Undergrad at Stanford</span><span class="mentoring-note">Co-mentored with Natasha Jaques</span></div>
                 </li>
                 <li>
                     <span class="mentoring-date">2025–Present</span>
                     <div class="mentoring-body"><a href="https://www.abhaygupta.io/" target="_blank" rel="noopener noreferrer">Abhay Gupta</a><span class="mentoring-affil">John Jay Senior High School</span></div>
                 </li>
-
             </ul>
 
             <h3 style="color: var(--secondary-color); margin: 2rem 0 1rem 0; font-size: 1.3rem;">Alumni</h3>
 
             <ul class="mentoring-list">
-                <li>
-                    <span class="mentoring-date">2025–2026</span>
-                    <div class="mentoring-body"><a href="https://yuanjiayiy.github.io/" target="_blank" rel="noopener noreferrer">Carrie Yuan</a><span class="mentoring-affil">PhD student at UW CSE</span><span class="mentoring-note">Co-mentored with Natasha Jaques</span></div>
-                </li>
-                <li>
-                    <span class="mentoring-date">2025–2026</span>
-                    <div class="mentoring-body"><a href="https://scholar.google.com/citations?user=db_dyb0AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Hangoo Kang</a><span class="mentoring-affil">Master student at Stanford</span><span class="mentoring-note">Co-mentored with Natasha Jaques</span></div>
-                </li>
-                <li>
-                    <span class="mentoring-date">2025–2026</span>
-                    <div class="mentoring-body"><a href="https://profiles.stanford.edu/james-liu" target="_blank" rel="noopener noreferrer">James (Jihao) Liu</a><span class="mentoring-affil">Undergrad at Stanford</span><span class="mentoring-note">Co-mentored with Natasha Jaques</span></div>
-                </li>
                 <li>
                     <span class="mentoring-date">2025–2026</span>
                     <div class="mentoring-body"><a href="https://eeelisa.github.io/" target="_blank" rel="noopener noreferrer">Mingqian Zheng</a><span class="mentoring-affil">PhD student at CMU LTI</span><span class="mentoring-note">Co-mentored with Maarten Sap</span></div>
@@ -3399,7 +3517,7 @@
                 </li>
                 <li>
                     <span class="mentoring-date">2023–2024</span>
-                    <div class="mentoring-body"><a href="https://kellycyy.github.io/" target="_blank" rel="noopener noreferrer">Kelly Chiu (Yu Ying Chiu)</a><span class="mentoring-affil">Master student at UW Linguistics → RA at NYU → PhD Student at Berkeley</span></div>
+                    <div class="mentoring-body"><a href="https://kellycyy.github.io/" target="_blank" rel="noopener noreferrer">Kelly Chiu (Yu Ying Chiu)</a><span class="mentoring-affil">Master student at UW Linguistics → RA at NYU</span></div>
                 </li>
                 <li>
                     <span class="mentoring-date">2023–2024</span>
