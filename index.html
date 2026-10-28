@@ -452,6 +452,41 @@
             text-align: left;
         }
 
+        .topic-groups {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.4rem;
+            margin-top: 1.1rem;
+            align-items: start;
+        }
+
+        .topic-group {
+            position: relative;
+            border: 2px solid #cfdef3;
+            border-radius: 14px;
+            padding: 1rem 1.1rem 0.95rem;
+            background: transparent;
+        }
+
+        .topic-group-title {
+            position: absolute;
+            top: -0.72rem;
+            left: 1rem;
+            background: #fff;
+            padding: 0 0.5rem;
+            margin: 0;
+            font-weight: 600;
+            font-size: 0.86rem;
+            letter-spacing: 0.02em;
+            color: var(--secondary-color);
+        }
+
+        .topic-group .topic-list {
+            margin-top: 0.3rem;
+            padding-left: 0.1rem;
+        }
+
+
         .topic-list li {
             display: flex;
             gap: 14px;
@@ -1681,16 +1716,28 @@
 
             <div class="about-text">
                 <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
-                <ul class="topic-list">
-                    <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
-                    <li><span><span class="topic-hl">High-fidelity simulation environments</span> that scale long-horizon capability and practical security in digital and physical agents</span></li>
-                    <li><span><span class="topic-hl">Multi-agent AI</span> that truly delivers: scalable learning and inference algorithms, safety and security, and practical applications</span></li>
-                    <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, starting with synthetic data for biomedicine and healthcare</span></li>
-                    <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
-                    <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
-                    <li><span><span class="topic-hl">Societal impact of AI</span> over the long tail and the long run, particularly on underrepresented users and latent human abilities</span></li>
-                    <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
-                </ul>
+                <div class="topic-groups">
+                    <div class="topic-group">
+                        <div class="topic-group-title">AI &amp; Open-Ended Worlds</div>
+                        <ul class="topic-list">
+                            <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multimodal, multisensory, and interactive world</span></li>
+                            <li><span><span class="topic-hl">Socially intelligent robotics</span>: building the foundations for machines to grasp the unspoken norms and expectations of a world shared with people</span></li>
+                            <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security</span></li>
+                            <!-- <li><span><span class="topic-hl">Multi-agent AI</span> that truly delivers: scalable learning and inference algorithms, safety and security, and practical applications</span></li> -->
+                            <li><span><span class="topic-hl">Building benchmarks for real-world AI impact</span>, measuring what applications change for people, especially where ground truth is scarce</span></li>
+                            <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+                        </ul>
+                    </div>
+                    <div class="topic-group">
+                        <div class="topic-group-title">AI &amp; Many Humans</div>
+                        <ul class="topic-list">
+                            <li><span><span class="topic-hl">Sociotechnical impact and safety of AI that accounts for every human</span>, across the long tail and over the long run</span></li>
+                            <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                            <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                            <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
             <!-- <div style="text-align: center; margin-top: 0.9em; margin-bottom: 1.2em;">
@@ -1863,6 +1910,21 @@
                         <a href="https://arxiv.org/abs/2609.14896" target="_blank">PDF</a>
                         <div class="publication-authors"></div>
                         <div class="workshop-venue">GenAICreativity Workshop @ ICML 2026</div>
+                    </div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        Safety Mid-Training: Internalizing LLM Safety as a Foundational Capability
+                    </div>
+                    <div class="publication-meta">
+                        <div class="publication-authors">
+                            Zhengyue Zhao, <strong>Liwei Jiang</strong>, Yejin Choi, Chaowei Xiao
+                        </div>
+                        <div class="publication-venue">Preprint</div>
+                    </div>
+                    <div class="publication-links">
+                        <a href="https://arxiv.org/abs/2610.26809" target="_blank" rel="noopener noreferrer">PDF</a>
                     </div>
                 </div>
 
