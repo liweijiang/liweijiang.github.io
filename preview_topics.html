@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topics — style options</title>
+<style>
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+}
+body {
+    font-family: 'Avenir Next', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: #2d3748;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    background: #fff;
+}
+.opt-label {
+    font-size: 0.78rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #a0aec0;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: .3rem;
+    margin: 2.6rem 0 1rem;
+}
+.about-text { font-size: 0.98rem; line-height: 1.5; text-align: justify; }
+.topics-heading { font-weight: 600; color: var(--primary-color); font-size: 1rem; }
+.topics-heading span { background: linear-gradient(transparent 60%, #ffe98a 60%); }
+.topic-hl { background: linear-gradient(transparent 60%, #e4eefb 60%); }
+.topic-list { list-style: none; margin: .3rem 0 0; padding: 0 0 0 .1rem; display: grid; text-align: left; }
+.topic-list li { display: flex; gap: 14px; align-items: flex-start; padding: 2px 0; font-size: .92rem; }
+.topic-list li::before {
+    content: ""; flex-shrink: 0; width: 6px; height: 6px;
+    border: 2px solid var(--secondary-color); border-radius: 50%; margin-top: 6px;
+}
+.topic-groups { display: grid; grid-template-columns: 1fr; gap: .9rem; margin-top: .75rem; }
+.topic-group-title {
+    font-weight: 600; font-size: .82rem; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--secondary-color); margin-bottom: .1rem;
+}
+
+/* ---------- A: current (outlined box) ---------- */
+.A .topic-group { border: 1px solid #e4eefb; border-radius: 12px; padding: .8rem 1rem .85rem; }
+
+/* ---------- B: floating label notched into the border ---------- */
+.B .topic-groups { gap: 1.4rem; margin-top: 1.1rem; }
+.B .topic-group {
+    border: 1px solid #dde7f4; border-radius: 14px;
+    padding: .95rem 1.1rem .9rem; position: relative;
+}
+.B .topic-group-title {
+    position: absolute; top: -.62rem; left: 1rem;
+    background: #fff; padding: 0 .5rem; margin: 0;
+    font-size: .74rem; letter-spacing: .1em;
+}
+
+/* ---------- C: no box, soft rule + lettered marker ---------- */
+.C .topic-groups { gap: 1.25rem; }
+.C .topic-group { padding: 0; }
+.C .topic-group-title {
+    display: flex; align-items: center; gap: .6rem;
+    text-transform: none; font-size: .95rem; letter-spacing: 0;
+    color: var(--primary-color); margin-bottom: .35rem;
+}
+.C .topic-group-title::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(90deg, #cfdcee, transparent);
+}
+.C .topic-group-title .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.35rem; height: 1.35rem; border-radius: 50%;
+    background: #e4eefb; color: var(--secondary-color);
+    font-size: .72rem; font-weight: 700;
+}
+
+/* ---------- D: chip header above a hairline box ---------- */
+.D .topic-groups { gap: 1.1rem; }
+.D .topic-group { border: 1px solid #edf2f7; border-radius: 16px; padding: 1rem 1.1rem .95rem; }
+.D .topic-group-title {
+    display: inline-block; background: #e4eefb; color: var(--primary-color);
+    border-radius: 999px; padding: .22rem .7rem; font-size: .72rem;
+    letter-spacing: .08em; margin-bottom: .5rem;
+}
+
+/* ---------- E: dashed box, centered title ---------- */
+.E .topic-groups { gap: 1.1rem; }
+.E .topic-group {
+    border: 1px dashed #c9d9ee; border-radius: 12px; padding: 1rem 1.15rem .95rem;
+}
+.E .topic-group-title {
+    text-align: center; color: var(--primary-color); margin-bottom: .55rem;
+    font-size: .78rem; letter-spacing: .14em;
+}
+
+/* ---------- F: left accent bar inside a rounded box ---------- */
+.F .topic-group {
+    border: 1px solid #e8eef6; border-left: 4px solid var(--secondary-color);
+    border-radius: 10px; padding: .85rem 1rem .85rem 1rem;
+}
+.F .topic-group-title { color: var(--primary-color); margin-bottom: .3rem; }
+.F .topic-groups { gap: .95rem; }
+</style>
+</head>
+<body>
+
+<div class="opt-label">Option A — outlined rounded box (current)</div>
+<div class="about-text A">
+    <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
+    <div class="topic-groups">
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Humans</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Sociotechnical impact of AI that accounts for every human</span>, across the long tail and over the long run.</span></li>
+                <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+            </ul>
+        </div>
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Worlds</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security.</span></li>
+                <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="opt-label">Option B — label notched into the border</div>
+<div class="about-text B">
+    <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
+    <div class="topic-groups">
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Humans</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Sociotechnical impact of AI that accounts for every human</span>, across the long tail and over the long run.</span></li>
+                <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+            </ul>
+        </div>
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Worlds</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security.</span></li>
+                <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="opt-label">Option C — no box: numbered marker + fading rule</div>
+<div class="about-text C">
+    <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
+    <div class="topic-groups">
+        <div class="topic-group">
+            <div class="topic-group-title"><span class="num">I</span>One AI &amp; Many Humans</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Sociotechnical impact of AI that accounts for every human</span>, across the long tail and over the long run.</span></li>
+                <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+            </ul>
+        </div>
+        <div class="topic-group">
+            <div class="topic-group-title"><span class="num">II</span>One AI &amp; Many Worlds</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security.</span></li>
+                <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="opt-label">Option D — pill label on a hairline box</div>
+<div class="about-text D">
+    <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
+    <div class="topic-groups">
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Humans</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Sociotechnical impact of AI that accounts for every human</span>, across the long tail and over the long run.</span></li>
+                <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+            </ul>
+        </div>
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Worlds</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security.</span></li>
+                <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="opt-label">Option E — dashed box, centered label</div>
+<div class="about-text E">
+    <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
+    <div class="topic-groups">
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Humans</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Sociotechnical impact of AI that accounts for every human</span>, across the long tail and over the long run.</span></li>
+                <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+            </ul>
+        </div>
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Worlds</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security.</span></li>
+                <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="opt-label">Option F — rounded box with left accent bar</div>
+<div class="about-text F">
+    <div class="topics-heading"><span>Topics that interest me and keep me pondering lately</span></div>
+    <div class="topic-groups">
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Humans</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Sociotechnical impact of AI that accounts for every human</span>, across the long tail and over the long run.</span></li>
+                <li><span><span class="topic-hl">Elevating human capabilities through AI</span>: cognition, creativity, communication, decision-making, everyday well-being, and beyond</span></li>
+                <li><span><span class="topic-hl">Novel AI interaction paradigms</span> that are more native to human intuitions, habits, and ways of thinking</span></li>
+                <li><span><span class="topic-hl">AI for education</span>, and education in the age of AI</span></li>
+            </ul>
+        </div>
+        <div class="topic-group">
+            <div class="topic-group-title">One AI &amp; Many Worlds</div>
+            <ul class="topic-list">
+                <li><span><span class="topic-hl">Alignment, safety, and reasoning for physical AI and robotics</span> in a multisensory, multimodal, and interactive world</span></li>
+                <li><span><span class="topic-hl">High-fidelity physical and digital simulation environments</span> for scaling and stress-testing agents' interactional capabilities and practical security.</span></li>
+                <li><span><span class="topic-hl">Democratizing AI in socially consequential but access-restricted domains</span>, such as synthetic data for biomedicine and healthcare</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
